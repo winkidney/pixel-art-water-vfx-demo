@@ -1,0 +1,49 @@
+{
+  "selected_source_set": "water-study-nine-v4",
+  "selected_ids": [
+    "D3",
+    "T3",
+    "N3"
+  ],
+  "selected_sources": [
+    {
+      "id": "D3",
+      "scene": "石阶泉湾",
+      "time": "白天",
+      "file": "images/D3.png",
+      "sha256": "784cfd9b4138969706ca4f1efe1f4e75966339cc7a71624410917f19b212364c"
+    },
+    {
+      "id": "T3",
+      "scene": "石阶泉湾",
+      "time": "黄昏",
+      "file": "images/T3.png",
+      "sha256": "99ad2606b8fe211758dbf35c6e457aef466edb124201749b9495e7cb672c897b"
+    },
+    {
+      "id": "N3",
+      "scene": "石阶泉湾",
+      "time": "夜晚",
+      "file": "images/N3.png",
+      "sha256": "0815a129aed047f2d84964d228462fefcc329f119db6a3ac86f42b0ccda43f9f"
+    }
+  ],
+  "selection_basis": "用户明确采纳 D3,T3,N3",
+  "requested_changes": [
+    "瀑布改为一整个较宽的瀑布汇入水体",
+    "适度归约细节灭高频冗余，软泛焦均质简谐流"
+  ],
+  "revision_directory": "stone-basin-widefall-v5",
+  "revision_status": "user_approved",
+  "migration_started": false,
+  "current_revision_images": [
+    "stone-basin-widefall-v5/images/D3R.png",
+    "stone-basin-widefall-v5/images/T3R.png",
+    "stone-basin-widefall-v5/images/N3R.png"
+  ],
+  "migration_authorized": true,
+  "runtime_time_variants": [
+    "day",
+    "night"
+  ]
+}

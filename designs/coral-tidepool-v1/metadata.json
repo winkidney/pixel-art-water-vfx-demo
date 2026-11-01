@@ -1,0 +1,28 @@
+{
+  "status": "awaiting_user_design_confirmation",
+  "date": "2026-11-01",
+  "name": "珊瑚潮池 v1",
+  "generation_mode": "built-in image_gen.imagegen",
+  "model_version": null,
+  "seed": null,
+  "generated_source": "exec-9dd8067f-28c0-4849-8323-c6409a251c96.png",
+  "reference_role": "style_and_visual_language",
+  "migration_started": false,
+  "runtime_project_unchanged": true,
+  "original_commit": "1243511",
+  "files": {
+    "concept.png": {
+      "sha256": "7a22728c989306aa8f46fc78c6c5de50ee3a414e2db95e61cafe4c137aa2656f",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "reference.png": {
+      "sha256": "6d4cd65085982a2a2f0593ae8f618b0f73a0b8854d1145b54954dbd3e6210972"
+    },
+    "prompt.txt": {
+      "sha256": "3230b9cbba54a9f94e9715ac27086114096b8f03796e36b60bbea229f4db1cc7"
+    }
+  }
+}

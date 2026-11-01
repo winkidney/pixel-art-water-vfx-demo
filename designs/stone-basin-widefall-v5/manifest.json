@@ -1,0 +1,84 @@
+{
+  "name": "石阶泉湾 整幅宽瀑布修订 v5",
+  "date": "2026-11-01",
+  "selected_source_ids": [
+    "D3",
+    "T3",
+    "N3"
+  ],
+  "user_selected_base": true,
+  "requested_revisions_complete": true,
+  "revision_user_visual_approval": true,
+  "generation_mode": "built-in image_gen.imagegen edit",
+  "model_version": null,
+  "seed": null,
+  "migration_started": false,
+  "runtime_validated": false,
+  "art_direction": "适度归约细节灭高频冗余，软泛焦均质简谐流",
+  "items": [
+    {
+      "id": "D3R",
+      "time": "白天",
+      "input_images": [
+        "references/D3.png"
+      ],
+      "file": "images/D3R.png",
+      "prompt": "prompts/D3R.txt",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "6e7a162f13d37e48e5792fa8013fcace603d4f1e8aa1eeb1eb1a8f0b75ff05b5",
+      "generated_source": "exec-8161ba39-f6bd-4c3a-a5e4-7c34a9d5742b.png",
+      "prompt_sha256": "0ff9d6834b8ed98430adb31209e100d6a9dd3223ae57d68db13ab1ec7e70469f",
+      "visual_review": "连续宽水幕、材质色簇归并、水面高频细节减少；石阶、单孔拱桥与测试角色仍可辨。"
+    },
+    {
+      "id": "T3R",
+      "time": "黄昏",
+      "input_images": [
+        "images/D3R.png",
+        "references/T3.png"
+      ],
+      "file": "images/T3R.png",
+      "prompt": "prompts/T3R.txt",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "b0c9bfdb3d7ec03f27916ceb34688140893656f9651e44b1455a6dd05dea9cb2",
+      "generated_source": "exec-86b1a483-e61a-447e-a52d-fd0f531284e4.png",
+      "prompt_sha256": "414d303d16fe447c502286cea9d6defc87281ea6726c145d4881fa54a7c301a1",
+      "visual_review": "连续宽水幕、材质色簇归并、水面高频细节减少；石阶、单孔拱桥与测试角色仍可辨。"
+    },
+    {
+      "id": "N3R",
+      "time": "夜晚",
+      "input_images": [
+        "images/D3R.png",
+        "references/N3.png"
+      ],
+      "file": "images/N3R.png",
+      "prompt": "prompts/N3R.txt",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "7f4e415b5e4bee0c766954e6a579f8587b12a1ea67ad599d81357db4b7b391a3",
+      "generated_source": "exec-41c62d00-8be8-4584-b688-ae401a507299.png",
+      "prompt_sha256": "a36141fe5b89e52f70716482dc5f3edc140c2d6f226d8f2497a4cb9949a4003f",
+      "visual_review": "连续宽水幕、材质色簇归并、水面高频细节减少；石阶、单孔拱桥与测试角色仍可辨。"
+    }
+  ],
+  "reference_files": {
+    "D3.png": "784cfd9b4138969706ca4f1efe1f4e75966339cc7a71624410917f19b212364c",
+    "T3.png": "99ad2606b8fe211758dbf35c6e457aef466edb124201749b9495e7cb672c897b",
+    "N3.png": "0815a129aed047f2d84964d228462fefcc329f119db6a3ac86f42b0ccda43f9f"
+  },
+  "review_boundary": "静态概念视觉检查，不作为严格像素网格、时段逐像素配准或运行时水体效果的证据。",
+  "adopted_for_runtime": [
+    "D3R",
+    "N3R"
+  ],
+  "dusk_adopted_archival_only": true
+}

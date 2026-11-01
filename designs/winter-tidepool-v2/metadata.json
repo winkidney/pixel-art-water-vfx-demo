@@ -1,0 +1,34 @@
+{
+  "name": "冬季潮池 v2",
+  "status": "awaiting_user_design_confirmation",
+  "date": "2026-11-01",
+  "generation_mode": "built-in image_gen.imagegen edit",
+  "model_version": null,
+  "seed": null,
+  "generated_source": "exec-8331e598-a45a-475f-963e-2d0ac955273b.png",
+  "edit_target": "../coral-tidepool-v1/concept.png",
+  "winter_reference": "winter-reference.png",
+  "visual_review": {
+    "snow_and_conifers": true,
+    "left_chasm_filled": true,
+    "main_pool_open_water": true,
+    "pool_island_waterfall_layout_retained": true
+  },
+  "migration_started": false,
+  "runtime_grid_validated": false,
+  "files": {
+    "concept.png": {
+      "sha256": "0c1505eb296f2d22d64dfab96889b0d393894d7538a79befa1bfd9e18071a369",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "winter-reference.png": {
+      "sha256": "3696b6af3cce514bcd4cafaaadbd1c21f44d86fa89cb1dc494a6220630a23fcb"
+    },
+    "prompt.txt": {
+      "sha256": "79b39927071ef15b33ecc6fc79b053a0c8a99968c70ec7971f82a0c5014b8aa5"
+    }
+  }
+}
