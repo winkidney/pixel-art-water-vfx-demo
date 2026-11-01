@@ -1,11 +1,12 @@
 """Verify actual OpenGL captures, not a software recreation of the shaders."""
 from pathlib import Path
 import json
+import sys
 import numpy as np
 from PIL import Image
 
 PROJECT=Path(__file__).resolve().parents[1]
-EV=PROJECT.parent/'evidence/stone-basin'
+EV=Path(sys.argv[1]) if len(sys.argv)>1 else PROJECT.parent/'evidence/parameters/scene-regression'
 water=np.array(Image.open(PROJECT/'assets/stone-basin/bathymetry.png'))[:,:,0]>127
 fall=np.max(np.array(Image.open(PROJECT/'assets/stone-basin/waterfall-mask.png'))[:,:,:2],axis=2)>127
 occlusion=np.array(Image.open(PROJECT/'assets/stone-basin/occlusion-mask.png'))[:,:,0]>0

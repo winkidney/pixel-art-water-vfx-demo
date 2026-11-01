@@ -18,7 +18,7 @@ func shot(name: String) -> void:
 	study.viewport.get_texture().get_image().save_png(evidence.path_join(name+"-world.png"))
 
 func run() -> void:
-	evidence = ProjectSettings.globalize_path("res://../evidence/legacy-regression" if "--legacy" in OS.get_cmdline_user_args() else "res://../evidence")
+	evidence = ProjectSettings.globalize_path("res://../evidence/parameters/legacy-regression" if "--legacy" in OS.get_cmdline_user_args() else "res://../evidence")
 	DirAccess.make_dir_recursive_absolute(evidence)
 	study = load("res://main.tscn").instantiate()
 	root.add_child(study)
@@ -86,10 +86,10 @@ func run() -> void:
 	report["palm_blocked"] = not study.is_walkable(Vector2(368,104))
 	report["deep_water_walkable"] = study.is_walkable(Vector2(278,180))
 	study.player = Vector2(396,239)
-	study.level = -.7
+	study.parameters.set_value("water_level",-.7)
 	study._refresh_character(Vector2.ZERO)
 	var low: float = study.immersion
-	study.level = .7
+	study.parameters.set_value("water_level",.7)
 	study._refresh_character(Vector2.ZERO)
 	report["tide_changes_immersion"] = study.immersion > low
 	# A real mouse event on the scene control chooses a target and emits a ripple.
@@ -101,9 +101,10 @@ func run() -> void:
 	report["click_target"] = study.target == Vector2(320,200)
 	# Reset restores initial controls and removes all transient ripples.
 	study.reset_study()
-	report["reset_restored"] = study.player == study.START and study.auto_tour and not study.frozen and study.level == 0
+	report["reset_restored"] = study.player == study.START and study.auto_tour and not study.frozen and is_equal_approx(study.level,.7)
 	study.frozen = true
 	await shot("07-reset")
+	study.parameters.restore_defaults()
 	# Check the full round trip in deterministic simulation steps, without file I/O.
 	study.reset_study()
 	var shore_seen := false

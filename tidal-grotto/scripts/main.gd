@@ -7,6 +7,11 @@ const INK := Color("dce9de")
 const MUTED := Color("819b94")
 const MINT := Color("98cbb0")
 
+var parameters
+var parameter_panel
+var applied_values := {}
+var phase_offsets := {}
+var ripple_offsets := PackedFloat32Array()
 var legacy := false
 var night := false
 var start_point := START
@@ -73,7 +78,13 @@ func _ready() -> void:
 		tour_points = [Vector2(103,192),Vector2(140,215),Vector2(181,207),Vector2(236,170),Vector2(288,152),Vector2(309,201),Vector2(213,234),Vector2(139,225),Vector2(91,210),start_point]
 	player = start_point
 	target = start_point
+	parameters = preload("res://scripts/parameter_store.gd").new()
+	applied_values = parameters.values.duplicate(true)
+	ripple_offsets.resize(16)
+	ripple_offsets.fill(0)
 	_build_world()
+	parameters.changed.connect(_parameters_changed)
+	_parameters_changed(PackedStringArray(parameters.values.keys()),"init")
 	_build_navigation()
 	_build_ui()
 	for i in 16:
@@ -253,7 +264,7 @@ func _button(text: String, pos: Vector2, dimensions: Vector2, action: Callable) 
 	return button
 
 func _build_ui() -> void:
-	_panel(Rect2(0,0,1280,800), Color("0c171b"), Color("0c171b"))
+	_panel(Rect2(0,0,1440,800), Color("0c171b"), Color("0c171b"))
 	_label("FIELD STUDY    /    001", Vector2(25,17), 11, MINT)
 	_label("潮汐洞窟" if legacy else "石桥清潭", Vector2(23,34), 30)
 	_label("PIXEL WATER     ·     白天 / 夜晚", Vector2(180,49), 12, MUTED)
@@ -270,36 +281,9 @@ func _build_ui() -> void:
 	display.mouse_default_cursor_shape = Control.CURSOR_CROSS
 	display.gui_input.connect(_scene_input)
 	add_child(display)
-	_panel(Rect2(1008,95,248,642), Color("112125"))
-	_button("白天",Vector2(1026,110),Vector2(101,32),func(): choose_time(false))
-	_button("夜晚",Vector2(1137,110),Vector2(101,32),func(): choose_time(true))
-	_label("水体层", Vector2(1026,153), 16)
-	var names := ["depth_enabled", "refraction_enabled", "caustics_enabled", "foam_enabled", "ripples_enabled", "reflection_enabled", "submersion_enabled", "environment_enabled", "waterfall_enabled"]
-	var titles := ["深浅色阶", "水下折射", "水底焦散", "岸线泡沫", "交互涟漪", "角色倒影", "渐进浸没", "环境倒影 / 月光", "瀑布与汇流"]
-	for i in names.size():
-		var check := CheckButton.new()
-		check.text = titles[i]
-		check.focus_mode = Control.FOCUS_NONE
-		check.position = Vector2(1022,183+i*26)
-		check.size = Vector2(216,26)
-		check.button_pressed = true
-		check.add_theme_color_override("font_color", INK)
-		check.add_theme_color_override("font_pressed_color", MINT)
-		var parameter: String = names[i]
-		check.toggled.connect(func(value: bool): set_effect(parameter, value))
-		add_child(check)
-		toggles[parameter] = check
-	_label("水面扰动", Vector2(1026,422), 12, MUTED)
-	waves_slider = _slider(Vector2(1026,447), 0, 2, 1, .05)
-	waves_slider.value_changed.connect(func(value: float): water_material.set_shader_parameter("strength", value))
-	_label("潮位 / 入水深度", Vector2(1026,477), 12, MUTED)
-	tide_slider = _slider(Vector2(1026,503), -.7, .7, 0, .02)
-	tide_slider.value_changed.connect(func(value: float): level = value)
-	tour_button = _button("暂停自动漫游", Vector2(1026,550), Vector2(212,34), toggle_tour)
-	_button("效果 / 深度图", Vector2(1026,592), Vector2(212,34), cycle_view)
-	pause_button = _button("冻结时间", Vector2(1026,634), Vector2(101,34), toggle_pause)
-	_button("重置", Vector2(1137,634), Vector2(101,34), reset_study)
-	_label("点击水面可激起涟漪", Vector2(1026,688), 11, MUTED)
+	parameter_panel = preload("res://scripts/parameter_panel.gd").new()
+	add_child(parameter_panel)
+	parameter_panel.setup(parameters,self)
 	_label("WASD / 方向键 移动    ·    点击前往    ·    空格 溅水    ·    Tab 原图", Vector2(25,752), 12, MUTED)
 	_label("P 冻结    ·    R 重置    ·    F12 截图", Vector2(25,776), 10, MUTED)
 	state_label = _label("", Vector2(25,108), 12, INK)
@@ -336,19 +320,22 @@ func _slider(pos: Vector2, minimum: float, maximum: float, initial: float, incre
 
 func _scene_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		var focus := get_viewport().gui_get_focus_owner()
+		if focus: focus.release_focus()
 		var where: Vector2 = event.position / 2.0
 		if is_water(where):
-			add_ripple(where, 1.4)
+			add_ripple(where, value("click_amplitude"))
 		if is_walkable(where):
 			target = where
 			auto_tour = false
 			_update_tour_button()
 
 func _unhandled_key_input(event: InputEvent) -> void:
+	if _editing_parameter(): return
 	if not event is InputEventKey or not event.pressed or event.echo:
 		return
 	match event.physical_keycode:
-		KEY_SPACE: add_ripple(_surface_point(), 2.0)
+		KEY_SPACE: add_ripple(_surface_point(), value("splash_amplitude"))
 		KEY_P: toggle_pause()
 		KEY_R: reset_study()
 		KEY_TAB: set_original_view(view_mode != 2)
@@ -366,6 +353,8 @@ func _process(delta: float) -> void:
 	water_material.set_shader_parameter("water_level", level)
 	character_material.set_shader_parameter("clock", clock)
 	reflection_material.set_shader_parameter("clock", clock)
+	_sync_motion()
+	water_material.set_shader_parameter("ripple_offsets",ripple_offsets)
 	if waterfall_material: waterfall_material.set_shader_parameter("clock",clock)
 	if occlusion_material: occlusion_material.set_shader_parameter("foot_y",player.y)
 	var location := "沙滩"
@@ -379,6 +368,9 @@ func _process(delta: float) -> void:
 
 func _move_player(delta: float) -> void:
 	var direction := Vector2.ZERO
+	if _editing_parameter():
+		moving = false
+		return
 	if Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP): direction.y -= 1
 	if Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN): direction.y += 1
 	if Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT): direction.x -= 1
@@ -410,41 +402,41 @@ func _move_player(delta: float) -> void:
 		_refresh_character(direction)
 		ripple_timer -= delta
 		if ripple_timer <= 0 and is_water(player):
-			add_ripple(_surface_point(), .65)
-			ripple_timer = .38
+			add_ripple(_surface_point(), value("move_amplitude"))
+			ripple_timer = value("move_interval")
 
 func _refresh_character(direction: Vector2) -> void:
 	var depth := sample_map(player).b
-	immersion = clampf(depth * 1.15 + (level*.28 if is_water(player) else 0),0, .96) if is_water(player) else 0.0
+	immersion = clampf(depth * value("immersion_scale") + (level*value("tide_influence") if is_water(player) else 0),0, .96) if is_water(player) else 0.0
 	if absf(direction.x) > absf(direction.y):
 		last_direction = 1 if direction.x > 0 else 3
 	elif direction.length() > .1:
 		last_direction = 0 if direction.y > 0 else 2
 	var frame := atlas[last_direction]
-	var character_height := 33.0
+	var character_height := value("character_height")
 	var scale_factor := character_height / frame.get_height()
-	var bob := sin(clock * (7 if moving and immersion < .3 else 2.4)) * (.55 if moving else .25)
-	var surface_shift := immersion * 5.0
+	var bob := sin(motion_phase("move_bob_speed") if moving and immersion < .3 else motion_phase("idle_bob_speed")) * (value("move_bob") if moving else value("idle_bob"))
+	var surface_shift := immersion * value("sink_offset")
 	character.texture = frame
 	character.scale = Vector2.ONE * scale_factor
 	character.position = (player + Vector2(0,-character_height*.5+surface_shift+bob)).round()
-	character.rotation = sin(clock*6.0)*.022 if moving and immersion < .3 else 0.0
+	character.rotation = sin(motion_phase("rotation_speed"))*value("rotation_amplitude") if moving and immersion < .3 else 0.0
 	character_material.set_shader_parameter("immersion", immersion)
 	character_material.set_shader_parameter("sprite_rect", Vector4(frame.region.position.x,frame.region.position.y,frame.region.size.x,frame.region.size.y))
 	character_material.set_shader_parameter("world_texel", Vector2.ONE / frame.atlas.get_size() / scale_factor)
 	shadow.position = player.round()
-	shadow.color.a = .23 * (1.0 - immersion*.85)
+	shadow.color.a = value("shadow_alpha") * (1.0 - immersion*value("shadow_fade"))
 	reflection.texture = frame
 	reflection.flip_v = true
-	reflection.scale = Vector2(scale_factor, scale_factor*.65)
-	reflection.position = (player + Vector2(0,character_height*.325)).round()
+	reflection.scale = Vector2(scale_factor, scale_factor*value("reflection_scale"))
+	reflection.position = (player + Vector2(0,character_height*value("reflection_scale")*.5)).round()
 	reflection_material.set_shader_parameter("foot", player)
 	reflection_material.set_shader_parameter("sprite_rect", Vector4(frame.region.position.x,frame.region.position.y,frame.region.size.x,frame.region.size.y))
-	reflection_material.set_shader_parameter("dimensions", Vector2(frame.get_width()*scale_factor,character_height*.65))
-	reflection_material.set_shader_parameter("opacity", .27*(1.0-immersion*.9))
+	reflection_material.set_shader_parameter("dimensions", Vector2(frame.get_width()*scale_factor,character_height*value("reflection_scale")))
+	reflection_material.set_shader_parameter("opacity", value("reflection_alpha")*(1.0-immersion*value("reflection_fade")))
 
 func _surface_point() -> Vector2:
-	return player + Vector2(0,-33.0*immersion*.55+immersion*5.0)
+	return player + Vector2(0,-value("character_height")*immersion*value("waterline_height")+immersion*value("sink_offset"))
 
 func sample_map(where: Vector2) -> Color:
 	if where.x < 0 or where.y < 0 or where.x >= WORLD.x or where.y >= WORLD.y: return Color(0,0,0,0)
@@ -459,9 +451,13 @@ func is_walkable(where: Vector2) -> bool:
 func add_ripple(where: Vector2, amplitude: float) -> void:
 	if not is_water(where): return
 	ripples[ripple_cursor] = Vector4(where.x, where.y, clock, amplitude)
+	ripple_offsets[ripple_cursor] = 0
 	ripple_cursor = (ripple_cursor + 1) % 16
 
 func set_effect(parameter: String, enabled: bool) -> void:
+	parameters.set_value(parameter,enabled)
+
+func _apply_effect(parameter: String, enabled: bool) -> void:
 	match parameter:
 		"waterfall_enabled":
 			if waterfall: waterfall.visible = enabled and view_mode != 2
@@ -513,21 +509,22 @@ func choose_time(is_night: bool) -> void:
 	waterfall_material.set_shader_parameter("night",float(night))
 	occlusion_material.set_shader_parameter("scene_plate",background.texture)
 	character_material.set_shader_parameter("night",float(night))
+	if parameter_panel: parameter_panel.update_context()
 
 func reset_study() -> void:
 	player = start_point
 	target = start_point
 	clock = 0
-	level = 0
-	tide_slider.value = 0
-	waves_slider.value = 1
+	phase_offsets.clear()
+	ripple_offsets.fill(0)
+	ripple_timer = 0
+	moving = false
 	route.clear()
 	route_goal = Vector2.INF
 	tour_index = 0
 	auto_tour = true
 	frozen = false
 	for i in 16: ripples[i] = Vector4(0,0,-1000,0)
-	for parameter in toggles: set_effect(parameter,true)
 	set_original_view(false)
 	_refresh_character(Vector2.ZERO)
 	_update_tour_button()
@@ -538,3 +535,57 @@ func save_screenshot() -> void:
 	var folder := "res://captures"
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(folder))
 	get_viewport().get_texture().get_image().save_png("%s/capture-%03d.png" % [folder,screenshot_counter])
+
+func value(id: String) -> float:
+	return float(parameters.values[id])
+
+func _editing_parameter() -> bool:
+	return get_viewport().gui_get_focus_owner() is LineEdit or (parameter_panel != null and parameter_panel.file_dialog.visible)
+
+func motion_phase(id: String) -> float:
+	return clock*value(id)+float(phase_offsets.get(id,0.0))
+
+func _material(target_name: String) -> ShaderMaterial:
+	match target_name:
+		"water": return water_material
+		"fall": return waterfall_material
+		"character": return character_material
+		"reflection": return reflection_material
+	return null
+
+func _parameters_changed(ids: PackedStringArray, reason: String) -> void:
+	for wave in ["wave1_speed","wave2_speed"]:
+		if not wave in ids and not "wave_axis_speed" in ids: continue
+		var key: String = wave+"_axis"
+		var old_rate: float = float(applied_values[wave])*float(applied_values.wave_axis_speed)
+		var rate: float = value(wave)*value("wave_axis_speed")
+		if reason == "edit": phase_offsets[key] = float(phase_offsets.get(key,0.0))+clock*(old_rate-rate)
+		else: phase_offsets[key] = 0.0
+	if "ripple_speed" in ids:
+		for i in ripples.size():
+			if reason == "edit": ripple_offsets[i] += maxf(0,clock-ripples[i].z)*(float(applied_values.ripple_speed)-value("ripple_speed"))
+			else: ripple_offsets[i] = 0.0
+	for id in ids:
+		var definition: Dictionary = parameters.by_id[id]
+		if definition.motion:
+			if reason == "edit": phase_offsets[id] = float(phase_offsets.get(id,0.0))+clock*(float(applied_values[id])-value(id))
+			else: phase_offsets[id] = 0.0
+		var material := _material(definition.target)
+		if definition.get("type","") == "bool": _apply_effect(id,parameters.values[id])
+		elif definition.has("color"):
+			if material: material.set_shader_parameter(definition.color+"_grade",parameters.grade(definition.color))
+		elif material and not definition.motion: material.set_shader_parameter(id,value(id))
+		applied_values[id] = parameters.values[id]
+	level = value("water_level")
+	if not atlas.is_empty(): _refresh_character(Vector2.ZERO)
+	_sync_motion()
+
+func _sync_motion() -> void:
+	for definition in parameters.definitions:
+		if definition.motion:
+			var material := _material(definition.target)
+			if material:
+				material.set_shader_parameter(definition.id,value(definition.id))
+				material.set_shader_parameter("offset_"+definition.id,float(phase_offsets.get(definition.id,0.0)))
+	for wave in ["wave1_speed","wave2_speed"]:
+		water_material.set_shader_parameter("offset_"+wave+"_axis",float(phase_offsets.get(wave+"_axis",0.0)))

@@ -1,0 +1,444 @@
+{
+  "files": [
+    {
+      "path": "evidence/parameters/README.md",
+      "sha256": "b8b81fbd545e418642acab6595e76eeb11deb96243eecd319a68f27bb3b45b9e"
+    },
+    {
+      "path": "evidence/parameters/coverage-report.json",
+      "sha256": "140adfeb28b6182433dcc69b34a5c44ab75cf2680ba87446e97ef56181834d3a"
+    },
+    {
+      "path": "evidence/parameters/day-adjusted-full.png",
+      "sha256": "f3814784ff632ef122770663425ed9fbedffb1823c50be9483ecee5fa637a01a"
+    },
+    {
+      "path": "evidence/parameters/day-adjusted-world.png",
+      "sha256": "58bf3e6759bbe158f9beab53a2ef225c0f446c7bd6a9494fdc8cb006991ef0a4"
+    },
+    {
+      "path": "evidence/parameters/day-default-full.png",
+      "sha256": "8d21d1790f1eb752b4951a469ea8e00aa216095a961a4dc65cbaf432ee1c285b"
+    },
+    {
+      "path": "evidence/parameters/day-default-world.png",
+      "sha256": "c2fd7fa001f89c90e57fc363aa087a92624deb033c40ef528bc649473dbfd7b4"
+    },
+    {
+      "path": "evidence/parameters/default-baseline-checks.json",
+      "sha256": "58a9b6825a3ffca408134e73faa1bc6e75a6fa59b48ce8cffd7e60259466ba12"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/01-complete-world.png",
+      "sha256": "503d1bb393353f9a4e02e8e3c3ce50f9f55ab460ee535571e8e9da606853b9d2"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/01-complete.png",
+      "sha256": "eb5403737f2dd591cc78604bda80f866433e06b003a5034f46572b9dfdf02a76"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/02-original-world.png",
+      "sha256": "0aab25cb30ed2c8021297ed9cb96b4f3960c2f9bf63b4d50e572687c8370fdd3"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/02-original.png",
+      "sha256": "5a68d73da96a32313aa19b4bead4e6b2c7105803d0e75e24bd26d20a36c527de"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/03-depth-map-world.png",
+      "sha256": "dd8a9c88d808c1321f04fbad5386c7f549c5ac782c56dee40f06918728b211e8"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/03-depth-map.png",
+      "sha256": "ef641c2bd3205fb52bd158a3358126f2223c0e8b52528e34c87506bb638def1d"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/04-submersion-off-world.png",
+      "sha256": "55aae97f50c88bd8ba8532cc6c0bf33d9df5987a0b3a0bde4412ce0234da1c1f"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/04-submersion-off.png",
+      "sha256": "2dc4553704497af93451ac5956e4d4dd6df3aa213f526a3edc205f71ee0f5328"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/05-ripples-world.png",
+      "sha256": "647e2905c193aa0fe8aa915fd82919fea96e2a3096af4b513d8781cfddf911c5"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/05-ripples.png",
+      "sha256": "29c15ae7a11649957e7b01b605e8552c348414d569ff9d68364b3b99e717e9f2"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/06-animation-world.png",
+      "sha256": "ab96579a14e5e3bf41b782b482838bab843ba5041012f08cdeb9efec3554b407"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/06-animation.png",
+      "sha256": "be6bd88d1d3b6f8393bb1352e846f507d4752a558aef104d15fe0e2318ac35cb"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/07-reset-world.png",
+      "sha256": "82adb55928834a26006eccb132858b6d037c377959527e7547234910be752dca"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/07-reset.png",
+      "sha256": "94a17c9499fe66ad1560a9ae62c109a811c2da3032c15910ba33c0f9a30809c8"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/depth-278-096-world.png",
+      "sha256": "9bcd17641f9e02acfac85a9d691dc967707fac6d8869d4b9a3f44c8fa8be84e6"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/depth-278-096.png",
+      "sha256": "b5a36af8a7c8c3aaa0e846c16892ca2699ba48f1c71e1514f376f49796b9c6dd"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/depth-355-094-world.png",
+      "sha256": "bc22f458886f5f002fcf8ca85f8df7546ec7ea82abad128c13c8b9f41ca6c083"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/depth-355-094.png",
+      "sha256": "8040b853eaba769394c8beb0b63b08915181b35cacc011ae82a8ed06704d7a5a"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/depth-396-033-world.png",
+      "sha256": "ca64b66e8e91ef770bd3250d5dfad914bab8628d04d9609d4610f271ccd0cc22"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/depth-396-033.png",
+      "sha256": "7bddbeb5be3c0435f0238c457220fd264d569af01a61ba51b4530f86f3be9ede"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/depth-415-007-world.png",
+      "sha256": "f0ec536d2ca43a72503a10864922fef75b12857bbdd1cdcd7b87b4ce10c6a317"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/depth-415-007.png",
+      "sha256": "bc34fa3a216d5e0b4dd6bf1c7e7caa2fec8e077cfb0f3767a4750ed34478658f"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/depth-425-000-world.png",
+      "sha256": "d7812ede4a0893d6fcf24bcf2d209cabf97512b71c74fb48a6dc9c9655cabb09"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/depth-425-000.png",
+      "sha256": "ced5e809f733d35c5e6e34144db172b3446436e10db22562a0354e040f9b53bb"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-caustics_enabled-world.png",
+      "sha256": "390b66a08635a9bdc5e45e3afc7d28292ac13ca51dd4220ca60570edddd80a45"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-caustics_enabled.png",
+      "sha256": "ff583daf4751b31f5e89b84562fb744300cd7dedeef93a1465df817a374b5a55"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-depth_enabled-world.png",
+      "sha256": "bd02a9409d3904915ba8cd29b4fea325a64c86b23703daa4211a901b729cb4ea"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-depth_enabled.png",
+      "sha256": "f5cce3aa33e41b2639fb0c5d4ccd988976098efc3c0b5647481cd0833b494b3d"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-foam_enabled-world.png",
+      "sha256": "5973729b0c4e0d6296d2efe629e0468619af2027399fe4aa0f03cc141039439a"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-foam_enabled.png",
+      "sha256": "32860003f22c22e75f089349f3e8ae57c4d5c6dacdd57c5d98cf35248b44dc5a"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-reflection_enabled-world.png",
+      "sha256": "6b17b3ac9087e3f2009554ee04fbe2303e44392f403b5b962b078fa6744c75b3"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-reflection_enabled.png",
+      "sha256": "f6cb4cb5a8c5cbe087e95fc3d99d7d547800fa30ef786b126f906310c9bd5852"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-refraction_enabled-world.png",
+      "sha256": "2a4edbb554780f86dea58c3cf7cd54f1a04ca86c89e11f161c0ad22d79cd5e8f"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-refraction_enabled.png",
+      "sha256": "9d9e3632506ab32be7743985b9c59c97635eddab001f387d589a0c5b9353c67e"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-ripples_enabled-world.png",
+      "sha256": "a61fa0a7df83e586ba1b19eb528fc84cc648280ee01bea7f1212a597d56db52d"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/layer-off-ripples_enabled.png",
+      "sha256": "46f88e77761976226bfe55ae43471fa8964585c84e23fd0ac6079d3fc1e99cbb"
+    },
+    {
+      "path": "evidence/parameters/legacy-regression/runtime-report.json",
+      "sha256": "9b078d9a4cab5f80c738fcce45f0a987d92ab5159c2336f077e0a3b0c850e17e"
+    },
+    {
+      "path": "evidence/parameters/night-adjusted-full.png",
+      "sha256": "dd112d195b55a00594bc6b3f4892604893f016065be9c543ab0b3200ae5cc493"
+    },
+    {
+      "path": "evidence/parameters/night-adjusted-world.png",
+      "sha256": "ecb9ab69dc1bdb99831c9a208de1c1a21382fa95ed9c9f1b7d841f2153cd665b"
+    },
+    {
+      "path": "evidence/parameters/night-default-full.png",
+      "sha256": "575d87473fd033e705fdd6ca32c6196452e041a12630fe4abcab2dd6615aa79b"
+    },
+    {
+      "path": "evidence/parameters/night-default-world.png",
+      "sha256": "0194ec084aac204e0893d5cf3a332dbfdb59673b51aa0fb1e58864d4f2dff9f4"
+    },
+    {
+      "path": "evidence/parameters/recording-report.json",
+      "sha256": "adf80d7eb98bf876ab73d78e7c8071a542a01b0a32e00140e8c29fe8292a3d97"
+    },
+    {
+      "path": "evidence/parameters/runtime-report.json",
+      "sha256": "6f5b4ee2b49c4fa1e487ec38c341af9c2960bee9755002b111d7ddc456007468"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/complete-full.png",
+      "sha256": "cd0b9b8a35fc1a17f40f30d5b1061966c62a308ba5759290cec0f6910aa73e1e"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/complete.png",
+      "sha256": "77511f48b1c8d091baaa812eb52c150183c9e8718614e053cdecdc804aee92f7"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/depth-000.png",
+      "sha256": "d886c5e9e9eb0c489906e93903fa163a0000d73c0f2e79e21791b979f91055c1"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/depth-005.png",
+      "sha256": "adc996872334c39655affd87e2463ea1e1ec88749adee63a1adb064f83dcac65"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/depth-030.png",
+      "sha256": "77511f48b1c8d091baaa812eb52c150183c9e8718614e053cdecdc804aee92f7"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/depth-092.png",
+      "sha256": "734f0755c36591fa92a1256069d9667e53c4cacf041d67ef82c122cba32c5d6e"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/depth-096.png",
+      "sha256": "18f3d8e54d1d6a6d1b9786907749471508fec9f98d3567be001aacf7c23ff289"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/environment-a.png",
+      "sha256": "77e3431d49ea276918bdd7e4d5bc34a2ab1cc855e91fabdf9cad0aef8e48f467"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/environment-b.png",
+      "sha256": "60d7931062c742a557da2c61865784c35a0736a249c4007197c57ee5f53779a7"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/fall-a.png",
+      "sha256": "d2167a4b6d79e97b5b6b74833c1e2c6bed6948b7b069aff0e725a47221b91bfc"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/fall-b.png",
+      "sha256": "e36ff3552caba6619b6d001bdcdd3bcf2feda55e8c2991f3faeef503a9789550"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/foreground-front-off.png",
+      "sha256": "cef8d95597e248c3aa3f67f3db12b69d6eae0aa459c8fdc185834f1ba42f1ee7"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/foreground-front-on.png",
+      "sha256": "cef8d95597e248c3aa3f67f3db12b69d6eae0aa459c8fdc185834f1ba42f1ee7"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/freeze-repeat.png",
+      "sha256": "77511f48b1c8d091baaa812eb52c150183c9e8718614e053cdecdc804aee92f7"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/layers-on.png",
+      "sha256": "77511f48b1c8d091baaa812eb52c150183c9e8718614e053cdecdc804aee92f7"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/occlusion-off.png",
+      "sha256": "d1052894d80c1697891a0f4d57ece06bb6acadf0c5750841179b7de1a93e3cbf"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/occlusion-on.png",
+      "sha256": "7f6c8de4a641f03e40d53635ff25b8e999cb7ae9cbd0a8134559ae307bf90eb2"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/off-caustics_enabled.png",
+      "sha256": "c2b85bd70dc49eb599637f2ee8a1811ed45fff09b62b50dc01a4ae5b4978754a"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/off-depth_enabled.png",
+      "sha256": "659e8d0104630e91e4fb427b1da392b8ba2b20d740d0b9b6754e90fbc81c4a1c"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/off-environment_enabled.png",
+      "sha256": "01b810af8b39575a856fbc30cdf7c103753e3e0e5de732bba20841cfc4c8ac57"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/off-foam_enabled.png",
+      "sha256": "a823515b557052239bfbd2a1f286d29ab35b0c3a86e60bc4e8c89fdde4c8ff93"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/off-reflection_enabled.png",
+      "sha256": "fe28dbf3550d94c86183b058692e51153a251917a464be4d9b286e8ad52da2c2"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/off-refraction_enabled.png",
+      "sha256": "253523aa64144b878202f4de4ee1210d3674af1237a2f9debb2e02fa10a432fb"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/off-ripples_enabled.png",
+      "sha256": "53938fba6b1c5fee7a67dc5381e1a3fd9b8e67ccea375383f1bd43e1e1d7e9ec"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/off-submersion_enabled.png",
+      "sha256": "af0f396e3ab237885bdeb11bd9a84b785d517cc4f0d793db7e1a59d0f00b30f2"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/off-waterfall_enabled.png",
+      "sha256": "cc373af98ccbb8eb5e471e0cbb72ffd2b591607110b3f7e88eb44d8bb6adf369"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/plate.png",
+      "sha256": "d8041a106f5b3799ccb681c335bbc1bf0257b5bbf2ec8366d04e7516e7fd9bdb"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/day/submersion-off.png",
+      "sha256": "4d5ed215bd88cef8c5d6840fe787273585211295060362c40cdf31476b5fd6fd"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/complete-full.png",
+      "sha256": "23c3a532c89991d61b9b87fe4f08641f8bf822ff648f7df53e60c882834a0202"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/complete.png",
+      "sha256": "e504fe9e495480d760c0a2ecf20bf76fcdf3021a2c41198801bcbc2374ace741"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/depth-000.png",
+      "sha256": "f674f1fe5c84da3e5e5a6a679db12ff0ebd9a6b07a3cfcc9fb58cbfbfa87f0f1"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/depth-005.png",
+      "sha256": "0647ec344ec96742fc08e5d2c5656d12584cbd81b51d62d65f557e45956ad3e0"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/depth-030.png",
+      "sha256": "e504fe9e495480d760c0a2ecf20bf76fcdf3021a2c41198801bcbc2374ace741"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/depth-092.png",
+      "sha256": "ee1db94f2e8fcad813d3918d72fb4767014f6834de6f51714737451bd94d4114"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/depth-096.png",
+      "sha256": "23f26a6ca3b8eb65374353816a42187c7d673eda1d8ec500e4979b8859b821c7"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/environment-a.png",
+      "sha256": "9d26b129703f15e47ca4cae272f829a8e00f9e7480495f3d028b9e47f48521a5"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/environment-b.png",
+      "sha256": "175008ea84f6c220837b8454b9637cdb27d1c20ae77548c0f64aeff8e5c5c957"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/fall-a.png",
+      "sha256": "1c60f6262ec7122339a229ff573eeacc94acdfa6d81f2da4ff2a30f5ab4e5082"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/fall-b.png",
+      "sha256": "23fd95ed3ff840871b6dc71735d1277224061459a13e88b1b9855276417e33e7"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/foreground-front-off.png",
+      "sha256": "cc774bdcf86dd7f7c5944b89f8e48337c7b5d40e74142d68928a3c631a33e55c"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/foreground-front-on.png",
+      "sha256": "cc774bdcf86dd7f7c5944b89f8e48337c7b5d40e74142d68928a3c631a33e55c"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/freeze-repeat.png",
+      "sha256": "e504fe9e495480d760c0a2ecf20bf76fcdf3021a2c41198801bcbc2374ace741"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/layers-on.png",
+      "sha256": "e504fe9e495480d760c0a2ecf20bf76fcdf3021a2c41198801bcbc2374ace741"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/occlusion-off.png",
+      "sha256": "d8daffdf2ed773e3687f6850f62bd2b470c30ff5417fab8088acf09439a0f828"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/occlusion-on.png",
+      "sha256": "aa33d26ac97d498165a3671e8e3e1543a8b278909d7063d5b20ab11932b4b137"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/off-caustics_enabled.png",
+      "sha256": "6eba3b787c6cde968d5288f44edf2f90bfbbe8a313229c03b5f408d32af038ec"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/off-depth_enabled.png",
+      "sha256": "7b1b511b9340e0a4137838d991c06c975dbc1cd0ba9243c54357bf9a4bf0cf06"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/off-environment_enabled.png",
+      "sha256": "b10e33f94455af0a20e38071edc4bccab5fbfe946641fd6f88f3980c11db909c"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/off-foam_enabled.png",
+      "sha256": "7efcea4a9072f1f0a81b3d9e7ad68d6643d7c2e6a57e00204c25361a83da961b"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/off-reflection_enabled.png",
+      "sha256": "1d580170e08588d37b4e87365b28b5edec832a08b990858d1f67c00808140d2e"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/off-refraction_enabled.png",
+      "sha256": "c408ae8c7d1053fcff468fe856bdfc78a29132fb6cd9c4274f6149b07b2e62aa"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/off-ripples_enabled.png",
+      "sha256": "a52d841730d22efa929410bca7dd6516bd31cb5cc2bea8614ec544397ef20d44"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/off-submersion_enabled.png",
+      "sha256": "c3c1a57ebf8dd6aeadd017caab304dfb270adfd3189d2ea1451e951bd63a21d0"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/off-waterfall_enabled.png",
+      "sha256": "4122951ab70caf9f023c87517fe04cb0f97d1b37de0852d42856a8d74b363abd"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/plate.png",
+      "sha256": "d83e39d5c0e14a38091ce620ad6c3dcb8dcb2905842a39dc43594ab8b3710a8f"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/night/submersion-off.png",
+      "sha256": "c7ba782f193c6f438286e8e3e6c63be8297684fe10e2d72bb116b8dc10331904"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/render-checks.json",
+      "sha256": "c0518df44ddc22274b66ffee2807fe863153362b28f3efc4d63ea027ee30c01c"
+    },
+    {
+      "path": "evidence/parameters/scene-regression/runtime-report.json",
+      "sha256": "181f9e0cf71f792630733d25c341225e0985e4b4db3f78732317f588df3b4793"
+    },
+    {
+      "path": "parameter-workbench-demo.mp4",
+      "sha256": "da70585df2220466572c11a884acfc338f83f661c6074c882092d99984834929"
+    },
+    {
+      "path": "parameter-workbench-preview.png",
+      "sha256": "a6ad217f657f3364a44d7b3f7013fd053ed6df03d88dd9a1c8ecaee29d086890"
+    }
+  ]
+}

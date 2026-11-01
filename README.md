@@ -1,9 +1,12 @@
 # 像素水体 Mini 实验
 
-独立 Godot 4 项目。打开 `tidal-grotto/project.godot` 后按 F5 运行。
+独立 Godot 4 项目。提供 158 项运行中参数控制，可手工调节并管理命名预设。打开 `tidal-grotto/project.godot` 后按 F5 运行。
 
 当前默认场景为已采用的宽瀑布石潭，右上角切换白天和夜晚。水体迁移已完成，包含动态瀑布、深浅水、折射、焦散、涟漪、角色浸没与夜间反光。
 
+- [调参验收记录](evidence/parameters/README.md)
+- [调参面板实机演示](parameter-workbench-demo.mp4) · [面板预览](parameter-workbench-preview.png)
+- [手工调参说明](tidal-grotto/docs/parameters.md) · [全部参数默认值与范围](tidal-grotto/docs/parameter-reference.md)
 - [白天 / 夜晚实机对照](stone-basin-runtime-comparison.png)
 - [30 秒实机视频](stone-basin-day-night-demo.mp4)
 - [Godot 项目压缩包](stone-basin-godot4.zip)

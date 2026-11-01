@@ -1,0 +1,794 @@
+{
+  "count": 158,
+  "failed": [],
+  "parameters": {
+    "backwash_distance": {
+      "changed_pixels": 3123,
+      "kind": "render",
+      "passed": true
+    },
+    "backwash_grade_brightness": {
+      "changed_pixels": 1713,
+      "kind": "render",
+      "passed": true
+    },
+    "backwash_grade_hue": {
+      "changed_pixels": 1586,
+      "kind": "render",
+      "passed": true
+    },
+    "backwash_grade_saturation": {
+      "changed_pixels": 1574,
+      "kind": "render",
+      "passed": true
+    },
+    "backwash_strength": {
+      "changed_pixels": 1861,
+      "kind": "render",
+      "passed": true
+    },
+    "backwash_width": {
+      "changed_pixels": 10401,
+      "kind": "render",
+      "passed": true
+    },
+    "bridge_compression": {
+      "changed_pixels": 5962,
+      "kind": "render",
+      "passed": true
+    },
+    "bridge_distortion": {
+      "changed_pixels": 3638,
+      "kind": "render",
+      "passed": true
+    },
+    "bridge_grade_brightness": {
+      "changed_pixels": 6284,
+      "kind": "render",
+      "passed": true
+    },
+    "bridge_grade_hue": {
+      "changed_pixels": 5648,
+      "kind": "render",
+      "passed": true
+    },
+    "bridge_grade_saturation": {
+      "changed_pixels": 5662,
+      "kind": "render",
+      "passed": true
+    },
+    "bridge_strength": {
+      "changed_pixels": 7134,
+      "kind": "render",
+      "passed": true
+    },
+    "bridge_width": {
+      "changed_pixels": 7319,
+      "kind": "render",
+      "passed": true
+    },
+    "caustic_break": {
+      "changed_pixels": 4621,
+      "kind": "render",
+      "passed": true
+    },
+    "caustic_deform": {
+      "changed_pixels": 9513,
+      "kind": "render",
+      "passed": true
+    },
+    "caustic_density": {
+      "changed_pixels": 10976,
+      "kind": "render",
+      "passed": true
+    },
+    "caustic_grade_brightness": {
+      "changed_pixels": 5541,
+      "kind": "render",
+      "passed": true
+    },
+    "caustic_grade_hue": {
+      "changed_pixels": 5044,
+      "kind": "render",
+      "passed": true
+    },
+    "caustic_grade_saturation": {
+      "changed_pixels": 5023,
+      "kind": "render",
+      "passed": true
+    },
+    "caustic_strength": {
+      "changed_pixels": 6526,
+      "kind": "render",
+      "passed": true
+    },
+    "caustic_width": {
+      "changed_pixels": 13827,
+      "kind": "render",
+      "passed": true
+    },
+    "caustic_x": {
+      "changed_pixels": 10475,
+      "kind": "render",
+      "passed": true
+    },
+    "caustic_y": {
+      "changed_pixels": 10910,
+      "kind": "render",
+      "passed": true
+    },
+    "caustics_enabled": {
+      "changed_pixels": 5778,
+      "kind": "render",
+      "passed": true
+    },
+    "character_height": {
+      "changed_pixels": 2521,
+      "kind": "render",
+      "passed": true
+    },
+    "clarity": {
+      "changed_pixels": 63471,
+      "kind": "render",
+      "passed": true
+    },
+    "click_amplitude": {
+      "kind": "event",
+      "passed": true
+    },
+    "deep_grade_brightness": {
+      "changed_pixels": 58481,
+      "kind": "render",
+      "passed": true
+    },
+    "deep_grade_hue": {
+      "changed_pixels": 58897,
+      "kind": "render",
+      "passed": true
+    },
+    "deep_grade_saturation": {
+      "changed_pixels": 58920,
+      "kind": "render",
+      "passed": true
+    },
+    "deep_mix": {
+      "changed_pixels": 63448,
+      "kind": "render",
+      "passed": true
+    },
+    "depth_enabled": {
+      "changed_pixels": 63928,
+      "kind": "render",
+      "passed": true
+    },
+    "environment_enabled": {
+      "changed_pixels": 6219,
+      "kind": "render",
+      "passed": true
+    },
+    "fall_grade_brightness": {
+      "changed_pixels": 6134,
+      "kind": "render",
+      "passed": true
+    },
+    "fall_grade_hue": {
+      "changed_pixels": 6133,
+      "kind": "render",
+      "passed": true
+    },
+    "fall_grade_saturation": {
+      "changed_pixels": 6134,
+      "kind": "render",
+      "passed": true
+    },
+    "fall_scroll": {
+      "changed_pixels": 5865,
+      "kind": "render",
+      "passed": true
+    },
+    "fall_speed": {
+      "changed_pixels": 5527,
+      "kind": "render",
+      "passed": true
+    },
+    "fall_stream": {
+      "changed_pixels": 6038,
+      "kind": "render",
+      "passed": true
+    },
+    "fall_stream_speed": {
+      "changed_pixels": 5747,
+      "kind": "render",
+      "passed": true
+    },
+    "flow_amplitude": {
+      "changed_pixels": 18013,
+      "kind": "render",
+      "passed": true
+    },
+    "flow_aspect": {
+      "changed_pixels": 23811,
+      "kind": "render",
+      "passed": true
+    },
+    "flow_decay": {
+      "changed_pixels": 29253,
+      "kind": "render",
+      "passed": true
+    },
+    "flow_density": {
+      "changed_pixels": 26879,
+      "kind": "render",
+      "passed": true
+    },
+    "flow_grade_brightness": {
+      "changed_pixels": 16462,
+      "kind": "render",
+      "passed": true
+    },
+    "flow_grade_hue": {
+      "changed_pixels": 13760,
+      "kind": "render",
+      "passed": true
+    },
+    "flow_grade_saturation": {
+      "changed_pixels": 12423,
+      "kind": "render",
+      "passed": true
+    },
+    "flow_speed": {
+      "changed_pixels": 9748,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_amplitude": {
+      "changed_pixels": 5377,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_break_speed": {
+      "changed_pixels": 2996,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_distance": {
+      "changed_pixels": 7057,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_enabled": {
+      "changed_pixels": 3610,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_grade_brightness": {
+      "changed_pixels": 1884,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_grade_hue": {
+      "changed_pixels": 1790,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_grade_saturation": {
+      "changed_pixels": 1788,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_jagged": {
+      "changed_pixels": 2647,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_jagged_speed": {
+      "changed_pixels": 2305,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_speed": {
+      "changed_pixels": 6018,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_strength": {
+      "changed_pixels": 1879,
+      "kind": "render",
+      "passed": true
+    },
+    "foam_width": {
+      "changed_pixels": 5669,
+      "kind": "render",
+      "passed": true
+    },
+    "idle_bob": {
+      "changed_pixels": 440,
+      "kind": "render",
+      "passed": true
+    },
+    "idle_bob_speed": {
+      "changed_pixels": 417,
+      "kind": "render",
+      "passed": true
+    },
+    "immersion_scale": {
+      "changed_pixels": 695,
+      "kind": "render",
+      "passed": true
+    },
+    "impact_amplitude": {
+      "changed_pixels": 1551,
+      "kind": "render",
+      "passed": true
+    },
+    "impact_aspect": {
+      "changed_pixels": 1530,
+      "kind": "render",
+      "passed": true
+    },
+    "impact_brightness": {
+      "changed_pixels": 1626,
+      "kind": "render",
+      "passed": true
+    },
+    "impact_density": {
+      "changed_pixels": 1537,
+      "kind": "render",
+      "passed": true
+    },
+    "impact_flicker": {
+      "changed_pixels": 1626,
+      "kind": "render",
+      "passed": true
+    },
+    "impact_grade_brightness": {
+      "changed_pixels": 1626,
+      "kind": "render",
+      "passed": true
+    },
+    "impact_grade_hue": {
+      "changed_pixels": 1626,
+      "kind": "render",
+      "passed": true
+    },
+    "impact_grade_saturation": {
+      "changed_pixels": 1626,
+      "kind": "render",
+      "passed": true
+    },
+    "impact_speed": {
+      "changed_pixels": 489,
+      "kind": "render",
+      "passed": true
+    },
+    "lamp_amplitude": {
+      "changed_pixels": 1077,
+      "kind": "render",
+      "passed": true
+    },
+    "lamp_grade_brightness": {
+      "changed_pixels": 862,
+      "kind": "render",
+      "passed": true
+    },
+    "lamp_grade_hue": {
+      "changed_pixels": 878,
+      "kind": "render",
+      "passed": true
+    },
+    "lamp_grade_saturation": {
+      "changed_pixels": 888,
+      "kind": "render",
+      "passed": true
+    },
+    "lamp_speed": {
+      "changed_pixels": 955,
+      "kind": "render",
+      "passed": true
+    },
+    "lamp_strength": {
+      "changed_pixels": 1018,
+      "kind": "render",
+      "passed": true
+    },
+    "lamp_width": {
+      "changed_pixels": 4222,
+      "kind": "render",
+      "passed": true
+    },
+    "light_break_speed": {
+      "changed_pixels": 4666,
+      "kind": "render",
+      "passed": true
+    },
+    "moon_amplitude": {
+      "changed_pixels": 5518,
+      "kind": "render",
+      "passed": true
+    },
+    "moon_grade_brightness": {
+      "changed_pixels": 4076,
+      "kind": "render",
+      "passed": true
+    },
+    "moon_grade_hue": {
+      "changed_pixels": 3854,
+      "kind": "render",
+      "passed": true
+    },
+    "moon_grade_saturation": {
+      "changed_pixels": 3841,
+      "kind": "render",
+      "passed": true
+    },
+    "moon_speed": {
+      "changed_pixels": 4668,
+      "kind": "render",
+      "passed": true
+    },
+    "moon_strength": {
+      "changed_pixels": 4949,
+      "kind": "render",
+      "passed": true
+    },
+    "moon_width": {
+      "changed_pixels": 20488,
+      "kind": "render",
+      "passed": true
+    },
+    "move_amplitude": {
+      "kind": "event",
+      "passed": true
+    },
+    "move_bob": {
+      "changed_pixels": 445,
+      "kind": "render",
+      "passed": true
+    },
+    "move_bob_speed": {
+      "changed_pixels": 423,
+      "kind": "render",
+      "passed": true
+    },
+    "move_interval": {
+      "kind": "event",
+      "passed": true
+    },
+    "night_character_grade_brightness": {
+      "changed_pixels": 395,
+      "kind": "render",
+      "passed": true
+    },
+    "night_character_grade_hue": {
+      "changed_pixels": 395,
+      "kind": "render",
+      "passed": true
+    },
+    "night_character_grade_saturation": {
+      "changed_pixels": 395,
+      "kind": "render",
+      "passed": true
+    },
+    "reflection_alpha": {
+      "changed_pixels": 263,
+      "kind": "render",
+      "passed": true
+    },
+    "reflection_distortion": {
+      "changed_pixels": 180,
+      "kind": "render",
+      "passed": true
+    },
+    "reflection_enabled": {
+      "changed_pixels": 263,
+      "kind": "render",
+      "passed": true
+    },
+    "reflection_fade": {
+      "changed_pixels": 180,
+      "kind": "render",
+      "passed": true
+    },
+    "reflection_grade_brightness": {
+      "changed_pixels": 255,
+      "kind": "render",
+      "passed": true
+    },
+    "reflection_grade_hue": {
+      "changed_pixels": 253,
+      "kind": "render",
+      "passed": true
+    },
+    "reflection_grade_saturation": {
+      "changed_pixels": 255,
+      "kind": "render",
+      "passed": true
+    },
+    "reflection_mix": {
+      "changed_pixels": 247,
+      "kind": "render",
+      "passed": true
+    },
+    "reflection_scale": {
+      "changed_pixels": 650,
+      "kind": "render",
+      "passed": true
+    },
+    "reflection_speed": {
+      "changed_pixels": 70,
+      "kind": "render",
+      "passed": true
+    },
+    "refraction_base": {
+      "changed_pixels": 59876,
+      "kind": "render",
+      "passed": true
+    },
+    "refraction_enabled": {
+      "changed_pixels": 43897,
+      "kind": "render",
+      "passed": true
+    },
+    "ripple_aspect": {
+      "changed_pixels": 197,
+      "kind": "render",
+      "passed": true
+    },
+    "ripple_grade_brightness": {
+      "changed_pixels": 157,
+      "kind": "render",
+      "passed": true
+    },
+    "ripple_grade_hue": {
+      "changed_pixels": 151,
+      "kind": "render",
+      "passed": true
+    },
+    "ripple_grade_saturation": {
+      "changed_pixels": 151,
+      "kind": "render",
+      "passed": true
+    },
+    "ripple_highlight": {
+      "changed_pixels": 159,
+      "kind": "render",
+      "passed": true
+    },
+    "ripple_lifetime": {
+      "changed_pixels": 150,
+      "kind": "render",
+      "passed": true
+    },
+    "ripple_radius": {
+      "changed_pixels": 437,
+      "kind": "render",
+      "passed": true
+    },
+    "ripple_refraction": {
+      "changed_pixels": 138,
+      "kind": "render",
+      "passed": true
+    },
+    "ripple_speed": {
+      "changed_pixels": 808,
+      "kind": "render",
+      "passed": true
+    },
+    "ripple_width": {
+      "changed_pixels": 759,
+      "kind": "render",
+      "passed": true
+    },
+    "ripples_enabled": {
+      "changed_pixels": 152,
+      "kind": "render",
+      "passed": true
+    },
+    "rotation_amplitude": {
+      "changed_pixels": 412,
+      "kind": "render",
+      "passed": true
+    },
+    "rotation_speed": {
+      "changed_pixels": 361,
+      "kind": "render",
+      "passed": true
+    },
+    "shadow_alpha": {
+      "changed_pixels": 72,
+      "kind": "render",
+      "passed": true
+    },
+    "shadow_fade": {
+      "changed_pixels": 67,
+      "kind": "render",
+      "passed": true
+    },
+    "shallow_grade_brightness": {
+      "changed_pixels": 54091,
+      "kind": "render",
+      "passed": true
+    },
+    "shallow_grade_hue": {
+      "changed_pixels": 54023,
+      "kind": "render",
+      "passed": true
+    },
+    "shallow_grade_saturation": {
+      "changed_pixels": 53938,
+      "kind": "render",
+      "passed": true
+    },
+    "sink_offset": {
+      "changed_pixels": 451,
+      "kind": "render",
+      "passed": true
+    },
+    "splash_amplitude": {
+      "kind": "event",
+      "passed": true
+    },
+    "strength": {
+      "changed_pixels": 61749,
+      "kind": "render",
+      "passed": true
+    },
+    "submersion_enabled": {
+      "changed_pixels": 53,
+      "kind": "render",
+      "passed": true
+    },
+    "tide_influence": {
+      "changed_pixels": 50180,
+      "kind": "render",
+      "passed": true
+    },
+    "under_alpha": {
+      "changed_pixels": 37,
+      "kind": "render",
+      "passed": true
+    },
+    "under_brightness": {
+      "changed_pixels": 37,
+      "kind": "render",
+      "passed": true
+    },
+    "under_distortion": {
+      "changed_pixels": 35,
+      "kind": "render",
+      "passed": true
+    },
+    "under_frequency": {
+      "changed_pixels": 24,
+      "kind": "render",
+      "passed": true
+    },
+    "under_grade_brightness": {
+      "changed_pixels": 37,
+      "kind": "render",
+      "passed": true
+    },
+    "under_grade_hue": {
+      "changed_pixels": 37,
+      "kind": "render",
+      "passed": true
+    },
+    "under_grade_saturation": {
+      "changed_pixels": 37,
+      "kind": "render",
+      "passed": true
+    },
+    "under_mix": {
+      "changed_pixels": 37,
+      "kind": "render",
+      "passed": true
+    },
+    "under_speed": {
+      "changed_pixels": 16,
+      "kind": "render",
+      "passed": true
+    },
+    "water_level": {
+      "changed_pixels": 54226,
+      "kind": "render",
+      "passed": true
+    },
+    "water_mix": {
+      "changed_pixels": 63992,
+      "kind": "render",
+      "passed": true
+    },
+    "waterfall_enabled": {
+      "changed_pixels": 28738,
+      "kind": "render",
+      "passed": true
+    },
+    "waterline_alpha": {
+      "changed_pixels": 5,
+      "kind": "render",
+      "passed": true
+    },
+    "waterline_amplitude": {
+      "changed_pixels": 41,
+      "kind": "render",
+      "passed": true
+    },
+    "waterline_grade_brightness": {
+      "changed_pixels": 25,
+      "kind": "render",
+      "passed": true
+    },
+    "waterline_grade_hue": {
+      "changed_pixels": 24,
+      "kind": "render",
+      "passed": true
+    },
+    "waterline_grade_saturation": {
+      "changed_pixels": 24,
+      "kind": "render",
+      "passed": true
+    },
+    "waterline_height": {
+      "changed_pixels": 64,
+      "kind": "render",
+      "passed": true
+    },
+    "waterline_speed": {
+      "changed_pixels": 21,
+      "kind": "render",
+      "passed": true
+    },
+    "waterline_strength": {
+      "changed_pixels": 19,
+      "kind": "render",
+      "passed": true
+    },
+    "waterline_width": {
+      "changed_pixels": 113,
+      "kind": "render",
+      "passed": true
+    },
+    "wave1_angle": {
+      "changed_pixels": 46473,
+      "kind": "render",
+      "passed": true
+    },
+    "wave1_density": {
+      "changed_pixels": 48643,
+      "kind": "render",
+      "passed": true
+    },
+    "wave1_speed": {
+      "changed_pixels": 55949,
+      "kind": "render",
+      "passed": true
+    },
+    "wave2_angle": {
+      "changed_pixels": 34518,
+      "kind": "render",
+      "passed": true
+    },
+    "wave2_density": {
+      "changed_pixels": 36467,
+      "kind": "render",
+      "passed": true
+    },
+    "wave2_speed": {
+      "changed_pixels": 48162,
+      "kind": "render",
+      "passed": true
+    },
+    "wave2_weight": {
+      "changed_pixels": 53815,
+      "kind": "render",
+      "passed": true
+    },
+    "wave_axis_speed": {
+      "changed_pixels": 43696,
+      "kind": "render",
+      "passed": true
+    }
+  },
+  "passed": true,
+  "windowed_render_fps": 59.999734807802
+}

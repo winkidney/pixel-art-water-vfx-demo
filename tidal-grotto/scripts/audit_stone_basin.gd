@@ -22,7 +22,7 @@ func actor_visible(value: bool) -> void:
 	study.reflection.visible=value
 
 func run() -> void:
-	var base := ProjectSettings.globalize_path("res://../evidence/stone-basin")
+	var base := ProjectSettings.globalize_path("res://../evidence/parameters/scene-regression")
 	study=load("res://main.tscn").instantiate()
 	root.add_child(study)
 	await frames(20)
@@ -32,6 +32,7 @@ func run() -> void:
 	for variant in ["day","night"]:
 		evidence=base.path_join(variant)
 		DirAccess.make_dir_recursive_absolute(evidence)
+		study.parameters.restore_defaults()
 		study.reset_study()
 		study.choose_time(variant=="night")
 		study.auto_tour=false
@@ -122,14 +123,15 @@ func run() -> void:
 		result["reef_blocked"]=not study.is_walkable(Vector2(350,210))
 		result["deep_water_walkable"]=study.is_walkable(Vector2(245,160))
 		study.player=Vector2(134,213)
-		study.level=-.7
+		study.parameters.set_value("water_level",-.7)
 		study._refresh_character(Vector2.ZERO)
 		var low: float=study.immersion
-		study.level=.7
+		study.parameters.set_value("water_level",.7)
 		study._refresh_character(Vector2.ZERO)
 		result["tide_changes_immersion"]=study.immersion>low
 		study.reset_study()
-		result["reset_restored"]=study.player==study.start_point and study.auto_tour and not study.frozen and study.level==0 and study.night==(variant=="night")
+		result["reset_restored"]=study.player==study.start_point and study.auto_tour and not study.frozen and is_equal_approx(study.level,.7) and study.night==(variant=="night")
+		study.parameters.restore_defaults()
 		study.frozen=true
 		var shore:=false
 		var shallow:=false

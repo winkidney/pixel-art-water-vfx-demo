@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "comparison": "Original adopted-scene GPU captures, same scene position and clock; UI excluded.",
+  "variants": {
+    "day": {
+      "changed_pixels": 0,
+      "max_channel_difference": 0
+    },
+    "night": {
+      "changed_pixels": 0,
+      "max_channel_difference": 0
+    }
+  }
+}

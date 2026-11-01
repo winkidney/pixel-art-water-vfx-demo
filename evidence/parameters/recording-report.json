@@ -1,0 +1,12 @@
+{
+  "mode": "Godot Movie Maker, actual X11/OpenGL window",
+  "frames": 1261,
+  "fps": 60,
+  "duration_seconds": 21.016666666666666,
+  "cpu_render_ms_per_frame": 0.27,
+  "gpu_render_ms_per_frame": 0.39,
+  "encoding_ms_per_frame": 9.7,
+  "note": "Rounded engine console timings during recording, separate from normal window process time.",
+  "script": "scripts/record_parameters.gd",
+  "video": "../../parameter-workbench-demo.mp4"
+}
