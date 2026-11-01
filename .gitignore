@@ -1,0 +1,6 @@
+**/.godot/
+**/captures/
+**/__pycache__/
+*.zip
+*.avi
+*.wav

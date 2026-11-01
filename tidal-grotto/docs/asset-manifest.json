@@ -1,0 +1,26 @@
+{
+  "grotto-imagegen.png": {
+    "sha256": "585f0985abe35228048506442685c0aadfbb0588284ad96404a086d207d7c359",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB"
+  },
+  "adventurer-imagegen.png": {
+    "sha256": "e36966101d6bfaa77b9fba112ff31920f304f0386e291156fb83af6088adf980",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA"
+  },
+  "bathymetry.png": {
+    "sha256": "40ec8a684961f4833beb29daa9dfd65f64548a4c405096e1ffc7c7506bdd44c2",
+    "size": [
+      480,
+      320
+    ],
+    "mode": "RGBA"
+  }
+}

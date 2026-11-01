@@ -1,0 +1,17 @@
+{
+  "dry_pixels_changed": 0,
+  "water_pixels_changed": 81988,
+  "layer_pixel_changes": {
+    "depth_enabled": 81955,
+    "refraction_enabled": 59560,
+    "caustics_enabled": 7456,
+    "foam_enabled": 3525,
+    "ripples_enabled": 320,
+    "reflection_enabled": 254
+  },
+  "submersion_pixel_changes": 238,
+  "animated_water_pixels": 62315,
+  "perfect_2x_art_blocks": true,
+  "monotonic_depth": true,
+  "passed": true
+}
