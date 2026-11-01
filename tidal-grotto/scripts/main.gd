@@ -7,6 +7,15 @@ const INK := Color("dce9de")
 const MUTED := Color("819b94")
 const MINT := Color("98cbb0")
 
+var legacy := false
+var night := false
+var start_point := START
+var tour_points := TOUR.duplicate()
+var background: Sprite2D
+var waterfall: ColorRect
+var waterfall_material: ShaderMaterial
+var occlusion_material: ShaderMaterial
+var foreground: ColorRect
 var viewport: SubViewport
 var world_root: Node2D
 var display: TextureRect
@@ -58,6 +67,12 @@ func _ready() -> void:
 	ui_theme.default_font = font
 	ui_theme.default_font_size = 14
 	theme = ui_theme
+	legacy = "--legacy" in OS.get_cmdline_user_args()
+	if not legacy:
+		start_point = Vector2(62,155)
+		tour_points = [Vector2(103,192),Vector2(140,215),Vector2(181,207),Vector2(236,170),Vector2(288,152),Vector2(309,201),Vector2(213,234),Vector2(139,225),Vector2(91,210),start_point]
+	player = start_point
+	target = start_point
 	_build_world()
 	_build_navigation()
 	_build_ui()
@@ -74,12 +89,12 @@ func _build_world() -> void:
 	add_child(viewport)
 	world_root = Node2D.new()
 	viewport.add_child(world_root)
-	var background := Sprite2D.new()
-	background.texture = load("res://assets/grotto-imagegen.png")
+	background = Sprite2D.new()
+	background.texture = load("res://assets/grotto-imagegen.png" if legacy else "res://assets/stone-basin/day-imagegen.png")
 	background.centered = false
 	background.scale = WORLD / background.texture.get_size()
 	world_root.add_child(background)
-	var map_texture: Texture2D = load("res://assets/bathymetry.png")
+	var map_texture: Texture2D = load("res://assets/bathymetry.png" if legacy else "res://assets/stone-basin/bathymetry.png")
 	bathymetry = map_texture.get_image()
 	water = ColorRect.new()
 	water.size = WORLD
@@ -88,8 +103,18 @@ func _build_world() -> void:
 	water_material.shader = load("res://shaders/water.gdshader")
 	water_material.set_shader_parameter("seabed", background.texture)
 	water_material.set_shader_parameter("bathymetry", map_texture)
+	water_material.set_shader_parameter("basin_scene",not legacy)
 	water.material = water_material
 	world_root.add_child(water)
+	if not legacy:
+		waterfall = ColorRect.new()
+		waterfall.size = WORLD
+		waterfall_material = ShaderMaterial.new()
+		waterfall_material.shader = load("res://shaders/waterfall.gdshader")
+		waterfall_material.set_shader_parameter("scene_plate", background.texture)
+		waterfall_material.set_shader_parameter("fall_mask",load("res://assets/stone-basin/waterfall-mask.png"))
+		waterfall.material = waterfall_material
+		world_root.add_child(waterfall)
 	_load_atlas()
 	reflection = Sprite2D.new()
 	reflection_material = ShaderMaterial.new()
@@ -110,6 +135,15 @@ func _build_world() -> void:
 	character_material.shader = load("res://shaders/character.gdshader")
 	character.material = character_material
 	world_root.add_child(character)
+	if not legacy:
+		foreground = ColorRect.new()
+		foreground.size = WORLD
+		occlusion_material = ShaderMaterial.new()
+		occlusion_material.shader = load("res://shaders/occlusion.gdshader")
+		occlusion_material.set_shader_parameter("scene_plate",background.texture)
+		occlusion_material.set_shader_parameter("occlusion_map",load("res://assets/stone-basin/occlusion-mask.png"))
+		foreground.material = occlusion_material
+		world_root.add_child(foreground)
 
 func _build_navigation() -> void:
 	navigation.region = Rect2i(0,0,240,160)
@@ -221,8 +255,8 @@ func _button(text: String, pos: Vector2, dimensions: Vector2, action: Callable) 
 func _build_ui() -> void:
 	_panel(Rect2(0,0,1280,800), Color("0c171b"), Color("0c171b"))
 	_label("FIELD STUDY    /    001", Vector2(25,17), 11, MINT)
-	_label("潮汐洞窟", Vector2(23,34), 30)
-	_label("TIDAL GROTTO     ·     像素水体实验", Vector2(180,49), 12, MUTED)
+	_label("潮汐洞窟" if legacy else "石桥清潭", Vector2(23,34), 30)
+	_label("PIXEL WATER     ·     白天 / 夜晚", Vector2(180,49), 12, MUTED)
 	_label("GODOT 4    /    IMAGEGEN ART", Vector2(1012,25), 11, MUTED)
 	_label("480 × 320  ·  2× 像素网格", Vector2(1012,47), 13, INK)
 	_panel(Rect2(23,95,962,642), Color("14282a"))
@@ -237,16 +271,17 @@ func _build_ui() -> void:
 	display.gui_input.connect(_scene_input)
 	add_child(display)
 	_panel(Rect2(1008,95,248,642), Color("112125"))
-	_label("水体层", Vector2(1026,111), 18)
-	_label("逐层切换，观察画面变化", Vector2(1026,141), 11, MUTED)
-	var names := ["depth_enabled", "refraction_enabled", "caustics_enabled", "foam_enabled", "ripples_enabled", "reflection_enabled", "submersion_enabled"]
-	var titles := ["深浅色阶", "水下折射", "水底焦散", "岸线泡沫", "交互涟漪", "角色倒影", "渐进浸没"]
+	_button("白天",Vector2(1026,110),Vector2(101,32),func(): choose_time(false))
+	_button("夜晚",Vector2(1137,110),Vector2(101,32),func(): choose_time(true))
+	_label("水体层", Vector2(1026,153), 16)
+	var names := ["depth_enabled", "refraction_enabled", "caustics_enabled", "foam_enabled", "ripples_enabled", "reflection_enabled", "submersion_enabled", "environment_enabled", "waterfall_enabled"]
+	var titles := ["深浅色阶", "水下折射", "水底焦散", "岸线泡沫", "交互涟漪", "角色倒影", "渐进浸没", "环境倒影 / 月光", "瀑布与汇流"]
 	for i in names.size():
 		var check := CheckButton.new()
 		check.text = titles[i]
 		check.focus_mode = Control.FOCUS_NONE
-		check.position = Vector2(1022,172+i*34)
-		check.size = Vector2(216,30)
+		check.position = Vector2(1022,183+i*26)
+		check.size = Vector2(216,26)
 		check.button_pressed = true
 		check.add_theme_color_override("font_color", INK)
 		check.add_theme_color_override("font_pressed_color", MINT)
@@ -331,6 +366,8 @@ func _process(delta: float) -> void:
 	water_material.set_shader_parameter("water_level", level)
 	character_material.set_shader_parameter("clock", clock)
 	reflection_material.set_shader_parameter("clock", clock)
+	if waterfall_material: waterfall_material.set_shader_parameter("clock",clock)
+	if occlusion_material: occlusion_material.set_shader_parameter("foot_y",player.y)
 	var location := "沙滩"
 	if immersion > .04:
 		location = "浅滩" if immersion < .33 else ("涉水" if immersion < .66 else "游泳")
@@ -351,10 +388,10 @@ func _move_player(delta: float) -> void:
 		target = player
 		_update_tour_button()
 	elif auto_tour:
-		target = TOUR[tour_index]
+		target = tour_points[tour_index]
 		if player.distance_to(target) < 1.5:
-			tour_index = (tour_index + 1) % TOUR.size()
-			target = TOUR[tour_index]
+			tour_index = (tour_index + 1) % tour_points.size()
+			target = tour_points[tour_index]
 		direction = _route_direction(target)
 	elif player.distance_to(target) > 1.0:
 		direction = _route_direction(target)
@@ -426,7 +463,10 @@ func add_ripple(where: Vector2, amplitude: float) -> void:
 
 func set_effect(parameter: String, enabled: bool) -> void:
 	match parameter:
-		"reflection_enabled": reflection.visible = enabled
+		"waterfall_enabled":
+			if waterfall: waterfall.visible = enabled and view_mode != 2
+			water_material.set_shader_parameter(parameter,enabled)
+		"reflection_enabled": reflection.visible = enabled and view_mode != 2
 		"submersion_enabled": character_material.set_shader_parameter(parameter,enabled)
 		_: water_material.set_shader_parameter(parameter,enabled)
 	if toggles.has(parameter): toggles[parameter].set_pressed_no_signal(enabled)
@@ -435,8 +475,8 @@ func toggle_tour() -> void:
 	auto_tour = not auto_tour
 	if auto_tour:
 		var closest := INF
-		for i in TOUR.size():
-			var distance := player.distance_to(TOUR[i])
+		for i in tour_points.size():
+			var distance := player.distance_to(tour_points[i])
 			if distance < closest:
 				closest = distance
 				tour_index = i
@@ -449,18 +489,34 @@ func toggle_pause() -> void:
 	frozen = not frozen
 
 func cycle_view() -> void:
-	view_mode = (view_mode+1)%2
-	water.visible = true
+	var next_view := (view_mode+1)%2
+	set_original_view(false)
+	view_mode = next_view
 	water_material.set_shader_parameter("debug_depth", view_mode==1)
 
 func set_original_view(enabled: bool) -> void:
 	view_mode = 2 if enabled else 0
 	water.visible = not enabled
+	character.visible = not enabled
+	shadow.visible = not enabled
+	reflection.visible = not enabled and (not toggles.has("reflection_enabled") or toggles["reflection_enabled"].button_pressed)
+	if waterfall: waterfall.visible = not enabled and toggles["waterfall_enabled"].button_pressed
 	water_material.set_shader_parameter("debug_depth", false)
 
+func choose_time(is_night: bool) -> void:
+	if legacy: return
+	night = is_night
+	background.texture = load("res://assets/stone-basin/night-imagegen.png" if night else "res://assets/stone-basin/day-imagegen.png")
+	water_material.set_shader_parameter("seabed",background.texture)
+	water_material.set_shader_parameter("night",float(night))
+	waterfall_material.set_shader_parameter("scene_plate",background.texture)
+	waterfall_material.set_shader_parameter("night",float(night))
+	occlusion_material.set_shader_parameter("scene_plate",background.texture)
+	character_material.set_shader_parameter("night",float(night))
+
 func reset_study() -> void:
-	player = START
-	target = START
+	player = start_point
+	target = start_point
 	clock = 0
 	level = 0
 	tide_slider.value = 0

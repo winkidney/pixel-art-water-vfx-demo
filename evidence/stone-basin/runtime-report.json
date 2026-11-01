@@ -1,0 +1,101 @@
+{
+  "godot": "4.7.2-stable (official)",
+  "passed": true,
+  "renderer": "NVIDIA GeForce RTX 4070 SUPER",
+  "variants": {
+    "day": {
+      "click_target": true,
+      "cliff_blocked": true,
+      "deep_water_walkable": true,
+      "depth_samples": [
+        {
+          "immersion": 0.0,
+          "position": "(62.0, 155.0)",
+          "walkable": true
+        },
+        {
+          "immersion": 0.0541176481172442,
+          "position": "(113.0, 207.0)",
+          "walkable": true
+        },
+        {
+          "immersion": 0.297647075355053,
+          "position": "(134.0, 213.0)",
+          "walkable": true
+        },
+        {
+          "immersion": 0.924509817361832,
+          "position": "(181.0, 196.0)",
+          "walkable": true
+        },
+        {
+          "immersion": 0.96,
+          "position": "(245.0, 160.0)",
+          "walkable": true
+        }
+      ],
+      "frame_cpu_ms_max": 0.972,
+      "frame_cpu_ms_median": 0.791,
+      "frame_cpu_ms_p95": 0.972,
+      "keyboard_movement_pixels": 5.6044921875,
+      "original_depth_restores_actor": true,
+      "passed": true,
+      "reef_blocked": true,
+      "reef_detour": true,
+      "reset_restored": true,
+      "tide_changes_immersion": true,
+      "tour_end_position": "(62.89128, 156.3126)",
+      "tour_has_shore_shallow_deep": true,
+      "tour_round_trip": true,
+      "tour_stays_walkable": true,
+      "windowed_render_fps": 60.0035602112392
+    },
+    "night": {
+      "click_target": true,
+      "cliff_blocked": true,
+      "deep_water_walkable": true,
+      "depth_samples": [
+        {
+          "immersion": 0.0,
+          "position": "(62.0, 155.0)",
+          "walkable": true
+        },
+        {
+          "immersion": 0.0541176481172442,
+          "position": "(113.0, 207.0)",
+          "walkable": true
+        },
+        {
+          "immersion": 0.297647075355053,
+          "position": "(134.0, 213.0)",
+          "walkable": true
+        },
+        {
+          "immersion": 0.924509817361832,
+          "position": "(181.0, 196.0)",
+          "walkable": true
+        },
+        {
+          "immersion": 0.96,
+          "position": "(245.0, 160.0)",
+          "walkable": true
+        }
+      ],
+      "frame_cpu_ms_max": 0.908,
+      "frame_cpu_ms_median": 0.667,
+      "frame_cpu_ms_p95": 0.908,
+      "keyboard_movement_pixels": 5.39791870117188,
+      "original_depth_restores_actor": true,
+      "passed": true,
+      "reef_blocked": true,
+      "reef_detour": true,
+      "reset_restored": true,
+      "tide_changes_immersion": true,
+      "tour_end_position": "(62.89128, 156.3126)",
+      "tour_has_shore_shallow_deep": true,
+      "tour_round_trip": true,
+      "tour_stays_walkable": true,
+      "windowed_render_fps": 60.0037602356414
+    }
+  }
+}

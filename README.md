@@ -2,10 +2,19 @@
 
 独立 Godot 4 项目。打开 `tidal-grotto/project.godot` 后按 F5 运行。
 
+当前默认场景为已采用的宽瀑布石潭，右上角切换白天和夜晚。水体迁移已完成，包含动态瀑布、深浅水、折射、焦散、涟漪、角色浸没与夜间反光。
+
+- [白天 / 夜晚实机对照](stone-basin-runtime-comparison.png)
+- [30 秒实机视频](stone-basin-day-night-demo.mp4)
+- [Godot 项目压缩包](stone-basin-godot4.zip)
+- [已确认设计归档](designs/stone-basin-widefall-v5/README.md)
+- [迁移记录、提示词与来源](tidal-grotto/docs/stone-basin/README.md)
+- [运行检查](evidence/stone-basin/runtime-report.json) 与 [像素检查](evidence/stone-basin/render-checks.json)
+
 - [运行说明](tidal-grotto/README.md)
 - [ImageGen 素材和完整提示词](tidal-grotto/docs/imagegen.md)
 - [参考与实现边界](tidal-grotto/docs/references.md)
 - [验证结果](tidal-grotto/docs/validation.md)
-- [29 秒动态演示](tidal-grotto-demo.mp4)
+- [原洞窟 29 秒演示](tidal-grotto-demo.mp4)
 
 `evidence/` 保存真实窗口截图、运行报告与渲染差异检查。项目源码、原始素材、演示与证据纳入本仓库；Godot 缓存和可重新生成的压缩包不纳入版本历史。

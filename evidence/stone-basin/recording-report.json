@@ -1,0 +1,16 @@
+{
+  "mode": "Godot Movie Maker, real X11/OpenGL window, fixed 60 FPS",
+  "frames": 1801,
+  "fps": 60,
+  "duration_seconds": 30.016666666666666,
+  "cpu_render_seconds": 0.26,
+  "cpu_render_ms_per_frame": 0.14,
+  "gpu_render_seconds": 0.54,
+  "gpu_render_ms_per_frame": 0.3,
+  "encoding_seconds": 16.29,
+  "encoding_ms_per_frame": 9.05,
+  "note": "Values reported by Godot Movie Maker console, rounded by the engine. These are render timings during recording, separate from normal-window TIME_PROCESS measurements. Encoding is recording overhead.",
+  "script": "scripts/record_stone_basin.gd",
+  "sequence": "15 seconds day, reset, 15 seconds night",
+  "video": "../../stone-basin-day-night-demo.mp4"
+}

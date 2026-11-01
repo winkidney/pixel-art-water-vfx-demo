@@ -18,7 +18,7 @@ func shot(name: String) -> void:
 	study.viewport.get_texture().get_image().save_png(evidence.path_join(name+"-world.png"))
 
 func run() -> void:
-	evidence = ProjectSettings.globalize_path("res://../evidence")
+	evidence = ProjectSettings.globalize_path("res://../evidence/legacy-regression" if "--legacy" in OS.get_cmdline_user_args() else "res://../evidence")
 	DirAccess.make_dir_recursive_absolute(evidence)
 	study = load("res://main.tscn").instantiate()
 	root.add_child(study)
@@ -78,6 +78,7 @@ func run() -> void:
 	key.physical_keycode = KEY_A
 	key.pressed = false
 	Input.parse_input_event(key)
+	await wait_frames(2)
 	report["keyboard_movement_pixels"] = start.distance_to(study.player)
 	study.frozen = true
 	# A cliff and the palm are solid; a deep-water click remains navigable.

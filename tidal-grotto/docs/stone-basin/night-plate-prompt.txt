@@ -1,0 +1,6 @@
+Use case: lighting-weather.
+Asset type: exact registered night production plate for a 2D pixel-art water scene, 1536x1024.
+Input image 1 is the edit target: cleaned DAY production plate. Image 2 is a lighting and color reference ONLY: approved NIGHT concept.
+Relight image 1 to the same beautiful legible indigo-blue night lighting as image 2. Preserve every edge, shape, layout and camera of image 1, especially single wide waterfall, stone bridge arch, stairs, shores and seabed rocks. Keep the cleaned empty lake and its visible seabed. Warm amber marker inset and local soft light on dry terrace; a few grouped luminous cyan/violet corals. Bright cool continuous waterfall.
+Keep production cleanup from image 1: NO adventurer, NO character shadow/reflection, NO circular ripples, NO shoreline white foam outlines, NO painted water caustic net, NO long wavy surface arcs, NO vertical moonlight stripe or amber reflection on water. Those will be generated dynamically in engine. Keep only the immediate waterfall landing foam as animation source.
+Moderately reduced texture density, coherent pixel clusters and harmonious hue masses, crisp silhouettes, no overall blur, no added objects, no text/watermark/UI. Exact same geometry as image 1; change lighting only.

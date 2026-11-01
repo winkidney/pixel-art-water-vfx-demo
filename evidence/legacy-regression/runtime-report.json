@@ -1,0 +1,58 @@
+{
+  "atlas_regions": [
+    "[P: (192.0, 139.0), S: (254.0, 441.0)]",
+    "[P: (834.0, 139.0), S: (209.0, 441.0)]",
+    "[P: (192.0, 728.0), S: (246.0, 439.0)]",
+    "[P: (836.0, 728.0), S: (212.0, 439.0)]"
+  ],
+  "click_target": true,
+  "cliff_blocked": true,
+  "deep_water_walkable": true,
+  "depth_samples": [
+    {
+      "immersion": 0.0,
+      "position": "(425.0, 251.0)",
+      "walkable": true,
+      "water": false
+    },
+    {
+      "immersion": 0.0676470590755343,
+      "position": "(415.0, 249.0)",
+      "walkable": true,
+      "water": true
+    },
+    {
+      "immersion": 0.33372550457716,
+      "position": "(396.0, 239.0)",
+      "walkable": true,
+      "water": true
+    },
+    {
+      "immersion": 0.942549031972885,
+      "position": "(355.0, 220.0)",
+      "walkable": true,
+      "water": true
+    },
+    {
+      "immersion": 0.96,
+      "position": "(278.0, 180.0)",
+      "walkable": true,
+      "water": true
+    }
+  ],
+  "frame_cpu_ms": 0.672,
+  "godot": "4.7.2-stable (official)",
+  "island_detour": true,
+  "keyboard_movement_pixels": 5.02169799804688,
+  "palm_blocked": true,
+  "passed": true,
+  "render_objects": 262.0,
+  "renderer": "NVIDIA GeForce RTX 4070 SUPER",
+  "reset_restored": true,
+  "tide_changes_immersion": true,
+  "timing_seconds": 3.016488,
+  "tour_end_position": "(423.552, 250.2005)",
+  "tour_has_shore_shallow_deep": true,
+  "tour_round_trip": true,
+  "windowed_render_fps": 60.0035538016395
+}

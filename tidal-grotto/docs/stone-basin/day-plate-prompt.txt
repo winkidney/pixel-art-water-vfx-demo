@@ -1,0 +1,9 @@
+Use case: precise-object-edit.
+Asset type: production background plate for a 2D pixel-art Godot water scene, landscape 1536x1024.
+Input image 1 is the APPROVED edit target. Preserve its exact framing, camera, geometry, object placement, colors, pixel-art style, wide single waterfall, bridge, steps, shores, coral and palms.
+Make only these production cleanup edits:
+1. Remove the small blond adventurer standing in the lower-left shallows, including its shadow/reflection and every circular ripple around it. Seamlessly restore the turquoise seabed behind it.
+2. Remove painted water-surface effects across the lake: bright caustic lace/net patterns, isolated white glints, long curved ripple lines, shoreline white foam outlines, and vertically streaked reflections of banks. Keep the water floor visible with broad quiet turquoise-to-blue masses, submerged rocks and natural depth shading. Land and above-water rocks keep their shading.
+3. KEEP the single broad waterfall and its immediate foamy landing footprint as painted animation source. Do not split or move the waterfall.
+Pixel detail: moderate grouped coherent pixel clusters, reduce isolated high-frequency flecks, harmonious adjoining hues, soft calm depth and lighting without global blur. Preserve crisp silhouettes, architectural structure and underwater rock shapes.
+No characters, no writing, no UI, no borders, no watermark. Exact same composition as image 1.

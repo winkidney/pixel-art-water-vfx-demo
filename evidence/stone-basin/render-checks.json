@@ -1,0 +1,61 @@
+{
+  "variants": {
+    "day": {
+      "dry_pixels_changed_outside_waterfall": 0,
+      "water_pixels_changed": 64293,
+      "black_water_pixels": 0,
+      "frozen_pixels_changed": 0,
+      "animated_water_pixels": 45226,
+      "animated_waterfall_pixels": 7747,
+      "waterfall_animation_leaked_pixels": 0,
+      "layer_pixel_changes": {
+        "depth_enabled": 63928,
+        "refraction_enabled": 43900,
+        "caustics_enabled": 5783,
+        "foam_enabled": 3608,
+        "ripples_enabled": 152,
+        "reflection_enabled": 263,
+        "submersion_enabled": 58,
+        "environment_enabled": 6219,
+        "waterfall_enabled": 28742
+      },
+      "deep_submersion_pixel_changes": 238,
+      "occlusion_pixel_changes": 153,
+      "occlusion_changes_outside_mask": 0,
+      "front_actor_pixels_overpainted": 0,
+      "perfect_2x_art_blocks": true,
+      "monotonic_depth": true,
+      "all_depth_samples_walkable": true,
+      "passed": true
+    },
+    "night": {
+      "dry_pixels_changed_outside_waterfall": 0,
+      "water_pixels_changed": 64293,
+      "black_water_pixels": 0,
+      "frozen_pixels_changed": 0,
+      "animated_water_pixels": 45386,
+      "animated_waterfall_pixels": 7744,
+      "waterfall_animation_leaked_pixels": 0,
+      "layer_pixel_changes": {
+        "depth_enabled": 63923,
+        "refraction_enabled": 43143,
+        "caustics_enabled": 5453,
+        "foam_enabled": 3569,
+        "ripples_enabled": 151,
+        "reflection_enabled": 260,
+        "submersion_enabled": 58,
+        "environment_enabled": 10743,
+        "waterfall_enabled": 28625
+      },
+      "deep_submersion_pixel_changes": 238,
+      "occlusion_pixel_changes": 153,
+      "occlusion_changes_outside_mask": 0,
+      "front_actor_pixels_overpainted": 0,
+      "perfect_2x_art_blocks": true,
+      "monotonic_depth": true,
+      "all_depth_samples_walkable": true,
+      "passed": true
+    }
+  },
+  "passed": true
+}

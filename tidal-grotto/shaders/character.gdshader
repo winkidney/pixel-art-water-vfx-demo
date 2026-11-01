@@ -3,6 +3,7 @@ render_mode unshaded;
 
 uniform float immersion = 0.0;
 uniform float clock = 0.0;
+uniform float night = 0.0;
 uniform bool submersion_enabled = true;
 uniform bool show_height = false;
 uniform vec4 sprite_rect = vec4(0.0,0.0,640.0,640.0);
@@ -34,6 +35,7 @@ void fragment() {
 		}
 	}
 	if (base.a < .08) { discard; }
+	base.rgb *= mix(vec3(1.),vec3(.54,.66,.88),night);
 	if (show_height) { base.rgb = vec3(height); }
 	COLOR = base;
 }
