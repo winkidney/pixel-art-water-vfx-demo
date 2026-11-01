@@ -2,6 +2,12 @@
 
 独立 Godot 4 Mini 项目。默认场景采用已确认的 D3R、N3R 宽瀑布设计，可即时切换白天和夜晚。场景与四方向角色由内置 ImageGen 生成，水面、角色浸没和瀑布流动由 Godot 实时绘制。
 
+## 设计与实验总结
+
+- [设计与技术说明](../docs/water-vfx-design.md)：效果分层、算法、默认值与迁移要点。
+- [完整实验复盘](../docs/water-vfx-retrospective.md)：概念选择、日夜迁移、调参与验证过程。
+- [视频、教程与实现边界](docs/references.md)：来源归属、章节定位和核验范围。
+
 ## 运行
 
 使用 Godot 4.7.2 打开 `project.godot`，等待导入后按 F5。项目使用 Compatibility 渲染器，无需插件、Python 或在线服务。实际验证版本为 4.7.2。

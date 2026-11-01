@@ -4,6 +4,8 @@
 
 当前默认场景为已采用的宽瀑布石潭，右上角切换白天和夜晚。水体迁移已完成，包含动态瀑布、深浅水、折射、焦散、涟漪、角色浸没与夜间反光。
 
+- [设计与技术说明](docs/water-vfx-design.md)：技术如何影响画面、组合流程与调参建议
+- [完整实验复盘](docs/water-vfx-retrospective.md)：设计演变、问题修正、验证证据与边界
 - [调参验收记录](evidence/parameters/README.md)
 - [调参面板实机演示](parameter-workbench-demo.mp4) · [面板预览](parameter-workbench-preview.png)
 - [手工调参说明](tidal-grotto/docs/parameters.md) · [全部参数默认值与范围](tidal-grotto/docs/parameter-reference.md)
