@@ -1,0 +1,22 @@
+{
+  "voice": "Kokoro-82M-v1.1-zh zf_001",
+  "synthetic": true,
+  "seconds": 15.05,
+  "sources": [
+    {
+      "file": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/intro-v2/deliverable/edit-source/narration-assets/intro_day-00.wav",
+      "sha256": "3d2e731299416353411cddd91fed8fffd743f12ef659c3a34bf991ef0d9fa244",
+      "text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。"
+    },
+    {
+      "file": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/intro-v2/deliverable/edit-source/narration-assets/semantic-00.wav",
+      "sha256": "d170043893e3d87d789a1e4ab79ecf3c969522c3407ae5ef882fb3a660e224db",
+      "text": "底图负责材质，数据负责空间。"
+    },
+    {
+      "file": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/intro-v2/deliverable/edit-source/narration-assets/semantic-01.wav",
+      "sha256": "7b279886c2ba8a718a7ab7c4258df80bdf5b12b65775d649ab4140b98cb91948",
+      "text": "四个通道是水域、距岸、水深和可走。"
+    }
+  ]
+}

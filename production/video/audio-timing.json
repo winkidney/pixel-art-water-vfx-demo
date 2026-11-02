@@ -1,0 +1,163 @@
+[
+  {
+    "id": "intro_day",
+    "tempo": 1,
+    "audio_seconds": 6.118666666666667,
+    "shot_end": 8,
+    "audio_end": 6.318666666666667
+  },
+  {
+    "id": "intro_night",
+    "tempo": 1,
+    "audio_seconds": 4.118666666666667,
+    "shot_end": 14,
+    "audio_end": 12.318666666666665
+  },
+  {
+    "id": "intro_immersion",
+    "tempo": 1,
+    "audio_seconds": 2.8386666666666667,
+    "shot_end": 18,
+    "audio_end": 17.038666666666664
+  },
+  {
+    "id": "semantic",
+    "tempo": 1,
+    "audio_seconds": 6.858666666666666,
+    "shot_end": 27,
+    "audio_end": 25.058666666666667
+  },
+  {
+    "id": "stack",
+    "tempo": 1,
+    "audio_seconds": 7.298666666666667,
+    "shot_end": 36,
+    "audio_end": 34.498666666666665
+  },
+  {
+    "id": "refraction",
+    "tempo": 1,
+    "audio_seconds": 6.998666666666667,
+    "shot_end": 46,
+    "audio_end": 43.19866666666667
+  },
+  {
+    "id": "depth",
+    "tempo": 1,
+    "audio_seconds": 5.458666666666667,
+    "shot_end": 52,
+    "audio_end": 51.65866666666667
+  },
+  {
+    "id": "caustics",
+    "tempo": 1,
+    "audio_seconds": 3.3986666666666667,
+    "shot_end": 58,
+    "audio_end": 55.59866666666667
+  },
+  {
+    "id": "foam",
+    "tempo": 1,
+    "audio_seconds": 3.978666666666667,
+    "shot_end": 64,
+    "audio_end": 62.17866666666667
+  },
+  {
+    "id": "ripples",
+    "tempo": 1,
+    "audio_seconds": 3.9386666666666668,
+    "shot_end": 70,
+    "audio_end": 68.13866666666667
+  },
+  {
+    "id": "falls",
+    "tempo": 1,
+    "audio_seconds": 5.318666666666667,
+    "shot_end": 78,
+    "audio_end": 75.51866666666668
+  },
+  {
+    "id": "environment",
+    "tempo": 1,
+    "audio_seconds": 4.778666666666667,
+    "shot_end": 84,
+    "audio_end": 82.97866666666667
+  },
+  {
+    "id": "height",
+    "tempo": 1,
+    "audio_seconds": 10.718666666666667,
+    "shot_end": 96,
+    "audio_end": 94.91866666666667
+  },
+  {
+    "id": "immersion",
+    "tempo": 1,
+    "audio_seconds": 7.458666666666667,
+    "shot_end": 106,
+    "audio_end": 103.65866666666668
+  },
+  {
+    "id": "occlusion",
+    "tempo": 1,
+    "audio_seconds": 5.578666666666667,
+    "shot_end": 114,
+    "audio_end": 111.77866666666667
+  },
+  {
+    "id": "parameters",
+    "tempo": 1,
+    "audio_seconds": 9.238666666666667,
+    "shot_end": 124,
+    "audio_end": 123.43866666666668
+  },
+  {
+    "id": "color",
+    "tempo": 1,
+    "audio_seconds": 3.9386666666666668,
+    "shot_end": 130,
+    "audio_end": 128.13866666666667
+  },
+  {
+    "id": "preset",
+    "tempo": 1,
+    "audio_seconds": 3.6986666666666665,
+    "shot_end": 135,
+    "audio_end": 133.89866666666666
+  },
+  {
+    "id": "pitfall_stack",
+    "tempo": 1,
+    "audio_seconds": 8.158666666666667,
+    "shot_end": 144,
+    "audio_end": 143.35866666666666
+  },
+  {
+    "id": "pitfall_mask",
+    "tempo": 1,
+    "audio_seconds": 5.878666666666667,
+    "shot_end": 153,
+    "audio_end": 150.07866666666666
+  },
+  {
+    "id": "pitfall_waterline",
+    "tempo": 1,
+    "audio_seconds": 6.978666666666666,
+    "shot_end": 162,
+    "audio_end": 160.17866666666666
+  },
+  {
+    "id": "refs_tech",
+    "tempo": 1,
+    "audio_seconds": 5.5986666666666665,
+    "shot_end": 171,
+    "audio_end": 167.79866666666666
+  },
+  {
+    "id": "refs_art",
+    "tempo": 1,
+    "audio_seconds": 3.8986666666666667,
+    "shot_end": 178,
+    "audio_end": 175.09866666666665
+  }
+]

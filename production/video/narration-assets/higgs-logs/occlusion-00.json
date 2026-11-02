@@ -1,0 +1,20 @@
+{
+  "cache_key": "5931da89e0c520beeb4880c90f241e95c4f127a6c049fcc624e19b8be91f1fb5",
+  "request": {
+    "model": "higgs",
+    "input": "比较脚点与接地高度。人在后面画前景，走到前面不覆盖。",
+    "voice_ref": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/higgs-v3/edit-source/reference/female-zf001.wav",
+    "reference_text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+    "seed": 20261102,
+    "options": {
+      "text_chunk_size": 40
+    }
+  },
+  "inference_seconds": 1.813,
+  "raw_sha256": "159621869fcb94b8dd6c289b420f60bfa596abb8e4dbc541142a590d85643b26",
+  "raw_seconds": 5.72,
+  "trim_start_seconds": 0.04,
+  "trim_end_seconds": 0.18,
+  "final_sha256": "462197fa00322182a676247dda8b7acf8ba13183cca589078f59a4f2cc34b552",
+  "final_seconds": 5.5
+}

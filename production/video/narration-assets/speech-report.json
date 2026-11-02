@@ -1,0 +1,384 @@
+[
+  {
+    "id": "intro_day",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 6.14,
+    "budget": 8,
+    "sentences": [
+      {
+        "text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。",
+        "file": "intro_day-00.wav",
+        "seconds": 6.04,
+        "sha256": "a2c9aa2e4a830bc30cedd5bc1f51ef0bd0f5ae6506047c34f58ce264b4c9519b"
+      }
+    ]
+  },
+  {
+    "id": "intro_night",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 4.14,
+    "budget": 6,
+    "sentences": [
+      {
+        "text": "落点汇流向外传播，夜间保留冷暖反光。",
+        "file": "intro_night-00.wav",
+        "seconds": 4.04,
+        "sha256": "72f27a9c8aa4aa4fae7ee5b39f7f1c3b6be0b6527f6649016faf844e9aa5c7fd"
+      }
+    ]
+  },
+  {
+    "id": "intro_immersion",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 2.86,
+    "budget": 4,
+    "sentences": [
+      {
+        "text": "入水越深，角色水线越高。",
+        "file": "intro_immersion-00.wav",
+        "seconds": 2.76,
+        "sha256": "8ccc002ffcda5a3762b0da278c119e8411f38d496e354a1b0bb51068fb114ecc"
+      }
+    ]
+  },
+  {
+    "id": "semantic",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 6.88,
+    "budget": 9,
+    "sentences": [
+      {
+        "text": "底图负责材质，数据负责空间。",
+        "file": "semantic-00.wav",
+        "seconds": 3.14,
+        "sha256": "8d1749315785fb460b500999129c249c99719a6eee480cb1881c360d043fb682"
+      },
+      {
+        "text": "四个通道是水域、距岸、水深和可走。",
+        "file": "semantic-01.wav",
+        "seconds": 3.54,
+        "sha256": "47edefd23906620b84b2fdddb77f974a0f0897c37a674cb5cee9c3660b184f26"
+      }
+    ]
+  },
+  {
+    "id": "stack",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 7.32,
+    "budget": 9,
+    "sentences": [
+      {
+        "text": "先画水面和瀑布，再画倒影、角色与前景。",
+        "file": "stack-00.wav",
+        "seconds": 4.52,
+        "sha256": "269592331e21f173886ae9c337a11209ca06f5523fd820e7c2cc8e9687779db1"
+      },
+      {
+        "text": "每层只承担自己的视觉线索。",
+        "file": "stack-01.wav",
+        "seconds": 2.6,
+        "sha256": "6ff1fa3094e262b5fde86bdcf2654ead78382bc08bde06d8bbc0636ddea8612f"
+      }
+    ]
+  },
+  {
+    "id": "refraction",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 7.02,
+    "budget": 10,
+    "sentences": [
+      {
+        "text": "正弦波扰动采样位置。",
+        "file": "refraction-00.wav",
+        "seconds": 2.34,
+        "sha256": "60aa42094eeab2e8ce9b13c100059f680c2ed7fa98fa7e666ae63f1b0cbb20d5"
+      },
+      {
+        "text": "位移取整，岸外退回。",
+        "file": "refraction-01.wav",
+        "seconds": 2.26,
+        "sha256": "25c0169434af47263f974c656b516c9fe03720d11b8d7f224e304cba3481b405"
+      },
+      {
+        "text": "水底会动，沙岸不动。",
+        "file": "refraction-02.wav",
+        "seconds": 2.12,
+        "sha256": "2f863aec4fdced23f1528317e56dcf98891e22f0b2888d73bc73cab403c50317"
+      }
+    ]
+  },
+  {
+    "id": "depth",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 5.48,
+    "budget": 6,
+    "sentences": [
+      {
+        "text": "浅深色与海床混合。提高清澈度，水下石块保留更多。",
+        "file": "depth-00.wav",
+        "seconds": 5.38,
+        "sha256": "3b78e70636b8c8a24c96833d40d9a87b8fe994c83929308e75186c7b9929cacd"
+      }
+    ]
+  },
+  {
+    "id": "caustics",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 3.42,
+    "budget": 6,
+    "sentences": [
+      {
+        "text": "正弦函数生成焦散，随深度衰减。",
+        "file": "caustics-00.wav",
+        "seconds": 3.32,
+        "sha256": "503ed08c2f43af51dd8fd716599fa3be647d79f0a8a6bd0ead1b4d85e29e74e5"
+      }
+    ]
+  },
+  {
+    "id": "foam",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 4.0,
+    "budget": 6,
+    "sentences": [
+      {
+        "text": "泡沫沿距岸等值线往复，不必逐段手绘。",
+        "file": "foam-00.wav",
+        "seconds": 3.9,
+        "sha256": "04795047552e534fddd764128d559ce7949f781b1351af3b9b8a64635d64b028"
+      }
+    ]
+  },
+  {
+    "id": "ripples",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 3.96,
+    "budget": 6,
+    "sentences": [
+      {
+        "text": "点击和移动触发涟漪，扩散时扰动折射。",
+        "file": "ripples-00.wav",
+        "seconds": 3.86,
+        "sha256": "ba7b66dccfedfdb55aaec16dcefda0c5b4427b0260755472479110901f795922"
+      }
+    ]
+  },
+  {
+    "id": "falls",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 5.34,
+    "budget": 8,
+    "sentences": [
+      {
+        "text": "双相滚动让水幕下落，落点翻动，汇流波向外衰减。",
+        "file": "falls-00.wav",
+        "seconds": 5.24,
+        "sha256": "59b1b4704ae447daeaaf74eb2ec495b0d5512a37af81a9b0e9b7c23fe958e50b"
+      }
+    ]
+  },
+  {
+    "id": "environment",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 4.8,
+    "budget": 6,
+    "sentences": [
+      {
+        "text": "桥身二维投影，叠加冷暖光带，形成夜间反光。",
+        "file": "environment-00.wav",
+        "seconds": 4.7,
+        "sha256": "a6b0ed7e5ba1272ffca62c98e97d35120959fe7f9c259fb40edce8bcc7b26ec0"
+      }
+    ]
+  },
+  {
+    "id": "height",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 10.74,
+    "budget": 12,
+    "sentences": [
+      {
+        "text": "地图深度决定浸没量，精灵局部高度决定哪些像素入水。",
+        "file": "height-00.wav",
+        "seconds": 6.08,
+        "sha256": "432aa284c5a95dc75dba90d4218ad5d0d41a0e3272deec9152edcff1800af092"
+      },
+      {
+        "text": "给高度加一条横向曲线，水线就能绕着身体弯曲。",
+        "file": "height-01.wav",
+        "seconds": 4.46,
+        "sha256": "6f3dd0f84ec1233675a3ce42dcfa4e7ac04e75e0ad9b127eb2f601bff5ddfe2d"
+      }
+    ]
+  },
+  {
+    "id": "immersion",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 7.48,
+    "budget": 10,
+    "sentences": [
+      {
+        "text": "水下身体染色、透明并扰动。",
+        "file": "immersion-00.wav",
+        "seconds": 2.86,
+        "sha256": "74385ef358ba914c43332425139fa90f8780e3fbd684fd101d8b19820b8d2508"
+      },
+      {
+        "text": "水线用窄亮带，倒影翻转压缩，随浸没变淡。",
+        "file": "immersion-01.wav",
+        "seconds": 4.42,
+        "sha256": "511600acaca8e7b73c84f01335862f01d868c8704f8716b09ab2d6317dc6762b"
+      }
+    ]
+  },
+  {
+    "id": "occlusion",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 5.6,
+    "budget": 8,
+    "sentences": [
+      {
+        "text": "比较脚点与接地高度。人在后面画前景，走到前面不覆盖。",
+        "file": "occlusion-00.wav",
+        "seconds": 5.5,
+        "sha256": "462197fa00322182a676247dda8b7acf8ba13183cca589078f59a4f2cc34b552"
+      }
+    ]
+  },
+  {
+    "id": "parameters",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 9.26,
+    "budget": 10,
+    "sentences": [
+      {
+        "text": "一百五十八项控制共用默认值与范围。",
+        "file": "parameters-00.wav",
+        "seconds": 3.66,
+        "sha256": "f3b028336bacb0ae1b0ead461601ab5c1bb2f30cf836a98c3ef91c8ea2c53582"
+      },
+      {
+        "text": "滑杆和数值输入即时生效，改速度时保留当前相位。",
+        "file": "parameters-01.wav",
+        "seconds": 5.4,
+        "sha256": "178129b6f6213fac85253138ec4ce1f5a347e0e8422bfb245ae6e70044c59aea"
+      }
+    ]
+  },
+  {
+    "id": "color",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 3.96,
+    "budget": 6,
+    "sentences": [
+      {
+        "text": "日夜共享相对调色，各自保留基准光色。",
+        "file": "color-00.wav",
+        "seconds": 3.86,
+        "sha256": "87e9876069bfa8775c4fd0a08bc4fb9a5c89f2a3174bd30a6a86d3cfb18fea4e"
+      }
+    ]
+  },
+  {
+    "id": "preset",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 3.72,
+    "budget": 5,
+    "sentences": [
+      {
+        "text": "预设保存参数与时段，重置不丢参数。",
+        "file": "preset-00.wav",
+        "seconds": 3.62,
+        "sha256": "c970e037b5518dfd8acd1542267021af58451cd4feca0d957c1340e9ebaf20a2"
+      }
+    ]
+  },
+  {
+    "id": "pitfall_stack",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 8.18,
+    "budget": 9,
+    "sentences": [
+      {
+        "text": "第一坑，原画已画满焦散，再叠动态层就会太碎。",
+        "file": "pitfall_stack-00.wav",
+        "seconds": 4.76,
+        "sha256": "e1a4235166360a121bba5569f449fef6b048e28432b6dd6d1eff4f86b14de7c4"
+      },
+      {
+        "text": "先清理底图，让实时效果有空间。",
+        "file": "pitfall_stack-01.wav",
+        "seconds": 3.22,
+        "sha256": "e0be563f429f977d1e0d2aa24e628441b64a77740e0904966fc0aa9e201bae0a"
+      }
+    ]
+  },
+  {
+    "id": "pitfall_mask",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 5.9,
+    "budget": 9,
+    "sentences": [
+      {
+        "text": "边缘修复改写数据，导致水效越界。",
+        "file": "pitfall_mask-00.wav",
+        "seconds": 3.3,
+        "sha256": "2735bd896a6a111678290a938e4af7387d419c9ab3648057496d3fe1c89a495e"
+      },
+      {
+        "text": "关闭修复，再逐像素检查。",
+        "file": "pitfall_mask-01.wav",
+        "seconds": 2.4,
+        "sha256": "14677c408e394a4de87f3f37ad9cdb5da2bb243ab89cabf6bb813eefce909793"
+      }
+    ]
+  },
+  {
+    "id": "pitfall_waterline",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 7.0,
+    "budget": 9,
+    "sentences": [
+      {
+        "text": "普通人形水线会淹到大头角色的脸。",
+        "file": "pitfall_waterline-00.wav",
+        "seconds": 3.12,
+        "sha256": "c4cad8552dcdcc974b706e93c4064a54e72147ff50730377f45e5203c9ae7fe2"
+      },
+      {
+        "text": "按精灵比例校准水线、下沉与涟漪位置。",
+        "file": "pitfall_waterline-01.wav",
+        "seconds": 3.68,
+        "sha256": "38b2f17abfe2fc5ce27f6955504f511f3e4472e6cccc1db3ccc2b455c42ef1cb"
+      }
+    ]
+  },
+  {
+    "id": "refs_tech",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 5.62,
+    "budget": 9,
+    "sentences": [
+      {
+        "text": "技术来源列在这里。社区讨论不代表星之海官方实现。",
+        "file": "refs_tech-00.wav",
+        "seconds": 5.52,
+        "sha256": "b246685f02f90fe63b8296e5d5a9b858eb367430a808a92ae77bb57c954d03ff"
+      }
+    ]
+  },
+  {
+    "id": "refs_art",
+    "voice": "Higgs TTS 3 Q8_0, fixed synthetic zf_001 reference",
+    "seconds": 3.92,
+    "budget": 7,
+    "sentences": [
+      {
+        "text": "美术素材与完整制作记录，见片尾链接。",
+        "file": "refs_art-00.wav",
+        "seconds": 3.82,
+        "sha256": "55090fa7a28cadd103797b626571c754ba2c5d5368f8d21312bcd2c0bc64b931"
+      }
+    ]
+  }
+]

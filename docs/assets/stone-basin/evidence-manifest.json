@@ -1,0 +1,249 @@
+{
+  "files": [
+    {
+      "path": "evidence/stone-basin/day/complete-full.png",
+      "sha256": "ca574dd3f05c141834bf01af21646e1d800dcde18ed4e13336a147492e646e8e"
+    },
+    {
+      "path": "evidence/stone-basin/day/complete.png",
+      "sha256": "c2fd7fa001f89c90e57fc363aa087a92624deb033c40ef528bc649473dbfd7b4"
+    },
+    {
+      "path": "evidence/stone-basin/day/depth-000.png",
+      "sha256": "4f0e15d1191078ed872da388c90abbb3ef05c75953ca7a8e19ea4ae8108cbd7b"
+    },
+    {
+      "path": "evidence/stone-basin/day/depth-005.png",
+      "sha256": "a15cb136bbb40ec19ac774a089ca706eca1c287d83b1cfd8208b8f4cb0f196ed"
+    },
+    {
+      "path": "evidence/stone-basin/day/depth-030.png",
+      "sha256": "ea3318d1d0918ded4338bb9c90d42e6b6b8d1f130a84c2a323d51c12ef28446d"
+    },
+    {
+      "path": "evidence/stone-basin/day/depth-092.png",
+      "sha256": "734f0755c36591fa92a1256069d9667e53c4cacf041d67ef82c122cba32c5d6e"
+    },
+    {
+      "path": "evidence/stone-basin/day/depth-096.png",
+      "sha256": "18f3d8e54d1d6a6d1b9786907749471508fec9f98d3567be001aacf7c23ff289"
+    },
+    {
+      "path": "evidence/stone-basin/day/environment-a.png",
+      "sha256": "77e3431d49ea276918bdd7e4d5bc34a2ab1cc855e91fabdf9cad0aef8e48f467"
+    },
+    {
+      "path": "evidence/stone-basin/day/environment-b.png",
+      "sha256": "60d7931062c742a557da2c61865784c35a0736a249c4007197c57ee5f53779a7"
+    },
+    {
+      "path": "evidence/stone-basin/day/fall-a.png",
+      "sha256": "d2167a4b6d79e97b5b6b74833c1e2c6bed6948b7b069aff0e725a47221b91bfc"
+    },
+    {
+      "path": "evidence/stone-basin/day/fall-b.png",
+      "sha256": "e36ff3552caba6619b6d001bdcdd3bcf2feda55e8c2991f3faeef503a9789550"
+    },
+    {
+      "path": "evidence/stone-basin/day/foreground-front-off.png",
+      "sha256": "2833040332243ac9a1299738642825ae5ac15848c63825f09ff03a05644a8c9e"
+    },
+    {
+      "path": "evidence/stone-basin/day/foreground-front-on.png",
+      "sha256": "2833040332243ac9a1299738642825ae5ac15848c63825f09ff03a05644a8c9e"
+    },
+    {
+      "path": "evidence/stone-basin/day/freeze-repeat.png",
+      "sha256": "c2fd7fa001f89c90e57fc363aa087a92624deb033c40ef528bc649473dbfd7b4"
+    },
+    {
+      "path": "evidence/stone-basin/day/layers-on.png",
+      "sha256": "ea3318d1d0918ded4338bb9c90d42e6b6b8d1f130a84c2a323d51c12ef28446d"
+    },
+    {
+      "path": "evidence/stone-basin/day/occlusion-off.png",
+      "sha256": "ac098de4ca8b4b536f3d46f34c58e17141acfba78605a2038c3e53b292ee0c4f"
+    },
+    {
+      "path": "evidence/stone-basin/day/occlusion-on.png",
+      "sha256": "b68aabc27e10185cb789f06642062e9ea34404dd1dc8a9bc6ebbfa438017263a"
+    },
+    {
+      "path": "evidence/stone-basin/day/off-caustics_enabled.png",
+      "sha256": "2cf2a4ac7cfaaa0cad578c86e7b605978d580c0fc1a75349aa7dfb99022063cb"
+    },
+    {
+      "path": "evidence/stone-basin/day/off-depth_enabled.png",
+      "sha256": "bcf20f470d21c95c3ca276e6304f500eb2880346e007cc0c0ebfe9ccb1722f16"
+    },
+    {
+      "path": "evidence/stone-basin/day/off-environment_enabled.png",
+      "sha256": "de92b826302766c692820bd4386e6cddcbcc6c228078679c6e015d12f8c59af8"
+    },
+    {
+      "path": "evidence/stone-basin/day/off-foam_enabled.png",
+      "sha256": "e817ad879d892c22558e2bd4a2d8d273f0a1b24943aac9c222515aaeb4460b53"
+    },
+    {
+      "path": "evidence/stone-basin/day/off-reflection_enabled.png",
+      "sha256": "2c792137eff76034a78222ae91ec6cfe1570fda4bf00f5309e1f75c0f8bd2268"
+    },
+    {
+      "path": "evidence/stone-basin/day/off-refraction_enabled.png",
+      "sha256": "3fbf073c62739d327410f8311b53fa7220ae868073f06bef39456a70eaf7a7ce"
+    },
+    {
+      "path": "evidence/stone-basin/day/off-ripples_enabled.png",
+      "sha256": "8153f8763e0472ee384db3acc6824a735a207a88a3d5554510735f0f7cd63183"
+    },
+    {
+      "path": "evidence/stone-basin/day/off-submersion_enabled.png",
+      "sha256": "8d34dcf2a29ca43e995ee1692f06531c5f65aee5f120fd67734f935bf5d4b0b5"
+    },
+    {
+      "path": "evidence/stone-basin/day/off-waterfall_enabled.png",
+      "sha256": "a658d53c6a80a4d0db4fa7ca5d7b8e1a7e53242319736bb33c9d052d097ee7db"
+    },
+    {
+      "path": "evidence/stone-basin/day/plate.png",
+      "sha256": "d8041a106f5b3799ccb681c335bbc1bf0257b5bbf2ec8366d04e7516e7fd9bdb"
+    },
+    {
+      "path": "evidence/stone-basin/day/submersion-off.png",
+      "sha256": "4d5ed215bd88cef8c5d6840fe787273585211295060362c40cdf31476b5fd6fd"
+    },
+    {
+      "path": "evidence/stone-basin/night/complete-full.png",
+      "sha256": "07de1ec1093132a65322cd9db100057b3ec4adab44f17ef86fe5132bef6f56de"
+    },
+    {
+      "path": "evidence/stone-basin/night/complete.png",
+      "sha256": "0194ec084aac204e0893d5cf3a332dbfdb59673b51aa0fb1e58864d4f2dff9f4"
+    },
+    {
+      "path": "evidence/stone-basin/night/depth-000.png",
+      "sha256": "e7ad971d4faba1c1aa78d4a1832e38dd990507e0889b5650f3e78f4bac3a0a2b"
+    },
+    {
+      "path": "evidence/stone-basin/night/depth-005.png",
+      "sha256": "12cf7ba54dffe8522c76b8c1a997230ab5f1d17e3481241d0fab71d1bddbda86"
+    },
+    {
+      "path": "evidence/stone-basin/night/depth-030.png",
+      "sha256": "d5852bcac9f241d97a60d7368ead4567d0c3fac15c8f5cf6ec7eb4aa51880df5"
+    },
+    {
+      "path": "evidence/stone-basin/night/depth-092.png",
+      "sha256": "ee1db94f2e8fcad813d3918d72fb4767014f6834de6f51714737451bd94d4114"
+    },
+    {
+      "path": "evidence/stone-basin/night/depth-096.png",
+      "sha256": "23f26a6ca3b8eb65374353816a42187c7d673eda1d8ec500e4979b8859b821c7"
+    },
+    {
+      "path": "evidence/stone-basin/night/environment-a.png",
+      "sha256": "9d26b129703f15e47ca4cae272f829a8e00f9e7480495f3d028b9e47f48521a5"
+    },
+    {
+      "path": "evidence/stone-basin/night/environment-b.png",
+      "sha256": "0a331d0675c1d64778c4ac60f69ac4746420f84272ec9b7196515d19660db4c8"
+    },
+    {
+      "path": "evidence/stone-basin/night/fall-a.png",
+      "sha256": "1c60f6262ec7122339a229ff573eeacc94acdfa6d81f2da4ff2a30f5ab4e5082"
+    },
+    {
+      "path": "evidence/stone-basin/night/fall-b.png",
+      "sha256": "23fd95ed3ff840871b6dc71735d1277224061459a13e88b1b9855276417e33e7"
+    },
+    {
+      "path": "evidence/stone-basin/night/foreground-front-off.png",
+      "sha256": "32e788b094d2869c362ee6c2476aa38f6dcbaf43292a8a5ef4c1b10abfe31271"
+    },
+    {
+      "path": "evidence/stone-basin/night/foreground-front-on.png",
+      "sha256": "32e788b094d2869c362ee6c2476aa38f6dcbaf43292a8a5ef4c1b10abfe31271"
+    },
+    {
+      "path": "evidence/stone-basin/night/freeze-repeat.png",
+      "sha256": "0194ec084aac204e0893d5cf3a332dbfdb59673b51aa0fb1e58864d4f2dff9f4"
+    },
+    {
+      "path": "evidence/stone-basin/night/layers-on.png",
+      "sha256": "d5852bcac9f241d97a60d7368ead4567d0c3fac15c8f5cf6ec7eb4aa51880df5"
+    },
+    {
+      "path": "evidence/stone-basin/night/occlusion-off.png",
+      "sha256": "9bfb6cdc8a20d91e4d80f976523ef743df7fb59257596f634f55518e266ec2bc"
+    },
+    {
+      "path": "evidence/stone-basin/night/occlusion-on.png",
+      "sha256": "a9aedd07200b4f2661a24b2e36377178f19cadadb4dbae916a992f44fc6d870d"
+    },
+    {
+      "path": "evidence/stone-basin/night/off-caustics_enabled.png",
+      "sha256": "58eaf83e26a1d83d7469a57fc42e613e8ce9396c508925789e7df99530d55639"
+    },
+    {
+      "path": "evidence/stone-basin/night/off-depth_enabled.png",
+      "sha256": "57c606f78febed6c4867862406e64d48512d4805f0ea1d931f2a2bdc88fa4b05"
+    },
+    {
+      "path": "evidence/stone-basin/night/off-environment_enabled.png",
+      "sha256": "a15da76a21ec7e7c886a0e35c14325bb13f7cd25e8c6abeb6f1b11fa3e42e72e"
+    },
+    {
+      "path": "evidence/stone-basin/night/off-foam_enabled.png",
+      "sha256": "29e133c69f3b06fce34003cf226d253b3a22fdb3fa00acd8c3185ce27f547f8d"
+    },
+    {
+      "path": "evidence/stone-basin/night/off-reflection_enabled.png",
+      "sha256": "8c99e4236f7f90d6e95d61f1de730ffc71a0aa487a566f13cc8e4ba8a80afa82"
+    },
+    {
+      "path": "evidence/stone-basin/night/off-refraction_enabled.png",
+      "sha256": "06cfc6338d3933387ec9534beee0f3eb772c1a660015f3de9092f2841ceb8e56"
+    },
+    {
+      "path": "evidence/stone-basin/night/off-ripples_enabled.png",
+      "sha256": "d13af265dbbd3feb0b29e8b29452f7273c2260cc4bf4a1888dd8036771977207"
+    },
+    {
+      "path": "evidence/stone-basin/night/off-submersion_enabled.png",
+      "sha256": "80788d5fb9d660b97ea77915d1e9027890baff7351a8a11b344d8db8eec25db1"
+    },
+    {
+      "path": "evidence/stone-basin/night/off-waterfall_enabled.png",
+      "sha256": "15a1d98977a2ee20ff2d11241a124fc73f62438996e430095e004ddd0cf72c2a"
+    },
+    {
+      "path": "evidence/stone-basin/night/plate.png",
+      "sha256": "d83e39d5c0e14a38091ce620ad6c3dcb8dcb2905842a39dc43594ab8b3710a8f"
+    },
+    {
+      "path": "evidence/stone-basin/night/submersion-off.png",
+      "sha256": "c7ba782f193c6f438286e8e3e6c63be8297684fe10e2d72bb116b8dc10331904"
+    },
+    {
+      "path": "evidence/stone-basin/recording-report.json",
+      "sha256": "3bfa7f98609df426a51b9abdc45698a15aa6b44ce8a6fcee64f120b743afa0de"
+    },
+    {
+      "path": "evidence/stone-basin/render-checks.json",
+      "sha256": "5c50e333a8c7697f2f762d71d37ca135180409c31f938d38e03163eac4a976bb"
+    },
+    {
+      "path": "evidence/stone-basin/runtime-report.json",
+      "sha256": "e430762876320eaf18a265db13b193775cfc13beae90ec88effb9c0c696fd1e5"
+    },
+    {
+      "path": "media/demos/day-night.mp4",
+      "sha256": "5bfb1c292d2a80cddd56aed507e9cd5965691c2fe9e89311f0ce262ba1ffaff0"
+    },
+    {
+      "path": "media/images/day-night-comparison.png",
+      "sha256": "fd85bc995fabdd427427a8cb7ee136fb306198e5cc0d5d104b8fe3539e7bfb44"
+    }
+  ],
+  "path_base": "repository_root"
+}

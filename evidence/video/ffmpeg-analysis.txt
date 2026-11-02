@@ -1,0 +1,104 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/title-cover-v5/render/godot-sea-of-stars-water-vfx.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Godot 复刻《星之海》通透像素水体效果｜2D 水面 Shader 原理拆解 | Sea of Stars
+    artist          : Pixel-art water VFX experiment
+    encoder         : Lavf61.7.103
+    comment         : Godot real GPU captures; Higgs TTS 3 Q8_0; fixed synthetic female reference; 2026-11-02
+  Duration: 00:02:58.00, start: 0.000000, bitrate: 2214 kb/s
+  Chapters:
+    Chapter #0:0: start 0.000000, end 18.000000
+      Metadata:
+        title           : 核心效果演示
+    Chapter #0:1: start 18.000000, end 36.000000
+      Metadata:
+        title           : 设计与语义分层
+    Chapter #0:2: start 36.000000, end 84.000000
+      Metadata:
+        title           : 水面技术与参数
+    Chapter #0:3: start 84.000000, end 114.000000
+      Metadata:
+        title           : 角色浸没与空间关系
+    Chapter #0:4: start 114.000000, end 135.000000
+      Metadata:
+        title           : 默认值与命名预设
+    Chapter #0:5: start 135.000000, end 162.000000
+      Metadata:
+        title           : 三个问题与修正
+    Chapter #0:6: start 162.000000, end 178.000000
+      Metadata:
+        title           : 技术与美术参考
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080, 1954 kb/s, 60 fps, 60 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 libx264
+  Stream #0:1[0x2](zho): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 247 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:2[0x3](eng): Data: bin_data (text / 0x74786574), 0 kb/s
+      Metadata:
+        handler_name    : SubtitleHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))
+  Stream #0:1 -> #0:1 (aac (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Godot 复刻《星之海》通透像素水体效果｜2D 水面 Shader 原理拆解 | Sea of Stars
+    artist          : Pixel-art water VFX experiment
+    comment         : Godot real GPU captures; Higgs TTS 3 Q8_0; fixed synthetic female reference; 2026-11-02
+    encoder         : Lavf61.7.103
+  Chapters:
+    Chapter #0:0: start 0.000000, end 18.000000
+      Metadata:
+        title           : 核心效果演示
+    Chapter #0:1: start 18.000000, end 36.000000
+      Metadata:
+        title           : 设计与语义分层
+    Chapter #0:2: start 36.000000, end 84.000000
+      Metadata:
+        title           : 水面技术与参数
+    Chapter #0:3: start 84.000000, end 114.000000
+      Metadata:
+        title           : 角色浸没与空间关系
+    Chapter #0:4: start 114.000000, end 135.000000
+      Metadata:
+        title           : 默认值与命名预设
+    Chapter #0:5: start 135.000000, end 162.000000
+      Metadata:
+        title           : 三个问题与修正
+    Chapter #0:6: start 162.000000, end 178.000000
+      Metadata:
+        title           : 技术与美术参考
+  Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1920x1080, q=2-31, 200 kb/s, 60 fps, 60 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 wrapped_avframe
+  Stream #0:1(zho): Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 pcm_s16le
+[Parsed_loudnorm_0 @ 0x7f795c004a80] 
+{
+	"input_i" : "-16.40",
+	"input_tp" : "-3.89",
+	"input_lra" : "5.40",
+	"input_thresh" : "-27.56",
+	"output_i" : "-16.20",
+	"output_tp" : "-3.27",
+	"output_lra" : "5.20",
+	"output_thresh" : "-27.10",
+	"normalization_type" : "dynamic",
+	"target_offset" : "0.20"
+}
+[out#0/null @ 0x55b5586043c0] video:4589KiB audio:133504KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=10680 fps=2252 q=-0.0 Lsize=N/A time=00:02:58.00 bitrate=N/A speed=37.5x    

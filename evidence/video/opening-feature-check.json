@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "opening_seconds": 18,
+  "feature_count": 8,
+  "maximum_simultaneous_features": 2,
+  "integer_zoom": 6,
+  "samples": [
+    {
+      "time": 1.8,
+      "labels": [
+        "通透水底与深浅渐变",
+        "像素折射"
+      ],
+      "file": "opening-01.png"
+    },
+    {
+      "time": 3.6,
+      "labels": [
+        "像素折射",
+        "水下焦散"
+      ],
+      "file": "opening-02.png"
+    },
+    {
+      "time": 6.0,
+      "labels": [
+        "岸线泡沫",
+        "交互涟漪"
+      ],
+      "file": "opening-03.png"
+    },
+    {
+      "time": 9.5,
+      "labels": [
+        "落点汇流"
+      ],
+      "file": "opening-04.png"
+    },
+    {
+      "time": 12.5,
+      "labels": [
+        "冷暖环境反光"
+      ],
+      "file": "opening-05.png"
+    },
+    {
+      "time": 16.0,
+      "labels": [
+        "渐进浸没与曲面水线"
+      ],
+      "file": "opening-06.png"
+    }
+  ],
+  "waterfall_curtain_closeup": false,
+  "flow_crop": [
+    240,
+    124,
+    480,
+    259
+  ],
+  "flow_display_amplitude": 1.4,
+  "parameter_label_visible": true,
+  "remaining_chapter_boundaries": [
+    [
+      18,
+      36,
+      "分层",
+      "设计与语义分层"
+    ],
+    [
+      36,
+      84,
+      "水面",
+      "水面技术与参数"
+    ],
+    [
+      84,
+      114,
+      "浸没",
+      "角色浸没与空间关系"
+    ],
+    [
+      114,
+      135,
+      "调参",
+      "默认值与命名预设"
+    ],
+    [
+      135,
+      162,
+      "踩坑",
+      "三个问题与修正"
+    ],
+    [
+      162,
+      178,
+      "参考",
+      "技术与美术参考"
+    ]
+  ]
+}

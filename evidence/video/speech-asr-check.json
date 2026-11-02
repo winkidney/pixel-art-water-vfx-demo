@@ -1,0 +1,186 @@
+[
+  {
+    "id": "intro_day",
+    "expected": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。",
+    "recognized": "先看效果 通透海床 像素折射和交互聯繫都在割多裡實時運行",
+    "similarity": 0.7307692307692307,
+    "audio_sha256": "653a9d2dcc1ec587b440ce467fe835b0d1aa51b7cec78e72b068530c34065e2c",
+    "phonetic_similarity": 0.9907407407407407
+  },
+  {
+    "id": "intro_night",
+    "expected": "落点汇流向外传播，夜间保留冷暖反光。",
+    "recognized": "落點會流向外傳播,夜間保留冷暖反光",
+    "similarity": 0.75,
+    "audio_sha256": "a1d050bf68c977c897737a00e019643b6a4eb4db799faf1a4c0730eba5e96973",
+    "phonetic_similarity": 0.9859154929577465
+  },
+  {
+    "id": "intro_immersion",
+    "expected": "入水越深，角色水线越高。",
+    "recognized": "入水越深,角色水線越高",
+    "similarity": 0.9,
+    "audio_sha256": "0ced357f8367f2463b6e00240cadd4379463a9ef4f4e326c25ba09188243ba87",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "semantic",
+    "expected": "底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+    "recognized": "地圖負責材質、數據負責空間四個通道是水域、巨岸、水深和可走",
+    "similarity": 0.5384615384615384,
+    "audio_sha256": "d3b420e6087ec6625485b820e953dd03703516cf6d91d1da0d9f100f0f05ea7f",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "stack",
+    "expected": "先画水面和瀑布，再画倒影、角色与前景。每层只承担自己的视觉线索。",
+    "recognized": "鮮化水面和瀑布再畫倒影角色與前景每層只承擔自己的視覺線索",
+    "similarity": 0.6785714285714286,
+    "audio_sha256": "6c60f8d0f97ad3cc16cc5a8f6bbe8123aac6d3e433163e708582be7e5d45e1c8",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "refraction",
+    "expected": "正弦波扰动采样位置。位移取整，岸外退回。水底会动，沙岸不动。",
+    "recognized": "鄭賢波擾動 採樣位置 位移取整 案外退回 水底會動 沙岸不動",
+    "similarity": 0.6,
+    "audio_sha256": "daa3a11a9fdbc98fd29a5ec631f927989dadeee06fda9583f1fbc7d2b19676f3",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "depth",
+    "expected": "浅深色与海床混合。提高清澈度，水下石块保留更多。",
+    "recognized": "潛身色與海床混合,提高清澈度,水下石塊保留更多",
+    "similarity": 0.8095238095238095,
+    "audio_sha256": "904cbeb6e07d953c1cb3cb037ff6234a0cbb8020ed9a73a8d6695e4c853e3cb2",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "caustics",
+    "expected": "正弦函数生成焦散，随深度衰减。",
+    "recognized": "正弦寒树生成交散,随身度衰减。",
+    "similarity": 0.6923076923076923,
+    "audio_sha256": "d67a39106e081a45ab18d890fefdbda7fc40384aa2a3e7154b00f7c36aa08d50",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "foam",
+    "expected": "泡沫沿距岸等值线往复，不必逐段手绘。",
+    "recognized": "泡沫、嚴聚案等直線往復,不必逐段守會",
+    "similarity": 0.5,
+    "audio_sha256": "aabcc3dac40817a527ef2b64e9d2d95d7b947f40908318d1fc2eef2f13bd32a3",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "ripples",
+    "expected": "点击和移动触发涟漪，扩散时扰动折射。",
+    "recognized": "點擊和移動觸發聯E,擴散時擾動折射",
+    "similarity": 0.3125,
+    "audio_sha256": "a3a73d1289862ee160be5199faa9fc99eddc4274cef95a5f8fc79c3a6ce7cc5d",
+    "phonetic_similarity": 0.9752066115702479
+  },
+  {
+    "id": "falls",
+    "expected": "双相滚动让水幕下落，落点翻动，汇流波向外衰减。",
+    "recognized": "雙箱滾動 讓水幕下落 落點翻動 會流波向外摔減",
+    "similarity": 0.5,
+    "audio_sha256": "d24e22a6a5cbd6bac6469f14a8d5a5544b796e8ed06b5eb6a32372b41df6878a",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "environment",
+    "expected": "桥身二维投影，叠加冷暖光带，形成夜间反光。",
+    "recognized": "橋身二維頭影疊加冷暖光帶形成夜間反光",
+    "similarity": 0.6666666666666666,
+    "audio_sha256": "f6a674830ad079c1e40baacf0f5374cbdc0282bb5d9f53b20f93d91e2b59ea44",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "height",
+    "expected": "地图深度决定浸没量，精灵局部高度决定哪些像素入水。给高度加一条横向曲线，水线就能绕着身体弯曲。",
+    "recognized": "地圖深度決定禁墨量精靈局部高度決定哪些像素入水給高度加一條橫向曲線水線就能繞著身體彎曲",
+    "similarity": 0.6511627906976745,
+    "audio_sha256": "c8b6a8b7e4c683619f58721acae46d527c1ad692a555c21be9b5ac6b27986ac0",
+    "phonetic_similarity": 0.9942857142857143
+  },
+  {
+    "id": "immersion",
+    "expected": "水下身体染色、透明并扰动。水线用窄亮带，倒影翻转压缩，随浸没变淡。",
+    "recognized": "水下身體染色透明並擾動水線用窄亮帶倒影翻轉壓縮隨浸墨變淡",
+    "similarity": 0.5714285714285714,
+    "audio_sha256": "31f2b4e3780d54515c357f8b416e68012120bd654b004ed5b0b86601d3576c47",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "occlusion",
+    "expected": "比较脚点与接地高度。人在后面画前景，走到前面不覆盖。",
+    "recognized": "比較腳點與接地高度,人在後面畫前景,走到前面不覆蓋。",
+    "similarity": 0.6956521739130435,
+    "audio_sha256": "e95bcbc76a5defc40761f743ba67a85e8a43b62f7cb3d8a7601e32e78df9ab10",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "parameters",
+    "expected": "一百五十八项控制共用默认值与范围。滑杆和数值输入即时生效，改速度时保留当前相位。",
+    "recognized": "158項控制 共用默認值與範圍滑桿和數值輸入 即時生效改速度時保留當前項位",
+    "similarity": 0.5555555555555556,
+    "audio_sha256": "360c03cb596c1d8332c394d48484eb3f8671d3306c45db4b74b9eb792abdd88a",
+    "phonetic_similarity": 0.9395017793594306
+  },
+  {
+    "id": "color",
+    "expected": "日夜共享相对调色，各自保留基准光色。",
+    "recognized": "日夜共享相對調色 各自保留機準光色",
+    "similarity": 0.75,
+    "audio_sha256": "686189d43045b2ba8bad9b054c567926c08cb486af6d641481bd941aa71a2807",
+    "phonetic_similarity": 0.9846153846153847
+  },
+  {
+    "id": "preset",
+    "expected": "预设保存参数与时段，重置不丢参数。",
+    "recognized": "預設保存參數與時段,重置不丟參數。",
+    "similarity": 0.4,
+    "audio_sha256": "fedcce8404a9f2a487af02a2837dd5c51fb7daa47477f26019b4829ed80781e7",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "pitfall_stack",
+    "expected": "第一坑，原画已画满焦散，再叠动态层就会太碎。先清理底图，让实时效果有空间。",
+    "recognized": "第一坑圆画,以画满胶散,再叠动态层,就会太碎。先清理底图,让实时效果有空间。",
+    "similarity": 0.90625,
+    "audio_sha256": "70cc8fd28d02f3adf4adb8b9e35643a5ac38fe50fc9ac4605cb4d465fbd5666a",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "pitfall_mask",
+    "expected": "边缘修复改写数据，导致水效越界。关闭修复，再逐像素检查。",
+    "recognized": "邊緣修復改寫數據 導致水效越界 關閉修復再逐向速檢查",
+    "similarity": 0.4583333333333333,
+    "audio_sha256": "5cb77601c7835e087800512867b955f124c18483efb675b385de0ae6784624c4",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "pitfall_waterline",
+    "expected": "普通人形水线会淹到大头角色的脸。按精灵比例校准水线、下沉与涟漪位置。",
+    "recognized": "普通人形水線會淹到大頭角色的臉按精靈比例校準水線下沉與連衣位置",
+    "similarity": 0.6774193548387096,
+    "audio_sha256": "82909e9b9dec34443162755690d8faf7cf5614bfc1ec04dd4f51dc0d6c77055f",
+    "phonetic_similarity": 0.9921259842519685
+  },
+  {
+    "id": "refs_tech",
+    "expected": "技术来源列在这里。社区讨论不代表星之海官方实现。",
+    "recognized": "技術來源列在這裡。社區討論不代表星之海官方實現。",
+    "similarity": 0.5909090909090909,
+    "audio_sha256": "62b175a2972d03ba5724fedb3d8dfbbe12e0065bc4bd9a7e0c7a98903c44d99a",
+    "phonetic_similarity": 1.0
+  },
+  {
+    "id": "refs_art",
+    "expected": "美术素材与完整制作记录，见片尾链接。",
+    "recognized": "美書素材與完整製作記錄 鑒片委鏈接",
+    "similarity": 0.5,
+    "audio_sha256": "0163dc345c08a8b94fc3144ca6c25f2234199dc54119ebe012488995a98b19bc",
+    "phonetic_similarity": 1.0
+  }
+]

@@ -1,0 +1,149 @@
+{
+  "fps": 60,
+  "godot": "4.7.2-stable (official)",
+  "renderer": "NVIDIA GeForce RTX 4070 SUPER",
+  "shots": [
+    {
+      "bytes": 165888000,
+      "frames": 360,
+      "id": "day",
+      "seconds": 6
+    },
+    {
+      "bytes": 165888000,
+      "frames": 360,
+      "id": "night",
+      "seconds": 6
+    },
+    {
+      "bytes": 165888000,
+      "frames": 360,
+      "id": "entry",
+      "seconds": 6
+    },
+    {
+      "bytes": 110592000,
+      "frames": 240,
+      "id": "refraction_off",
+      "seconds": 4
+    },
+    {
+      "bytes": 110592000,
+      "frames": 240,
+      "id": "refraction_on",
+      "seconds": 4
+    },
+    {
+      "bytes": 110592000,
+      "frames": 240,
+      "id": "depth_off",
+      "seconds": 4
+    },
+    {
+      "bytes": 110592000,
+      "frames": 240,
+      "id": "depth_on",
+      "seconds": 4
+    },
+    {
+      "bytes": 110592000,
+      "frames": 240,
+      "id": "caustics_off",
+      "seconds": 4
+    },
+    {
+      "bytes": 110592000,
+      "frames": 240,
+      "id": "caustics_on",
+      "seconds": 4
+    },
+    {
+      "bytes": 110592000,
+      "frames": 240,
+      "id": "foam_off",
+      "seconds": 4
+    },
+    {
+      "bytes": 110592000,
+      "frames": 240,
+      "id": "foam_on",
+      "seconds": 4
+    },
+    {
+      "bytes": 165888000,
+      "frames": 360,
+      "id": "ripples",
+      "seconds": 6
+    },
+    {
+      "bytes": 165888000,
+      "frames": 360,
+      "id": "falls",
+      "seconds": 6
+    },
+    {
+      "bytes": 165888000,
+      "frames": 360,
+      "id": "environment",
+      "seconds": 6
+    },
+    {
+      "bytes": 110592000,
+      "frames": 240,
+      "id": "occlusion_off",
+      "seconds": 4
+    },
+    {
+      "bytes": 110592000,
+      "frames": 240,
+      "id": "occlusion_on",
+      "seconds": 4
+    },
+    {
+      "bytes": 165888000,
+      "frames": 360,
+      "id": "deep",
+      "seconds": 6
+    },
+    {
+      "bytes": 165888000,
+      "frames": 360,
+      "id": "waterline_bad",
+      "seconds": 6
+    },
+    {
+      "bytes": 165888000,
+      "frames": 360,
+      "id": "color_day",
+      "seconds": 6
+    },
+    {
+      "bytes": 165888000,
+      "frames": 360,
+      "id": "color_night",
+      "seconds": 6
+    },
+    {
+      "background_wave_speeds": 0,
+      "bytes": 110592000,
+      "curtain_animation_visible": false,
+      "flow_amplitude": 1.4,
+      "frames": 240,
+      "godot": "4.7.2-stable (official)",
+      "id": "intro_flow",
+      "note": "Isolated real shader flow, parameter value labelled on screen. Crop excludes waterfall curtain and impact foam.",
+      "opening_crop": [
+        240,
+        124,
+        480,
+        259
+      ],
+      "renderer": "NVIDIA GeForce RTX 4070 SUPER",
+      "seconds": 4
+    }
+  ],
+  "size": [
+    480,
+    320
+  ]
+}

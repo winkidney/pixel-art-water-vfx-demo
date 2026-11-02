@@ -1,0 +1,21 @@
+{
+	"godot": "4.7.2-stable (official)",
+	"legacy": false,
+	"parameters": 158,
+	"passed": true,
+	"renderer": "NVIDIA GeForce RTX 4070 SUPER",
+	"variants": [
+		{
+			"character_visible": true,
+			"size": "(480, 320)",
+			"time": "day",
+			"water_visible": true
+		},
+		{
+			"character_visible": true,
+			"size": "(480, 320)",
+			"time": "night",
+			"water_visible": true
+		}
+	]
+}

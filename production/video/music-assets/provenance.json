@@ -1,0 +1,11 @@
+{
+  "file": "pixel-art-water.m4a",
+  "sha256": "5fa9c08d8f7c29f9f6a6b02d48ea73a7c5ae083d9db85cf3fb431376c1c9cf3d",
+  "bytes": 3151568,
+  "source": "User supplied /home/winkidney/Downloads/music/suno-video-bgm/pixel-art-water.m4a",
+  "metadata": "made with suno; created=2026-11-02T06:15:03Z; id=c0e7f528-e94b-4ae1-99b2-f7cdc42b3bd8",
+  "original_duration_seconds": 177.96,
+  "gain_db": -14,
+  "input_file_unchanged": true,
+  "mix_receipt": "../../../evidence/video/bgm-mix-check.json"
+}

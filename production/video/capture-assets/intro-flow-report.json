@@ -1,0 +1,18 @@
+{
+	"background_wave_speeds": 0,
+	"bytes": 110592000,
+	"curtain_animation_visible": false,
+	"flow_amplitude": 1.4,
+	"frames": 240,
+	"godot": "4.7.2-stable (official)",
+	"id": "intro_flow",
+	"note": "Isolated real shader flow, parameter value labelled on screen. Crop excludes waterfall curtain and impact foam.",
+	"opening_crop": [
+		240,
+		124,
+		480,
+		259
+	],
+	"renderer": "NVIDIA GeForce RTX 4070 SUPER",
+	"seconds": 4
+}

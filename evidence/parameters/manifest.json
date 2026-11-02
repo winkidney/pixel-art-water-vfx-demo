@@ -194,7 +194,7 @@
     },
     {
       "path": "evidence/parameters/recording-report.json",
-      "sha256": "adf80d7eb98bf876ab73d78e7c8071a542a01b0a32e00140e8c29fe8292a3d97"
+      "sha256": "8fb2680399a9f2afeccab94f1eea7d6eeb2a0d06ccd9a8ba998a2fbbf86f129d"
     },
     {
       "path": "evidence/parameters/runtime-report.json",
@@ -433,12 +433,13 @@
       "sha256": "181f9e0cf71f792630733d25c341225e0985e4b4db3f78732317f588df3b4793"
     },
     {
-      "path": "parameter-workbench-demo.mp4",
+      "path": "media/demos/parameter-workbench.mp4",
       "sha256": "da70585df2220466572c11a884acfc338f83f661c6074c882092d99984834929"
     },
     {
-      "path": "parameter-workbench-preview.png",
+      "path": "media/images/parameter-workbench.png",
       "sha256": "a6ad217f657f3364a44d7b3f7013fd053ed6df03d88dd9a1c8ecaee29d086890"
     }
-  ]
+  ],
+  "path_base": "repository_root"
 }

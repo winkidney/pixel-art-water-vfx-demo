@@ -1,0 +1,32 @@
+{
+  "cache_key": "dcc14a8e5633478f463793b43081b3fbb941a483a9dd083f90f5c629e8fd7dca",
+  "requests": [
+    {
+      "model": "higgs",
+      "input": "技术来源列在这里。",
+      "voice_ref": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/higgs-v3/edit-source/reference/female-zf001.wav",
+      "reference_text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+      "seed": 20261102,
+      "options": {
+        "text_chunk_size": 40
+      }
+    },
+    {
+      "model": "higgs",
+      "input": "社区讨论不代表星之海官方实现。",
+      "voice_ref": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/higgs-v3/edit-source/reference/female-zf001.wav",
+      "reference_text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+      "seed": 20261102,
+      "options": {
+        "text_chunk_size": 40
+      }
+    }
+  ],
+  "inference_seconds": 8.116,
+  "raw_sha256": "498165583160173249a47e4c0b9d9b970b4553b84e60442d6971f5d195e19176",
+  "raw_seconds": 5.88,
+  "trim_start_seconds": 0.04,
+  "trim_end_seconds": 0.32,
+  "final_sha256": "b246685f02f90fe63b8296e5d5a9b858eb367430a808a92ae77bb57c954d03ff",
+  "final_seconds": 5.52
+}

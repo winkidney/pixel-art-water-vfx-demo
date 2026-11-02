@@ -1,8 +1,15 @@
 **/.godot/
 **/captures/
 **/__pycache__/
+*.pyc
 *.zip
 *.avi
 *.wav
 
-/work/
+/.local/
+
+# Authored narration and the fixed synthetic reference are part of the video source.
+!media/audio/narration.wav
+!production/video/narration-assets/*.wav
+!production/video/narration-assets/raw/*.wav
+!production/video/reference/*.wav

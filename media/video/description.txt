@@ -1,0 +1,17 @@
+Godot 复刻《星之海》通透像素水体效果｜2D 水面 Shader 原理拆解 | Sea of Stars
+
+This audio was created with Boson AI's Higgs Audio: https://www.boson.ai/higgs-audio
+背景音乐：pixel-art-water，用户提供，文件元数据标注 Suno 制作。
+本视频使用 AI 合成旁白。发声模型为 Higgs TTS 3 Q8_0，参考为已有 Kokoro zf_001 合成女声录音。
+
+2 分 58 秒介绍水体分层、折射、焦散、泡沫、交互涟漪、角色浸没、日夜反光、调参与踩坑。开场包含像素水体局部放大和主要特性标注，汇流镜头不特写瀑布本体。
+
+技术参考：
+How I Created 2D Pixel Art Water For My Indie Game / Fishy Games
+https://www.youtube.com/watch?v=DkfKwfjaVx0
+How I Created Pixel Art Oceans | Pixel Perfect / Red Giraffe
+https://www.youtube.com/watch?v=RU3EReALbEU
+How did Sea of Stars render varying submersion on water? / r/gamedev
+https://www.reddit.com/r/gamedev/comments/1d3cdqq/how_did_sea_of_stars_render_varying_submersion_on/
+
+场景美术由 ImageGen 生成，风格参考来自用户提供的像素 JRPG 截图。画面使用本项目真实 Godot 视口。项目为独立二维视觉近似，未声称还原星之海内部代码。

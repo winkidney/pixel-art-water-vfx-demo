@@ -1,0 +1,18 @@
+{
+  "kokoro": "0.9.4",
+  "misaki": "0.9.4",
+  "torch": "2.8.0",
+  "transformers": "4.53.3",
+  "Pillow": "12.3.0",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "qrcode": "8.2",
+  "soundfile": "0.13.1",
+  "faster-whisper": "1.2.1",
+  "narration_runtime": {
+    "name": "audio.cpp",
+    "version": "v0.9.3",
+    "backend": "CUDA 12.8",
+    "gpu": "NVIDIA RTX 4070 SUPER 12 GB"
+  }
+}

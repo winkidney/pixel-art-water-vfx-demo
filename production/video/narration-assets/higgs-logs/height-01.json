@@ -1,0 +1,20 @@
+{
+  "cache_key": "c72a105d519348a7a559155476c155c5188beb4aada3610bab13095e96e1f398",
+  "request": {
+    "model": "higgs",
+    "input": "给高度加一条横向曲线，水线就能绕着身体弯曲。",
+    "voice_ref": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/higgs-v3/edit-source/reference/female-zf001.wav",
+    "reference_text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+    "seed": 20261102,
+    "options": {
+      "text_chunk_size": 40
+    }
+  },
+  "inference_seconds": 1.586,
+  "raw_sha256": "7f9fc9419aa3a3b756bb4ba184e316355949ed5a8a6a3d692e657eed2917fbbd",
+  "raw_seconds": 4.96,
+  "trim_start_seconds": 0.16,
+  "trim_end_seconds": 0.34,
+  "final_sha256": "6f3dd0f84ec1233675a3ce42dcfa4e7ac04e75e0ad9b127eb2f601bff5ddfe2d",
+  "final_seconds": 4.46
+}

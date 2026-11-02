@@ -21,7 +21,7 @@
 | Reddit 的 [varying submersion 讨论](https://www.reddit.com/r/gamedev/comments/1d3cdqq/how_did_sea_of_stars_render_varying_submersion_on/) | 水线如何围绕身体弯曲 | 将地图浸没深度与精灵局部高度分离 | 评论者的方案不代表《星之海》官方实现 |
 | Red Giraffe 的 [Pixel Art Oceans](https://www.youtube.com/watch?v=RU3EReALbEU) | 深度、折射、波动、泡沫、反射和像素尺度统一 | 借鉴分层与统一采样原则，用二维近似对应 | 本项目没有使用其三维顶点波或镜像相机 |
 
-两个视频的标题、作者、日期和内容摘要依据实验期间保存的作者元数据及英文自动字幕。此前视频流下载返回 403，未完成逐帧核验。Reddit 正文在文档核查时可读取。详细来源、章节链接与官方资料见[参考与实现边界](../tidal-grotto/docs/references.md)。
+两个视频的标题、作者、日期和内容摘要依据实验期间保存的作者元数据及英文自动字幕。此前视频流下载返回 403，未完成逐帧核验。Reddit 正文在文档核查时可读取。详细来源、章节链接与官方资料见[参考与实现边界](references.md)。
 
 ## 3. 从原型到当前版本
 
@@ -46,7 +46,7 @@ flowchart TD
 
 ImageGen 提供场景与四方向角色图，项目保留原图，再按实际尺寸裁切角色，并用 Python 制作水域、距离和深度等技术数据。第一阶段就加入原图查看、深度查看、单层开关、冻结、点击移动和自动往返，便于观察“这个变化来自哪一层”。
 
-原型视频为[29 秒洞窟演示](../tidal-grotto-demo.mp4)，完整输入提示词与生成限制见[ImageGen 记录](../tidal-grotto/docs/imagegen.md)。初次代码提交为 `1243511`，原始证据保留在 `evidence/`，之后的旧场景回归另外保存。
+原型视频为[29 秒洞窟演示](../media/demos/legacy-grotto.mp4)，完整输入提示词与生成限制见[ImageGen 记录](assets/legacy/imagegen.md)。初次代码提交为 `1243511`，原始证据保留在 `evidence/`，之后的旧场景回归另外保存。
 
 ### 3.2 三轮独立场景探索
 
@@ -86,15 +86,15 @@ ImageGen 提供场景与四方向角色图，项目保留原图，再按实际�
 
 原型七类水体效果迁入后，新增独立水幕、落水白沫、主水域汇流、桥身颜色投影、夜间光带与脚点遮挡。导航使用 2 像素 AStar 网格，确保自动路线能从岸边进入浅水、深水并返回。迁移提交为 `6ba9fa8`，随后 `0d4e60f` 保存 Godot 4.7 项目配置。
 
-![白天与夜晚运行效果](../stone-basin-runtime-comparison.png)
+![白天与夜晚运行效果](../media/images/day-night-comparison.png)
 
-完整制作输入、哈希、提示词与首次验收见[日夜迁移记录](../tidal-grotto/docs/stone-basin/README.md)。[30 秒录像](../stone-basin-day-night-demo.mp4)展示的是运行场景，黄昏只保留在上面的设计归档中。
+完整制作输入、哈希、提示词与首次验收见[日夜迁移记录](assets/stone-basin/README.md)。[30 秒录像](../media/demos/day-night.mp4)展示的是运行场景，黄昏只保留在上面的设计归档中。
 
 ### 3.6 从演示开关扩展到手工调参
 
 用户随后要求“各个参数可调，并提供默认值”。访谈最终确认运行中面板、完整美术控制、固定有效范围、保留已采用默认画面，以及手动管理预设。白天与夜晚共用调整值，用相对调色保留各自基准光色。
 
-![运行中参数面板](../parameter-workbench-preview.png)
+![运行中参数面板](../media/images/parameter-workbench.png)
 
 实现提交为 `0fe0c87`，共 158 项控制，包括 9 个效果开关、颜色相对调整与数值项。面板提供分组、常用与高级、搜索、滑杆、数值输入、默认值及逐项、整组、全部恢复。它只开放美术参数，像素分辨率、语义图格式、事件容量、构图锚点和导航结构保持技术设置。
 
@@ -105,7 +105,7 @@ ImageGen 提供场景与四方向角色图，项目保留原图，再按实际�
 - 保存由用户明确执行，不自动保存；覆盖、加载、导入、恢复默认和退出不弹保存确认。
 - 非法数值和损坏预设不部分应用。调速度时补偿相位，避免当前图案突跳。
 
-选择经过多轮澄清，完整记录在[调参设计访谈](design/water-parameter-workbench.md)。[调参录像](../parameter-workbench-demo.mp4)与[手工说明](../tidal-grotto/docs/parameters.md)展示最终交互。
+选择经过多轮澄清，完整记录在[调参设计访谈](design/water-parameter-workbench.md)。[调参录像](../media/demos/parameter-workbench.mp4)与[手工说明](guides/parameters.md)展示最终交互。
 
 ## 4. 实际遇到的问题与修正
 
@@ -125,7 +125,7 @@ ImageGen 提供场景与四方向角色图，项目保留原图，再按实际�
 | 每帧脚本赋值会覆盖直接修改的材质参数 | 用统一参数定义驱动脚本、面板与着色器 | 控件有读数还不够，必须证明效果确实变化 |
 | 改变速度导致相位跟随累计时间跳动 | 保存相位偏移；涟漪扩散另补半径偏移 | 连续手调需要同时保证数值生效和运动连续 |
 
-前半部分可追溯到[初版参考记录](../tidal-grotto/docs/references.md)，迁移问题见[迁移记录](../tidal-grotto/docs/stone-basin/README.md)，调参行为见[参数验收](../evidence/parameters/README.md)。
+前半部分可追溯到[初版参考记录](references.md)，迁移问题见[迁移记录](assets/stone-basin/README.md)，调参行为见[参数验收](../evidence/parameters/README.md)。
 
 ## 5. 证据如何组织，数字说明什么
 
@@ -133,7 +133,7 @@ ImageGen 提供场景与四方向角色图，项目保留原图，再按实际�
 
 | 阶段 | 主要证据 | 阅读时的边界 |
 | --- | --- | --- |
-| 初版洞窟 | [初版验证说明](../tidal-grotto/docs/validation.md)、`evidence/` 根目录 | 是旧场景结果，不代表新增的瀑布和遮挡 |
+| 初版洞窟 | [初版验证说明](validation.md)、`evidence/` 根目录 | 是旧场景结果，不代表新增的瀑布和遮挡 |
 | 石潭首次迁移 | [运行报告](../evidence/stone-basin/runtime-report.json)、[像素报告](../evidence/stone-basin/render-checks.json) | 是调参面板加入之前的结果 |
 | 最新参数与场景回归 | [验收索引](../evidence/parameters/README.md)、下方各报告 | 是当前源码基线的已保存依据 |
 | 旧洞窟保留能力 | [旧场景回归](../evidence/parameters/legacy-regression/runtime-report.json) | 与当前石潭分开记录 |
@@ -194,10 +194,10 @@ ImageGen 提供场景与四方向角色图，项目保留原图，再按实际�
 ## 8. 归档与阅读导航
 
 - 想理解当前组合方法，读[设计与技术说明](water-vfx-design.md)。
-- 想手工比较效果，读[调参操作](../tidal-grotto/docs/parameters.md)，配合[面板录像](../parameter-workbench-demo.mp4)。
+- 想手工比较效果，读[调参操作](guides/parameters.md)，配合[面板录像](../media/demos/parameter-workbench.mp4)。
 - 想复查概念选择，读[九稿目录](../designs/water-study-nine-v4/README.md)与[宽瀑布归档](../designs/stone-basin-widefall-v5/README.md)。
-- 想复查生成输入，读[初版提示词](../tidal-grotto/docs/imagegen.md)和[日夜迁移来源](../tidal-grotto/docs/stone-basin/README.md)。
+- 想复查生成输入，读[初版提示词](assets/legacy/imagegen.md)和[日夜迁移来源](assets/stone-basin/README.md)。
 - 想追踪证据，先读[最新验收索引](../evidence/parameters/README.md)，再按阶段查看原始报告。
-- 想回到视频和教程，读[参考与实现边界](../tidal-grotto/docs/references.md)。
+- 想回到视频和教程，读[参考与实现边界](references.md)。
 
 早期概念目录里的“尚未迁移”、`designs/selection.json` 中的 `migration_started:false` 是设计阶段留存的状态，不代表当前程序。本文保留这些历史档案的原文，并用迁移提交、当前代码与分阶段证据说明后续完成的工作。

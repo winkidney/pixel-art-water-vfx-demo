@@ -1,0 +1,29 @@
+{
+  "music_file": "pixel-art-water.m4a",
+  "music_sha256": "5fa9c08d8f7c29f9f6a6b02d48ea73a7c5ae083d9db85cf3fb431376c1c9cf3d",
+  "input_video_sha256": "898ae9e3655ba93da63443ad2dff1f8a95358f4eae851deda4fe75b2f27bd90c",
+  "input_narration_sha256": "082de8c8f01e5a1841ee7c762d86210b913b60922e9e0c9af9cc80b3aef1094b",
+  "output_video_sha256": "672008996227f02e7edc1ab96a88fd4c4c12c1f15313f60abd8307d933fb1f03",
+  "duration_seconds": 178,
+  "music_gain_db": -14,
+  "voice_gain_db": 0,
+  "voice_spatial_mapping": "Mono centered at equal total power in stereo",
+  "music_fade_in_seconds": 1.5,
+  "music_fade_out_start": 175,
+  "music_fade_out_seconds": 3,
+  "sidechain": {
+    "threshold": 0.1,
+    "ratio": 3,
+    "attack_ms": 35,
+    "release_ms": 550
+  },
+  "safety_limiter_dbfs": -1.5,
+  "video_stream_hash_before": "SHA256=6e5e92e0a32cc43cc81a0a53b8a708e958e26399a00ca0dbee902815969d3613",
+  "video_stream_hash_after": "SHA256=6e5e92e0a32cc43cc81a0a53b8a708e958e26399a00ca0dbee902815969d3613",
+  "video_stream_unchanged": true,
+  "single_mixed_audio_stream": true,
+  "audio_channels": 2,
+  "filter": "[0:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=mono,asplit=2[voice][side];[voice]pan=stereo|c0=0.70710678*c0|c1=0.70710678*c0[center];[1:a]aformat=sample_fmts=fltp:sample_rates=48000:channel_layouts=stereo,atrim=duration=178,apad=whole_dur=178,volume=-14dB,afade=t=in:st=0:d=1.5,afade=t=out:st=175:d=3[bed];[bed][side]sidechaincompress=threshold=0.1:ratio=3:attack=35:release=550:knee=2.82843:makeup=1[ducked];[center][ducked]amix=inputs=2:duration=first:normalize=0:dropout_transition=0,alimiter=limit=0.841395:level=0:latency=1,atrim=duration=178,asetpts=PTS-STARTPTS[mixed]",
+  "music_source": "User supplied file. Embedded metadata says made with suno. Original retained unchanged.",
+  "receipt_scope": "Original BGM mix before title/cover revision. Current audio copied unchanged; see title-cover-check.json."
+}

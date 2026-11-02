@@ -1,0 +1,170 @@
+[
+  {
+    "id": "day",
+    "frames": 360,
+    "raw_sha256": "fe0498109fc02ff566da59d664f610e09cebcb2094f1255dd84b0b2225d93682",
+    "file_sha256": "9742fc9c03d66cd73c79c0f47ea19a1cab6846c12eab943a9c71692c1ddb2360",
+    "bytes": 7752158,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "night",
+    "frames": 360,
+    "raw_sha256": "ab3457a5cd846afe6bf92d560b2f6f1d2c6118808b7dfe3925ee958f06dd14a6",
+    "file_sha256": "7687e1e2bab9ed643ab7b757771a171a4e9520f062468619ab420287f3042664",
+    "bytes": 7190562,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "entry",
+    "frames": 360,
+    "raw_sha256": "fe0498109fc02ff566da59d664f610e09cebcb2094f1255dd84b0b2225d93682",
+    "file_sha256": "9742fc9c03d66cd73c79c0f47ea19a1cab6846c12eab943a9c71692c1ddb2360",
+    "bytes": 7752158,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "refraction_off",
+    "frames": 240,
+    "raw_sha256": "e3f0432201794f4b6ff611f147c268bdc616420ded5b2915b068a91157e26243",
+    "file_sha256": "7ce0e72ac7f1d6776994b0ad55c221228348a69e06a8379bb3eb2e99b76c2f97",
+    "bytes": 3892986,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "refraction_on",
+    "frames": 240,
+    "raw_sha256": "29fb4e7a79df278197a0d352e7f7a45c8baf5bc3af8c52fada4b5172ef04e556",
+    "file_sha256": "f24eb008f4d9d22ce743d68195bddea9e0e484fcddeaea4671f08d80d085ec90",
+    "bytes": 4659951,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "depth_off",
+    "frames": 240,
+    "raw_sha256": "e277cc5794981a9daba00c08ec3478f0e7b869b48a81a213fe2cb8497d159ad7",
+    "file_sha256": "1629f988ce5efcfb2bcdc01146189661f8db3346f476e2afea2a6a29b6d79fc7",
+    "bytes": 4741092,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "depth_on",
+    "frames": 240,
+    "raw_sha256": "29fb4e7a79df278197a0d352e7f7a45c8baf5bc3af8c52fada4b5172ef04e556",
+    "file_sha256": "f24eb008f4d9d22ce743d68195bddea9e0e484fcddeaea4671f08d80d085ec90",
+    "bytes": 4659951,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "caustics_off",
+    "frames": 240,
+    "raw_sha256": "ea1338df22ed4e70b0080239db95cbb833ca455719534edff7c309f800979cec",
+    "file_sha256": "54295c9f948c6c7b53b9cb3eb96383ca3f5b940e6a5529582b6ebd6cfe1dd420",
+    "bytes": 4477293,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "caustics_on",
+    "frames": 240,
+    "raw_sha256": "29fb4e7a79df278197a0d352e7f7a45c8baf5bc3af8c52fada4b5172ef04e556",
+    "file_sha256": "f24eb008f4d9d22ce743d68195bddea9e0e484fcddeaea4671f08d80d085ec90",
+    "bytes": 4659951,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "foam_off",
+    "frames": 240,
+    "raw_sha256": "c58b1f19e12774b63453537a2dcb5d06968414ecc3692baa7d1a9145cebb4a63",
+    "file_sha256": "7557fb2c51e9242b264757e427d8cbc97c6f29a7e0672449198253859c00d21e",
+    "bytes": 4169243,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "foam_on",
+    "frames": 240,
+    "raw_sha256": "29fb4e7a79df278197a0d352e7f7a45c8baf5bc3af8c52fada4b5172ef04e556",
+    "file_sha256": "f24eb008f4d9d22ce743d68195bddea9e0e484fcddeaea4671f08d80d085ec90",
+    "bytes": 4659951,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "ripples",
+    "frames": 360,
+    "raw_sha256": "8a010b12d07c7f556e3e24db84fea6a2afaf384085aab3c759acdd48327d026d",
+    "file_sha256": "96ccda08ecf923f1b50cf65d1ffe42cf346be3f7d2f46e823457c57c06f70624",
+    "bytes": 7589837,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "falls",
+    "frames": 360,
+    "raw_sha256": "cc2a71e15b09a59bd37c964d751582471c01f6a089aadfdf09c109cde2618d16",
+    "file_sha256": "d992b19e1211d6c667db3ca24087eb97e0174e0d44e7eaef498089862cf08029",
+    "bytes": 7168488,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "environment",
+    "frames": 360,
+    "raw_sha256": "da741faff61c31f6be8ab05355f9e774a321a720d2ff169db616bb378e67b3e1",
+    "file_sha256": "59017a11bf0cc91f2aa8749498af48c6cb2e7e3904e7b54f39c5e58af3cec27e",
+    "bytes": 6661985,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "occlusion_off",
+    "frames": 240,
+    "raw_sha256": "7a7a0e67ddebf4df8d8d77b1e0a94f5d8526d072c0137b0776f757bf8b76e0b1",
+    "file_sha256": "84843a61ffea521d2f848904575db2c60726e80ff608b94e8ea5c21f37bb4475",
+    "bytes": 4660671,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "occlusion_on",
+    "frames": 240,
+    "raw_sha256": "4a536b6b55bb71b7ade436952f5ad0fc82963b86bf0572c0b824f9fc9d0b5bc4",
+    "file_sha256": "8f35ff4c4ed7467b13c50d3723b92b5e6c7e9ea680fa2b91bd835c67b62750bc",
+    "bytes": 4659040,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "deep",
+    "frames": 360,
+    "raw_sha256": "cf745a43f24ebfea8dc088abf680a8455ea934a8ee294e04a2d3b12de85f8131",
+    "file_sha256": "8519a7258c56e1571e1e9d6643f31e780659d654657ca980a25317ce6567cfd1",
+    "bytes": 7179485,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "waterline_bad",
+    "frames": 360,
+    "raw_sha256": "5f5e0e119d6e3f757c8e107ade8a836604f43a1057e7289dc7cc770426798aad",
+    "file_sha256": "70d2e2593e612825aca279b73793ed4a566c1c5592bbd82ca5fe05b7b7bb9d7f",
+    "bytes": 7189645,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "color_day",
+    "frames": 360,
+    "raw_sha256": "d9aa294b8ed1b79a7e7aa4e69a31cb925af245fddf24cf8eacc16d822d8b7c1f",
+    "file_sha256": "26c7056daaaf88f2c0e4d806203456ab01d4a32b7bf771fc06a3ca895f4330de",
+    "bytes": 7434588,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "color_night",
+    "frames": 360,
+    "raw_sha256": "8adf1fe7c9eb13a17c7b141760546bb5e7a6d4080950afe3f5c6cca2ff2495a2",
+    "file_sha256": "35dd92fe23fb037abdca8aa6b8072d4a6e5884bde049d3f8777a1249603916a1",
+    "bytes": 6853170,
+    "roundtrip": "bit-exact RGB"
+  },
+  {
+    "id": "intro_flow",
+    "frames": 240,
+    "raw_sha256": "48985fb68e2bf209d99d14fce15def22b6520740417b8ac9d98b10cf1d74b22d",
+    "file_sha256": "ef3bce6638f428494b4c5bff0bec4cd4d03533f14586634792c05e55f3ce3d86",
+    "bytes": 1371459,
+    "roundtrip": "bit-exact RGB"
+  }
+]

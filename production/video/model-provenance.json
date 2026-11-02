@@ -1,0 +1,43 @@
+{
+  "model": "bosonai/higgs-tts-3-4b",
+  "voice": "Fixed 15.05-second synthetic Kokoro zf_001 reference",
+  "quantization": "Q8_0",
+  "runtime": "audio.cpp v0.9.3 CUDA",
+  "seed": 20261102,
+  "text_chunk_size": 40,
+  "sampling": "audio.cpp runtime defaults",
+  "model_and_runtime_sources": [
+    {
+      "kind": "higgs",
+      "path": "models/higgs-audio-v3-tts-4b-q8_0.gguf",
+      "url": "https://huggingface.co/audio-cpp/audio.cpp-gguf/resolve/874fcb41ececda20bcbc0782d6b4ea7f7d069ea8/Higgs-Audio-v3-TTS-4B-GGUF/higgs-audio-v3-tts-4b-q8_0.gguf",
+      "revision": "874fcb41ececda20bcbc0782d6b4ea7f7d069ea8",
+      "bytes": 5095359136,
+      "sha256": "cfa5cc01adcd199dfcf1baf0f610aa474cda83418fd1802aa6defa82d956a0e4",
+      "download_seconds": 456.17
+    },
+    {
+      "kind": "runtime",
+      "path": "runtime/audio-v0.9.3-bin-ubuntu-x64-cuda12.8-colab.tar.gz",
+      "url": "https://github.com/0xShug0/audio.cpp/releases/download/v0.9.3/audio-v0.9.3-bin-ubuntu-x64-cuda12.8-colab.tar.gz",
+      "release_digest": "sha256:5be3e8d515fb244387de87958668ebb729d9442de6a53df12e4c718ea918419d",
+      "bytes": 228182886,
+      "sha256": "5be3e8d515fb244387de87958668ebb729d9442de6a53df12e4c718ea918419d",
+      "download_seconds": 25.03
+    },
+    {
+      "kind": "runtime",
+      "path": "runtime/audio-v0.9.3-cudart-ubuntu-x64-cuda12.8.tar.gz",
+      "url": "https://github.com/0xShug0/audio.cpp/releases/download/v0.9.3/audio-v0.9.3-cudart-ubuntu-x64-cuda12.8.tar.gz",
+      "release_digest": "sha256:2fcbaff8078b9eaed47a4a8e879c10dcf1f12fd31f2d52b29214fc9d45cfa198",
+      "bytes": 787020239,
+      "sha256": "2fcbaff8078b9eaed47a4a8e879c10dcf1f12fd31f2d52b29214fc9d45cfa198",
+      "download_seconds": 92.42
+    }
+  ],
+  "reference": "reference/provenance.json",
+  "license": "HIGGS-LICENSE.txt",
+  "license_source": "higgs-license-source.json",
+  "attribution": "This audio was created with Boson AI Higgs Audio: https://www.boson.ai/higgs-audio",
+  "weights_included": false
+}

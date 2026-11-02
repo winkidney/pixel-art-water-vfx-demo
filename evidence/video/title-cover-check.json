@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "publication_title": "Godot 复刻《星之海》通透像素水体效果｜2D 水面 Shader 原理拆解 | Sea of Stars",
+  "video_metadata_title_exact": true,
+  "opening_title_split": [
+    "Godot 复刻《星之海》通透像素水体效果",
+    "2D 水面 Shader 原理拆解 | Sea of Stars"
+  ],
+  "audio_hash_before": "SHA256=6e35ffa9aa42f2a4e0500071193878a6107a9ee9bf812e9b18b28fb3a370cc97",
+  "audio_hash_after": "SHA256=6e35ffa9aa42f2a4e0500071193878a6107a9ee9bf812e9b18b28fb3a370cc97",
+  "mixed_audio_stream_unchanged": true,
+  "subtitles_unchanged": true,
+  "duration_seconds": 178,
+  "cover_dimensions": [
+    [
+      1920,
+      1080
+    ],
+    [
+      1600,
+      1200
+    ]
+  ],
+  "text_bounds_checked": true,
+  "screenshot_inputs_preserved": true,
+  "font_sha256": "c4bf6069b8e5e31dc42c81f310afbc322c2cbc843ceba6c871358f9f1aaae033"
+}

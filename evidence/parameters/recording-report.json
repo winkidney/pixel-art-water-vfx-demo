@@ -8,5 +8,5 @@
   "encoding_ms_per_frame": 9.7,
   "note": "Rounded engine console timings during recording, separate from normal window process time.",
   "script": "scripts/record_parameters.gd",
-  "video": "../../parameter-workbench-demo.mp4"
+  "video": "../../media/demos/parameter-workbench.mp4"
 }

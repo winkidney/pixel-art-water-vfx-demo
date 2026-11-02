@@ -1,0 +1,1423 @@
+{
+  "title": "Godot 复刻《星之海》通透像素水体效果｜2D 水面 Shader 原理拆解 | Sea of Stars",
+  "date": "2026-11-02",
+  "revision": "repository-layout-v6",
+  "project_commit": "eb50d93",
+  "duration_seconds": 178,
+  "video_frames": 10680,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "voice": "Higgs TTS 3 Q8_0, fixed synthetic Kokoro zf_001 reference",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5527,
+      "sha256": "32d7cf512e7ad324e10382886ccfb28234efdcb7a76f496ca721cd6e9211b065"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 1131,
+      "sha256": "71b658906f86627a64389271069e31fd609aec8fd301e9521093b5754bbf44b8"
+    },
+    {
+      "path": "docs/assets/README.md",
+      "bytes": 1540,
+      "sha256": "0009d69aae92b6b14e7593f5392aa9938f36141a15cfb083e695331e020b66f0"
+    },
+    {
+      "path": "docs/repository-layout.md",
+      "bytes": 1827,
+      "sha256": "e6c54db44e10b2278f7ca43eeb45b523efad1f6cc9a63fb678b718cd8b9dd94b"
+    },
+    {
+      "path": "docs/video-production.md",
+      "bytes": 9086,
+      "sha256": "7befefd06ff8d2d690bc6d225fbcd0939b3d413823e20c501c228102ed777b56"
+    },
+    {
+      "path": "docs/video-references.md",
+      "bytes": 5245,
+      "sha256": "96bf9a0ba2657d997039abfdfddbf9f5aa49a090f8553358e89b585d50b281a6"
+    },
+    {
+      "path": "evidence/video/bgm-mix-check.json",
+      "bytes": 1935,
+      "sha256": "ff28cea3d790aff0f278ac3be9fae6635c09a50756b22c1626454743acb293a0"
+    },
+    {
+      "path": "evidence/video/ffmpeg-analysis.txt",
+      "bytes": 4561,
+      "sha256": "af74db2197d9f6ae7045bfd95ae8575ab68011bd2edc03b4a051948bcaf95426"
+    },
+    {
+      "path": "evidence/video/film-contact-sheet.png",
+      "bytes": 2506147,
+      "sha256": "1630604e1e98ce0482276d3cbb984a9b0523c2385707d72d7c5f71dd2e9defd0"
+    },
+    {
+      "path": "evidence/video/flow-capture-check.json",
+      "bytes": 271,
+      "sha256": "4e156e5b9d05e41e8c8429571f0b0d9b9347d046d265bd9e3015d582156b7356"
+    },
+    {
+      "path": "evidence/video/frame-height.png",
+      "bytes": 556768,
+      "sha256": "8f95ddc22885ff54c4561a96a4016e28daa3c1208670df232fb8948602438ac6"
+    },
+    {
+      "path": "evidence/video/frame-intro_day.png",
+      "bytes": 830845,
+      "sha256": "25bfd63f96250d0cd72d27de503deafd5aea2cf3f3ff2aeb3360de6ef22f4caa"
+    },
+    {
+      "path": "evidence/video/frame-pitfall_mask.png",
+      "bytes": 1385144,
+      "sha256": "c9b36171819d006dd5010242e7457dbfb7bd0fc8298583e9238e01f2f846216b"
+    },
+    {
+      "path": "evidence/video/frame-refraction.png",
+      "bytes": 773185,
+      "sha256": "d87c2611a3487878cb81b47667ebb4564daf75421f06dacca087e39ed701f87e"
+    },
+    {
+      "path": "evidence/video/frame-refs_art.png",
+      "bytes": 674138,
+      "sha256": "bdba1e0e2f9838fb457483630a3e0e738709c3b4f619d9bd1adbec0388e4be77"
+    },
+    {
+      "path": "evidence/video/frame-refs_tech.png",
+      "bytes": 300750,
+      "sha256": "710ae4c5239bf7edd7a8f97d101d3f7ccf1b88514e6ddce172d8b163d604075d"
+    },
+    {
+      "path": "evidence/video/media-probe.json",
+      "bytes": 6690,
+      "sha256": "d803444c2f7687d59a886e256a401b508e164e0052788e29748790b578b6d0b1"
+    },
+    {
+      "path": "evidence/video/mix-balance-check.json",
+      "bytes": 412,
+      "sha256": "4876495cc98e0add7e94f89e8e240a80f0b58b43ad5913bb45b4a9732aecdb8f"
+    },
+    {
+      "path": "evidence/video/opening-01.png",
+      "bytes": 806032,
+      "sha256": "a9e91765f8b6baf4ab39b6defa18b6cb1ccc98916f0f0e298f6063a6a09d2a24"
+    },
+    {
+      "path": "evidence/video/opening-02.png",
+      "bytes": 838940,
+      "sha256": "808eff8c53e6f17ca6d4018a42a1794e23bc3a7ad28673ab75e04f9f9992232c"
+    },
+    {
+      "path": "evidence/video/opening-03.png",
+      "bytes": 877135,
+      "sha256": "d6bc8953b7e68138ffad4e83cfc2a74c4ddc78abd1189493356b7e0843773c98"
+    },
+    {
+      "path": "evidence/video/opening-04.png",
+      "bytes": 678495,
+      "sha256": "e702e2b638ec94f1acd943ad180881ec3b4619a7009fea9bbb7a6e5db3f4658e"
+    },
+    {
+      "path": "evidence/video/opening-05.png",
+      "bytes": 552431,
+      "sha256": "dc467830dc34d8449a958ad2f645314146296710cf86b56f49eecf81583698d5"
+    },
+    {
+      "path": "evidence/video/opening-06.png",
+      "bytes": 840014,
+      "sha256": "aaecce404aa7eec9da6aab8879e1b0645ed7a5aaf811b224ef6fd271c924a692"
+    },
+    {
+      "path": "evidence/video/opening-contact-sheet.png",
+      "bytes": 2013752,
+      "sha256": "2277f36a505badcb894208b817aea68d5f21aa8592455c6956d900fd56b8af09"
+    },
+    {
+      "path": "evidence/video/opening-feature-check.json",
+      "bytes": 1627,
+      "sha256": "900a904e1a44a16ec1a534ae49e8117c90d501903465bc57a50bd35a91399f45"
+    },
+    {
+      "path": "evidence/video/qa-report.json",
+      "bytes": 3293,
+      "sha256": "78bcc7dd60441dca9fa9f1bd7de1b34a8382ec4805d6da2570b8947e83be2125"
+    },
+    {
+      "path": "evidence/video/speech-asr-check.json",
+      "bytes": 8672,
+      "sha256": "4502c16f929cb8d0e892d99be65d9b71939b983a11297bf10ae21c3091ba1966"
+    },
+    {
+      "path": "evidence/video/thumbnail-cover-16x9.png",
+      "bytes": 142384,
+      "sha256": "88c56711d490359ed98e9f8a202a3764e1242b1f22c6ff1e3c59f6d6c3c745d6"
+    },
+    {
+      "path": "evidence/video/thumbnail-cover-4x3.png",
+      "bytes": 131835,
+      "sha256": "41a88afc6032da3ea8fe355f3529fc824be47df895fe51e9088153e29c73ae87"
+    },
+    {
+      "path": "evidence/video/title-cover-check.json",
+      "bytes": 874,
+      "sha256": "b4a0346c724781a6ba6df1cd7af81cbe0e300bef1160bba3f5071cab4320d2cd"
+    },
+    {
+      "path": "evidence/video/voice-revision-check.json",
+      "bytes": 6710,
+      "sha256": "d7ca2313bdf1af3e4a7389bf12746f981bd2adc31d7562dab579f51e4012d90f"
+    },
+    {
+      "path": "media/README.md",
+      "bytes": 1044,
+      "sha256": "ea54356eda88b1148ac7ac848c91db8647c0277b2f0ac5c9aad15f3397f60372"
+    },
+    {
+      "path": "media/archive/covers/cover-sea-of-stars-16x9.png",
+      "bytes": 236691,
+      "sha256": "c35d5dd80a39206e5ef8cccb87e887812571dae8c460cac8687680b701a60be6"
+    },
+    {
+      "path": "media/archive/covers/cover-sea-of-stars-4x3.png",
+      "bytes": 298340,
+      "sha256": "df6cd53cd7d0654edcde9071b87716723b486b388494da1258007619c029fe54"
+    },
+    {
+      "path": "media/archive/video/godot-sea-of-stars-pixel-water-shader.mp4",
+      "bytes": 49267437,
+      "sha256": "13a38e95e9bb44ea3e4931ee686fcddfcba314bd92fd221e098241b5476143ce"
+    },
+    {
+      "path": "media/archive/video/higgs-q8-bgm-before-title.mp4",
+      "bytes": 49263819,
+      "sha256": "672008996227f02e7edc1ab96a88fd4c4c12c1f15313f60abd8307d933fb1f03"
+    },
+    {
+      "path": "media/archive/video/higgs-q8-narration-only.mp4",
+      "bytes": 46762396,
+      "sha256": "898ae9e3655ba93da63443ad2dff1f8a95358f4eae851deda4fe75b2f27bd90c"
+    },
+    {
+      "path": "media/audio/narration.wav",
+      "bytes": 17088078,
+      "sha256": "082de8c8f01e5a1841ee7c762d86210b913b60922e9e0c9af9cc80b3aef1094b"
+    },
+    {
+      "path": "media/audio/soundtrack.m4a",
+      "bytes": 5539677,
+      "sha256": "5f55b5772ed941b10283fdceaa29af11baa528743b036e00b5128f764f3a6e59"
+    },
+    {
+      "path": "media/images/covers/cover-16x9.png",
+      "bytes": 236691,
+      "sha256": "c35d5dd80a39206e5ef8cccb87e887812571dae8c460cac8687680b701a60be6"
+    },
+    {
+      "path": "media/images/covers/cover-4x3.png",
+      "bytes": 298340,
+      "sha256": "df6cd53cd7d0654edcde9071b87716723b486b388494da1258007619c029fe54"
+    },
+    {
+      "path": "media/video/chapters.txt",
+      "bytes": 302,
+      "sha256": "da9427a5cff9ce8c5a72c1879d36da453ddee73d80e1d15876c2d7fa3fdb581e"
+    },
+    {
+      "path": "media/video/description.txt",
+      "bytes": 1221,
+      "sha256": "3e24aa1dd291fbe4800ee16ed33382d58ecf6583f904df89acc22ab5c00dcb39"
+    },
+    {
+      "path": "media/video/opening-preview.mp4",
+      "bytes": 5173940,
+      "sha256": "c44b5c1015c4e1d212b5c06bf4cf3e21be3af808c0f9f3270fb5515ca35db6a8"
+    },
+    {
+      "path": "media/video/pixel-water-shader.mp4",
+      "bytes": 49267437,
+      "sha256": "13a38e95e9bb44ea3e4931ee686fcddfcba314bd92fd221e098241b5476143ce"
+    },
+    {
+      "path": "media/video/subtitles.srt",
+      "bytes": 2926,
+      "sha256": "020eae45724e05cc95aa54f9e2846046f38a3b375edb047174c8d6c8a882b8f4"
+    },
+    {
+      "path": "media/video/title.txt",
+      "bytes": 99,
+      "sha256": "33a88b52f675468e6200f2a198a2fb6e0b5f53a88de59a1f47641ee3a771eb4b"
+    },
+    {
+      "path": "production/video/AUDIOCPP-LICENSE.txt",
+      "bytes": 10276,
+      "sha256": "8f0b762d062e1ec79a3e73189b29474051c0e957973f43146aefeb03f2e11581"
+    },
+    {
+      "path": "production/video/HIGGS-LICENSE.txt",
+      "bytes": 32184,
+      "sha256": "0382189330b87c38517530e4e5bf0c9dfeb6c7bfbe62812577ddcb73e09a60c5"
+    },
+    {
+      "path": "production/video/KOKORO-LICENSE.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "production/video/README.md",
+      "bytes": 7326,
+      "sha256": "dc43565a5952f4fa904262b7052dc213c52cb112bc3b9a6ccb16be1354d7b005"
+    },
+    {
+      "path": "production/video/archive_captures.py",
+      "bytes": 1830,
+      "sha256": "84b738f30a49576f9b3e6dc85268ff76e4b2db40dd42f48d603e22ef1f512314"
+    },
+    {
+      "path": "production/video/assemble_audio.py",
+      "bytes": 2746,
+      "sha256": "94b418361026496b1e25ba5f05d110bdb9b6bfb81fa15379c418977d06474a69"
+    },
+    {
+      "path": "production/video/audio-timing.json",
+      "bytes": 3318,
+      "sha256": "9e026396d51ec3f9955f646e063af6f1a655d46537887e8368f5b42cad509409"
+    },
+    {
+      "path": "production/video/build_covers.py",
+      "bytes": 4728,
+      "sha256": "e998315d52af8141c78feba9b26468aa1283db8df06be1f600b7d391c251895a"
+    },
+    {
+      "path": "production/video/capture-assets/capture-report.json",
+      "bytes": 2749,
+      "sha256": "37562b9bc78e743f5c85fb0ae726c7ff6d73b9d66c756b0d2100a62b764b4e42"
+    },
+    {
+      "path": "production/video/capture-assets/caustics_off.mp4",
+      "bytes": 4477293,
+      "sha256": "54295c9f948c6c7b53b9cb3eb96383ca3f5b940e6a5529582b6ebd6cfe1dd420"
+    },
+    {
+      "path": "production/video/capture-assets/caustics_on.mp4",
+      "bytes": 4659951,
+      "sha256": "f24eb008f4d9d22ce743d68195bddea9e0e484fcddeaea4671f08d80d085ec90"
+    },
+    {
+      "path": "production/video/capture-assets/color_day.mp4",
+      "bytes": 7434588,
+      "sha256": "26c7056daaaf88f2c0e4d806203456ab01d4a32b7bf771fc06a3ca895f4330de"
+    },
+    {
+      "path": "production/video/capture-assets/color_night.mp4",
+      "bytes": 6853170,
+      "sha256": "35dd92fe23fb037abdca8aa6b8072d4a6e5884bde049d3f8777a1249603916a1"
+    },
+    {
+      "path": "production/video/capture-assets/day.mp4",
+      "bytes": 7752158,
+      "sha256": "9742fc9c03d66cd73c79c0f47ea19a1cab6846c12eab943a9c71692c1ddb2360"
+    },
+    {
+      "path": "production/video/capture-assets/deep.mp4",
+      "bytes": 7179485,
+      "sha256": "8519a7258c56e1571e1e9d6643f31e780659d654657ca980a25317ce6567cfd1"
+    },
+    {
+      "path": "production/video/capture-assets/depth_off.mp4",
+      "bytes": 4741092,
+      "sha256": "1629f988ce5efcfb2bcdc01146189661f8db3346f476e2afea2a6a29b6d79fc7"
+    },
+    {
+      "path": "production/video/capture-assets/depth_on.mp4",
+      "bytes": 4659951,
+      "sha256": "f24eb008f4d9d22ce743d68195bddea9e0e484fcddeaea4671f08d80d085ec90"
+    },
+    {
+      "path": "production/video/capture-assets/entry.mp4",
+      "bytes": 7752158,
+      "sha256": "9742fc9c03d66cd73c79c0f47ea19a1cab6846c12eab943a9c71692c1ddb2360"
+    },
+    {
+      "path": "production/video/capture-assets/environment.mp4",
+      "bytes": 6661985,
+      "sha256": "59017a11bf0cc91f2aa8749498af48c6cb2e7e3904e7b54f39c5e58af3cec27e"
+    },
+    {
+      "path": "production/video/capture-assets/falls.mp4",
+      "bytes": 7168488,
+      "sha256": "d992b19e1211d6c667db3ca24087eb97e0174e0d44e7eaef498089862cf08029"
+    },
+    {
+      "path": "production/video/capture-assets/flow-capture-check.json",
+      "bytes": 271,
+      "sha256": "4e156e5b9d05e41e8c8429571f0b0d9b9347d046d265bd9e3015d582156b7356"
+    },
+    {
+      "path": "production/video/capture-assets/foam_off.mp4",
+      "bytes": 4169243,
+      "sha256": "7557fb2c51e9242b264757e427d8cbc97c6f29a7e0672449198253859c00d21e"
+    },
+    {
+      "path": "production/video/capture-assets/foam_on.mp4",
+      "bytes": 4659951,
+      "sha256": "f24eb008f4d9d22ce743d68195bddea9e0e484fcddeaea4671f08d80d085ec90"
+    },
+    {
+      "path": "production/video/capture-assets/intro-flow-report.json",
+      "bytes": 423,
+      "sha256": "23f929dc832f6ea0bccdd0ba8d4cdd5996256d51fa3e14e4cd4df99c404ccfc5"
+    },
+    {
+      "path": "production/video/capture-assets/intro_flow.mp4",
+      "bytes": 1371459,
+      "sha256": "ef3bce6638f428494b4c5bff0bec4cd4d03533f14586634792c05e55f3ce3d86"
+    },
+    {
+      "path": "production/video/capture-assets/lossless-receipts.json",
+      "bytes": 5863,
+      "sha256": "7c3624414ab30add85f17555a3ad80f8ce5b9844ac3c30b4886e175678180f68"
+    },
+    {
+      "path": "production/video/capture-assets/night.mp4",
+      "bytes": 7190562,
+      "sha256": "7687e1e2bab9ed643ab7b757771a171a4e9520f062468619ab420287f3042664"
+    },
+    {
+      "path": "production/video/capture-assets/occlusion_off.mp4",
+      "bytes": 4660671,
+      "sha256": "84843a61ffea521d2f848904575db2c60726e80ff608b94e8ea5c21f37bb4475"
+    },
+    {
+      "path": "production/video/capture-assets/occlusion_on.mp4",
+      "bytes": 4659040,
+      "sha256": "8f35ff4c4ed7467b13c50d3723b92b5e6c7e9ea680fa2b91bd835c67b62750bc"
+    },
+    {
+      "path": "production/video/capture-assets/refraction_off.mp4",
+      "bytes": 3892986,
+      "sha256": "7ce0e72ac7f1d6776994b0ad55c221228348a69e06a8379bb3eb2e99b76c2f97"
+    },
+    {
+      "path": "production/video/capture-assets/refraction_on.mp4",
+      "bytes": 4659951,
+      "sha256": "f24eb008f4d9d22ce743d68195bddea9e0e484fcddeaea4671f08d80d085ec90"
+    },
+    {
+      "path": "production/video/capture-assets/ripples.mp4",
+      "bytes": 7589837,
+      "sha256": "96ccda08ecf923f1b50cf65d1ffe42cf346be3f7d2f46e823457c57c06f70624"
+    },
+    {
+      "path": "production/video/capture-assets/waterline_bad.mp4",
+      "bytes": 7189645,
+      "sha256": "70d2e2593e612825aca279b73793ed4a566c1c5592bbd82ca5fe05b7b7bb9d7f"
+    },
+    {
+      "path": "production/video/check_speech.py",
+      "bytes": 1666,
+      "sha256": "af2395efd46f32b0925e8d394bab0fc35840c93bb0944e3e512f3ac88ab1c1f9"
+    },
+    {
+      "path": "production/video/cover-assets/day.png",
+      "bytes": 309390,
+      "sha256": "41834db02b627cbd4dff160bc8d045253341c3619087bb40e073b41049c7b431"
+    },
+    {
+      "path": "production/video/cover-assets/night.png",
+      "bytes": 284850,
+      "sha256": "1841d01b753df12c9e41711fb0e8209009fbe78de07863e28e22e5190e599d17"
+    },
+    {
+      "path": "production/video/cover-receipt.json",
+      "bytes": 7143,
+      "sha256": "045a83c446ff60cf98b445960cf3d214ed2a911f0caa45bbeb9ca47b864c3dc5"
+    },
+    {
+      "path": "production/video/environment-versions.json",
+      "bytes": 378,
+      "sha256": "2c1cd7aadbd22f2c60679fe0c4dea17c5d11debbb2cd579ee7d57b672d4d1ef7"
+    },
+    {
+      "path": "production/video/font-glyph-audit.json",
+      "bytes": 139,
+      "sha256": "991ed74c5435b53b3a8726f2a06f57f351a76f70d2e9016c709f2234be5ba4fb"
+    },
+    {
+      "path": "production/video/fonts/SOURCE.json",
+      "bytes": 469,
+      "sha256": "835dc3b68ee7a62dca48dd03f66d536e041695daa1d863f62676a3c092ab0633"
+    },
+    {
+      "path": "production/video/fonts/zlabs-pixel-12px-m-cn.ttf",
+      "bytes": 3350152,
+      "sha256": "c4bf6069b8e5e31dc42c81f310afbc322c2cbc843ceba6c871358f9f1aaae033"
+    },
+    {
+      "path": "production/video/fonts/zlabs-pixel-font-OFL.txt",
+      "bytes": 4508,
+      "sha256": "1b4d4877cb561c1800e3a2eacdbcd024760d20971656cec042d434ae9ee33c1d"
+    },
+    {
+      "path": "production/video/higgs-license-source.json",
+      "bytes": 274,
+      "sha256": "7f74049f5a4e1d6f1435acec202fafac8d68b45e31797b38bc6df8d93205ff94"
+    },
+    {
+      "path": "production/video/mix-settings.json",
+      "bytes": 232,
+      "sha256": "c825fa3dd2d59381760c3c4e51f4f2662d3960f7f28b6253f057e302a5508e44"
+    },
+    {
+      "path": "production/video/mix_bgm.py",
+      "bytes": 3727,
+      "sha256": "0a50b30136502f79b9c28ff0de70a85e0bf63cfadd3cd022b4ebc8cf7aa94ea3"
+    },
+    {
+      "path": "production/video/model-provenance.json",
+      "bytes": 1984,
+      "sha256": "df0a0eb9a573615cfc418b936de0802eaa032e852d06e29e050cf58a4910ae0a"
+    },
+    {
+      "path": "production/video/music-assets/pixel-art-water.m4a",
+      "bytes": 3151568,
+      "sha256": "5fa9c08d8f7c29f9f6a6b02d48ea73a7c5ae083d9db85cf3fb431376c1c9cf3d"
+    },
+    {
+      "path": "production/video/music-assets/provenance.json",
+      "bytes": 487,
+      "sha256": "3e7801c3c12ac1a48f175c5af687ad39dcab39321f3133b8add47ce9ddb6f101"
+    },
+    {
+      "path": "production/video/narration-assets/attempts/refs-tech-max-tokens/inference.log",
+      "bytes": 425513,
+      "sha256": "e551b3395937df0fc020647978b844d4329d3f3a335295a23414db5411973a2f"
+    },
+    {
+      "path": "production/video/narration-assets/attempts/refs-tech-max-tokens/method.json",
+      "bytes": 1024,
+      "sha256": "0c006f36f4b788110f7cad6a05ab9f29da0455ef4bf95ba392d6720c3df17274"
+    },
+    {
+      "path": "production/video/narration-assets/attempts/refs-tech-max-tokens/shutdown.json",
+      "bytes": 101,
+      "sha256": "5fe55b04309cb372bb743e8375aabec4cecc17a6f508b9a4240e20482a1c4944"
+    },
+    {
+      "path": "production/video/narration-assets/caustics-00.txt",
+      "bytes": 45,
+      "sha256": "ea869eafaf9826687800421d2aea95eeb2522ef24ccd4f49bfdc7f4e8c564e2b"
+    },
+    {
+      "path": "production/video/narration-assets/caustics-00.wav",
+      "bytes": 159404,
+      "sha256": "503ed08c2f43af51dd8fd716599fa3be647d79f0a8a6bd0ead1b4d85e29e74e5"
+    },
+    {
+      "path": "production/video/narration-assets/caustics.wav",
+      "bytes": 164204,
+      "sha256": "d67a39106e081a45ab18d890fefdbda7fc40384aa2a3e7154b00f7c36aa08d50"
+    },
+    {
+      "path": "production/video/narration-assets/color-00.txt",
+      "bytes": 54,
+      "sha256": "b6a22dd2ffdcb78bbd27f09ab878cc5c95eb0f2b6dd699c863f9bee3bd81b3c2"
+    },
+    {
+      "path": "production/video/narration-assets/color-00.wav",
+      "bytes": 185324,
+      "sha256": "87e9876069bfa8775c4fd0a08bc4fb9a5c89f2a3174bd30a6a86d3cfb18fea4e"
+    },
+    {
+      "path": "production/video/narration-assets/color.wav",
+      "bytes": 190124,
+      "sha256": "686189d43045b2ba8bad9b054c567926c08cb486af6d641481bd941aa71a2807"
+    },
+    {
+      "path": "production/video/narration-assets/depth-00.txt",
+      "bytes": 72,
+      "sha256": "05667f0335a002ab4219629b51f6a800c6cca8b7d5bf4a0f0965dec48010b9db"
+    },
+    {
+      "path": "production/video/narration-assets/depth-00.wav",
+      "bytes": 258284,
+      "sha256": "3b78e70636b8c8a24c96833d40d9a87b8fe994c83929308e75186c7b9929cacd"
+    },
+    {
+      "path": "production/video/narration-assets/depth.wav",
+      "bytes": 263084,
+      "sha256": "904cbeb6e07d953c1cb3cb037ff6234a0cbb8020ed9a73a8d6695e4c853e3cb2"
+    },
+    {
+      "path": "production/video/narration-assets/environment-00.txt",
+      "bytes": 63,
+      "sha256": "4a11dd3f7e59003f81852d4484f7ecd97845cefa4e687723c30ca5cdbc977c7e"
+    },
+    {
+      "path": "production/video/narration-assets/environment-00.wav",
+      "bytes": 225644,
+      "sha256": "a6b0ed7e5ba1272ffca62c98e97d35120959fe7f9c259fb40edce8bcc7b26ec0"
+    },
+    {
+      "path": "production/video/narration-assets/environment.wav",
+      "bytes": 230444,
+      "sha256": "f6a674830ad079c1e40baacf0f5374cbdc0282bb5d9f53b20f93d91e2b59ea44"
+    },
+    {
+      "path": "production/video/narration-assets/falls-00.txt",
+      "bytes": 69,
+      "sha256": "713ec7b513b06d132bc78976e226f6ed0a6030788c138de7e069b26aa4de652d"
+    },
+    {
+      "path": "production/video/narration-assets/falls-00.wav",
+      "bytes": 251564,
+      "sha256": "59b1b4704ae447daeaaf74eb2ec495b0d5512a37af81a9b0e9b7c23fe958e50b"
+    },
+    {
+      "path": "production/video/narration-assets/falls.wav",
+      "bytes": 256364,
+      "sha256": "d24e22a6a5cbd6bac6469f14a8d5a5544b796e8ed06b5eb6a32372b41df6878a"
+    },
+    {
+      "path": "production/video/narration-assets/foam-00.txt",
+      "bytes": 54,
+      "sha256": "832c2c955193384d9cacd12ff84e9c396337847c405489f9137c65e7eddb9eb7"
+    },
+    {
+      "path": "production/video/narration-assets/foam-00.wav",
+      "bytes": 187244,
+      "sha256": "04795047552e534fddd764128d559ce7949f781b1351af3b9b8a64635d64b028"
+    },
+    {
+      "path": "production/video/narration-assets/foam.wav",
+      "bytes": 192044,
+      "sha256": "aabcc3dac40817a527ef2b64e9d2d95d7b947f40908318d1fc2eef2f13bd32a3"
+    },
+    {
+      "path": "production/video/narration-assets/height-00.txt",
+      "bytes": 75,
+      "sha256": "1d5232955418185d84a82aaa93956d0b6877865c6a5908b9cb118b5d06cf44f9"
+    },
+    {
+      "path": "production/video/narration-assets/height-00.wav",
+      "bytes": 291884,
+      "sha256": "432aa284c5a95dc75dba90d4218ad5d0d41a0e3272deec9152edcff1800af092"
+    },
+    {
+      "path": "production/video/narration-assets/height-01.txt",
+      "bytes": 66,
+      "sha256": "1002a0d63f77a1f72f281874098b78be9eaee647cf44ee3e4f1b0c19b784a0ee"
+    },
+    {
+      "path": "production/video/narration-assets/height-01.wav",
+      "bytes": 214124,
+      "sha256": "6f3dd0f84ec1233675a3ce42dcfa4e7ac04e75e0ad9b127eb2f601bff5ddfe2d"
+    },
+    {
+      "path": "production/video/narration-assets/height.wav",
+      "bytes": 515564,
+      "sha256": "c8b6a8b7e4c683619f58721acae46d527c1ad692a555c21be9b5ac6b27986ac0"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/caustics-00.json",
+      "bytes": 937,
+      "sha256": "4d1a0c7603104e5e2fc4247776603a6e0707f2ced136944484a06b6682d6b1c7"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/color-00.json",
+      "bytes": 946,
+      "sha256": "25d973fa9979848172563b3782b93077632f2ff9e9c61b94f26d7ecd406f1d34"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/declared-options.json",
+      "bytes": 2517,
+      "sha256": "b0c12211dd41dcbfe4d5aca9b1834ca1fa92a0e113ad52ed35d1e5c01107b368"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/depth-00.json",
+      "bytes": 965,
+      "sha256": "13b41f4d6d350378909d96bb67f2963f16545f3303b1c71d4a7a82adc9157e58"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/environment-00.json",
+      "bytes": 954,
+      "sha256": "acd2a92ce179f8c7738b4d2f110f06955ff1fee7413024f2d36c2f1c475a4f1b"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/falls-00.json",
+      "bytes": 960,
+      "sha256": "215446638a7f7f3d7f9587039ffa29d81c4dee9a8af1bcfd8d8f6397ea3897b8"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/foam-00.json",
+      "bytes": 946,
+      "sha256": "eb7344d917b63fae44d767e0baa9f5836ce6bc361c43faa0e75b07b5cb6f5a6b"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/height-00.json",
+      "bytes": 968,
+      "sha256": "fa33bd95f2f623ad3e9995e53945ad2cbd2b0883e98047cd82595db75434519c"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/height-01.json",
+      "bytes": 959,
+      "sha256": "422022422dbf0619de8cc6efa92b1684abf5f7203b64eb070ce94fe15c178964"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/immersion-00.json",
+      "bytes": 931,
+      "sha256": "8b22eade34f1590362715823f870275816ab73efbc9662f02464529c3276770b"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/immersion-01.json",
+      "bytes": 951,
+      "sha256": "767aba4a33772fd589ad88d66f88edb684f4976aff7a1102dba433a017a8369b"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/inference.log",
+      "bytes": 45397,
+      "sha256": "e2e395c0b3b3ba0f814c517eba759295a1c828890b39a7cc0a446cf36ea4c876"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/intro_day-00.json",
+      "bytes": 983,
+      "sha256": "c57605e70da65355341465608b85d13f9f3d74b0f97845dfa7e3431531ab32e9"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/intro_immersion-00.json",
+      "bytes": 927,
+      "sha256": "83a71c114601a76688d689fdd3708364a29b52b8658fc33cdfb64111673f0703"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/intro_night-00.json",
+      "bytes": 947,
+      "sha256": "1cda83cb23482840bf564240eda1135fc0c2f87fed12e0b4e44db7da3f4bef9d"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/method.json",
+      "bytes": 1024,
+      "sha256": "0c006f36f4b788110f7cad6a05ab9f29da0455ef4bf95ba392d6720c3df17274"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/occlusion-00.json",
+      "bytes": 970,
+      "sha256": "f595c60f5b1c776e896e436e31902130a83e0ac3100310628ba47cd12e3a1204"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/parameters-00.json",
+      "bytes": 942,
+      "sha256": "169380f520d72cea85e60339b61e14f627fe99145ede1a1963ebd5c48d324ba0"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/parameters-01.json",
+      "bytes": 961,
+      "sha256": "b77d00fa2541c9ac1315470335b827a729bef809942b0357a210a9636e479370"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/pitfall_mask-00.json",
+      "bytes": 940,
+      "sha256": "7e3ae769c2d6bd3b9301cca77ee9021807824d15ce89a65977df5ab5c9914ff6"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/pitfall_mask-01.json",
+      "bytes": 928,
+      "sha256": "00218eabb92d1054706e83ba80347fcb9cbf7f3455991fc6bfa023ee4564bbf3"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/pitfall_stack-00.json",
+      "bytes": 958,
+      "sha256": "2c1b3ff128ec4a402b89ad1229c00e9e6986a23893ffa7c2d8131ca73dda5948"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/pitfall_stack-01.json",
+      "bytes": 938,
+      "sha256": "86219de4d9f2b31ac8a05b717145b7d2f0cf91d770cfeba2776bd67531fba2de"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/pitfall_waterline-00.json",
+      "bytes": 940,
+      "sha256": "16466a204b5efd97282c7d26678180a94704963504682ea3dd74981018fd9188"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/pitfall_waterline-01.json",
+      "bytes": 946,
+      "sha256": "921033e6263715e8de166a6740154542fefcf267a03953fcdfecfa00ae78c4a1"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/preset-00.json",
+      "bytes": 944,
+      "sha256": "0a7d26dc117ffc9e9fd02003dce84c9b56f861491698ba25ff5dbccf268851da"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/refraction-00.json",
+      "bytes": 920,
+      "sha256": "80522cb1bdbec7015a0e7b035764bbf1a08c6c279c7e43110fecc48474ca40e2"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/refraction-01.json",
+      "bytes": 923,
+      "sha256": "2e66ec9050261b982a6fbd52c2568d68a2c05f6e0b784e3b856fd76f0b52e30b"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/refraction-02.json",
+      "bytes": 922,
+      "sha256": "92f9b3ffa3c6ba2021cbbbcfdcdf9225d934d4c2411edf4399ebcbbb43b7f4a1"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/refs_art-00.json",
+      "bytes": 975,
+      "sha256": "1ab24d546eb9998d9079b4b0a81f1438b9239d77d2c5a54baba3cb500f2a7e04"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/refs_tech-00.json",
+      "bytes": 1504,
+      "sha256": "4efd9f5f59f43b9d717e6243a22b8224f44180a5c723a03a8a7a4ac1177d58ad"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/ripples-00.json",
+      "bytes": 947,
+      "sha256": "fef917b96bff50c4ebb39e7424c7169865a74504bedc4c73f2be39d5e54b95b7"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/semantic-00.json",
+      "bytes": 935,
+      "sha256": "dc897cb8ae8325673c50c5aa2c228eb73ef59e1d645ae4087761b0a6845bf5cf"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/semantic-01.json",
+      "bytes": 942,
+      "sha256": "dd6ab34718aba5bcd47e3ab18c4d635089c66aafc7e04b5610d40363e290188a"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/server.json",
+      "bytes": 403,
+      "sha256": "7a148523c4a941e562005d34ec8d4df4a6114911518667becab93887f09c3b9a"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/shutdown.json",
+      "bytes": 101,
+      "sha256": "33f01ef0fc7c1351e9d2d2e6a789f3aedf287ce6701086502decc90b21e673a0"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/stack-00.json",
+      "bytes": 949,
+      "sha256": "9073dd2eae49800405d08550b869dd0f1da3ce08ef4de75b209bd49957923938"
+    },
+    {
+      "path": "production/video/narration-assets/higgs-logs/stack-01.json",
+      "bytes": 930,
+      "sha256": "c8535bb41bfccc2f3b658971f6905db25507bdd19492be37a280a2ee13fb1c16"
+    },
+    {
+      "path": "production/video/narration-assets/immersion-00.txt",
+      "bytes": 39,
+      "sha256": "3be6e429be442166c9782f2f1c6c62c3252db3958b4f0af5c5971e1963cf42f0"
+    },
+    {
+      "path": "production/video/narration-assets/immersion-00.wav",
+      "bytes": 137324,
+      "sha256": "74385ef358ba914c43332425139fa90f8780e3fbd684fd101d8b19820b8d2508"
+    },
+    {
+      "path": "production/video/narration-assets/immersion-01.txt",
+      "bytes": 60,
+      "sha256": "7672cd788a3a2c33538a293a8b2ac1114e7ea662a8f5f3bb8796904434486ad4"
+    },
+    {
+      "path": "production/video/narration-assets/immersion-01.wav",
+      "bytes": 212204,
+      "sha256": "511600acaca8e7b73c84f01335862f01d868c8704f8716b09ab2d6317dc6762b"
+    },
+    {
+      "path": "production/video/narration-assets/immersion.wav",
+      "bytes": 359084,
+      "sha256": "31f2b4e3780d54515c357f8b416e68012120bd654b004ed5b0b86601d3576c47"
+    },
+    {
+      "path": "production/video/narration-assets/intro_day-00.txt",
+      "bytes": 90,
+      "sha256": "b45ec8cd4edbb299877577a1fbc7b7e46643bf0d02ac7953ef5e20ec5d3ad1ac"
+    },
+    {
+      "path": "production/video/narration-assets/intro_day-00.wav",
+      "bytes": 289964,
+      "sha256": "a2c9aa2e4a830bc30cedd5bc1f51ef0bd0f5ae6506047c34f58ce264b4c9519b"
+    },
+    {
+      "path": "production/video/narration-assets/intro_day.wav",
+      "bytes": 294764,
+      "sha256": "653a9d2dcc1ec587b440ce467fe835b0d1aa51b7cec78e72b068530c34065e2c"
+    },
+    {
+      "path": "production/video/narration-assets/intro_immersion-00.txt",
+      "bytes": 36,
+      "sha256": "d54db77049a147899878743ef316013dbf75555175868973edd356313e56a580"
+    },
+    {
+      "path": "production/video/narration-assets/intro_immersion-00.wav",
+      "bytes": 132524,
+      "sha256": "8ccc002ffcda5a3762b0da278c119e8411f38d496e354a1b0bb51068fb114ecc"
+    },
+    {
+      "path": "production/video/narration-assets/intro_immersion.wav",
+      "bytes": 137324,
+      "sha256": "0ced357f8367f2463b6e00240cadd4379463a9ef4f4e326c25ba09188243ba87"
+    },
+    {
+      "path": "production/video/narration-assets/intro_night-00.txt",
+      "bytes": 54,
+      "sha256": "058617cc5f14a58f7a5acde442fa1507cbcb2b34aca11b6dd5781245b0932d55"
+    },
+    {
+      "path": "production/video/narration-assets/intro_night-00.wav",
+      "bytes": 193964,
+      "sha256": "72f27a9c8aa4aa4fae7ee5b39f7f1c3b6be0b6527f6649016faf844e9aa5c7fd"
+    },
+    {
+      "path": "production/video/narration-assets/intro_night.wav",
+      "bytes": 198764,
+      "sha256": "a1d050bf68c977c897737a00e019643b6a4eb4db799faf1a4c0730eba5e96973"
+    },
+    {
+      "path": "production/video/narration-assets/occlusion-00.txt",
+      "bytes": 78,
+      "sha256": "3381039152801006109875285a1dda56e2277a2faa6d50e632429e63bcd7a8de"
+    },
+    {
+      "path": "production/video/narration-assets/occlusion-00.wav",
+      "bytes": 264044,
+      "sha256": "462197fa00322182a676247dda8b7acf8ba13183cca589078f59a4f2cc34b552"
+    },
+    {
+      "path": "production/video/narration-assets/occlusion.wav",
+      "bytes": 268844,
+      "sha256": "e95bcbc76a5defc40761f743ba67a85e8a43b62f7cb3d8a7601e32e78df9ab10"
+    },
+    {
+      "path": "production/video/narration-assets/parameters-00.txt",
+      "bytes": 51,
+      "sha256": "54e0332373fbd617e762007a8a5a8a9dfc23001756f5d6475ae88bbbe15c90c4"
+    },
+    {
+      "path": "production/video/narration-assets/parameters-00.wav",
+      "bytes": 175724,
+      "sha256": "f3b028336bacb0ae1b0ead461601ab5c1bb2f30cf836a98c3ef91c8ea2c53582"
+    },
+    {
+      "path": "production/video/narration-assets/parameters-01.txt",
+      "bytes": 69,
+      "sha256": "feb830372176c9420baf2741d6175d82aeaab176cc4764ab2390c593dbf484a7"
+    },
+    {
+      "path": "production/video/narration-assets/parameters-01.wav",
+      "bytes": 259244,
+      "sha256": "178129b6f6213fac85253138ec4ce1f5a347e0e8422bfb245ae6e70044c59aea"
+    },
+    {
+      "path": "production/video/narration-assets/parameters.wav",
+      "bytes": 444524,
+      "sha256": "360c03cb596c1d8332c394d48484eb3f8671d3306c45db4b74b9eb792abdd88a"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_mask-00.txt",
+      "bytes": 48,
+      "sha256": "4e2388f505767e1b2621a331b975927e436cda5c9571eb7f8cc503b65ebc2a50"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_mask-00.wav",
+      "bytes": 158444,
+      "sha256": "2735bd896a6a111678290a938e4af7387d419c9ab3648057496d3fe1c89a495e"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_mask-01.txt",
+      "bytes": 36,
+      "sha256": "d91d5fdc9e6d4c63c913d365b7187486b1b3dc1338c866b15ff3d01c99172a7f"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_mask-01.wav",
+      "bytes": 115244,
+      "sha256": "14677c408e394a4de87f3f37ad9cdb5da2bb243ab89cabf6bb813eefce909793"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_mask.wav",
+      "bytes": 283244,
+      "sha256": "5cb77601c7835e087800512867b955f124c18483efb675b385de0ae6784624c4"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_stack-00.txt",
+      "bytes": 66,
+      "sha256": "5e8d84294d0d8fcd6f06d3a121a16a56c0144e5b23b78484dc169f9ade6fee36"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_stack-00.wav",
+      "bytes": 228524,
+      "sha256": "e1a4235166360a121bba5569f449fef6b048e28432b6dd6d1eff4f86b14de7c4"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_stack-01.txt",
+      "bytes": 45,
+      "sha256": "65b205fb51e7e5a3c0391b3a109e0a42408c69cea0f27d31e602b54692c69b03"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_stack-01.wav",
+      "bytes": 154604,
+      "sha256": "e0be563f429f977d1e0d2aa24e628441b64a77740e0904966fc0aa9e201bae0a"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_stack.wav",
+      "bytes": 392684,
+      "sha256": "70cc8fd28d02f3adf4adb8b9e35643a5ac38fe50fc9ac4605cb4d465fbd5666a"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_waterline-00.txt",
+      "bytes": 48,
+      "sha256": "0d7cdcb9cfc6efd42d82d7142b4575339610ab452fb54ca9fdd158b99e075fa7"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_waterline-00.wav",
+      "bytes": 149804,
+      "sha256": "c4cad8552dcdcc974b706e93c4064a54e72147ff50730377f45e5203c9ae7fe2"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_waterline-01.txt",
+      "bytes": 54,
+      "sha256": "1ccaa8befaf591d72fda600acb1896ffe24de238a6e9da1a3173b8b10874455d"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_waterline-01.wav",
+      "bytes": 176684,
+      "sha256": "38b2f17abfe2fc5ce27f6955504f511f3e4472e6cccc1db3ccc2b455c42ef1cb"
+    },
+    {
+      "path": "production/video/narration-assets/pitfall_waterline.wav",
+      "bytes": 336044,
+      "sha256": "82909e9b9dec34443162755690d8faf7cf5614bfc1ec04dd4f51dc0d6c77055f"
+    },
+    {
+      "path": "production/video/narration-assets/preset-00.txt",
+      "bytes": 51,
+      "sha256": "39ffb35aea949f3ee87d724017dc3b0d968b94493bcdeb50c14b762cb62cf188"
+    },
+    {
+      "path": "production/video/narration-assets/preset-00.wav",
+      "bytes": 173804,
+      "sha256": "c970e037b5518dfd8acd1542267021af58451cd4feca0d957c1340e9ebaf20a2"
+    },
+    {
+      "path": "production/video/narration-assets/preset.wav",
+      "bytes": 178604,
+      "sha256": "fedcce8404a9f2a487af02a2837dd5c51fb7daa47477f26019b4829ed80781e7"
+    },
+    {
+      "path": "production/video/narration-assets/raw/caustics-00.wav",
+      "bytes": 174764,
+      "sha256": "d30997ac03a9f8f7e2ddb8cc66904a6aed153c614e7fa6bc5f7f2a9f802280b1"
+    },
+    {
+      "path": "production/video/narration-assets/raw/color-00.wav",
+      "bytes": 193964,
+      "sha256": "17869c9c4de61686bf7c4061cdbf6bd72078fe2985e9d1e319b854e1dc2f9534"
+    },
+    {
+      "path": "production/video/narration-assets/raw/depth-00.wav",
+      "bytes": 274604,
+      "sha256": "7e0d0bd8ee5b008d4b822e097f9ecd482b745d656f839a9df988df66ddaceb0e"
+    },
+    {
+      "path": "production/video/narration-assets/raw/environment-00.wav",
+      "bytes": 241964,
+      "sha256": "c274c068e1d5626da6128b45f5383dca3d4d425e2c1307b808d66021a6ef8499"
+    },
+    {
+      "path": "production/video/narration-assets/raw/falls-00.wav",
+      "bytes": 272684,
+      "sha256": "276b0c3f4afc4aa83e72ada9cb7b3d5477428faa7990000db2b2f1d234ea15c1"
+    },
+    {
+      "path": "production/video/narration-assets/raw/foam-00.wav",
+      "bytes": 209324,
+      "sha256": "cb415a3c4b033cf37cb3797c4df2960ffde214891684e1285ab200aef6fe4be5"
+    },
+    {
+      "path": "production/video/narration-assets/raw/height-00.wav",
+      "bytes": 311084,
+      "sha256": "01af07007ef435dba439f2693ea149dc33dbcb31f28c9b5298ae8d8f61ddda88"
+    },
+    {
+      "path": "production/video/narration-assets/raw/height-01.wav",
+      "bytes": 238124,
+      "sha256": "7f9fc9419aa3a3b756bb4ba184e316355949ed5a8a6a3d692e657eed2917fbbd"
+    },
+    {
+      "path": "production/video/narration-assets/raw/immersion-00.wav",
+      "bytes": 159404,
+      "sha256": "dcb28f20352a012f757596b061991ce4fac54143463b7ad95d5580d8c67dae3c"
+    },
+    {
+      "path": "production/video/narration-assets/raw/immersion-01.wav",
+      "bytes": 230444,
+      "sha256": "adbba849b8a3abaf79c4114c24d06cb10c1e21f7052df6579a40bdc604b15103"
+    },
+    {
+      "path": "production/video/narration-assets/raw/intro_day-00.wav",
+      "bytes": 309164,
+      "sha256": "b104d3b21c0b025b4a0a7019220408de906785445e459809e0e66fa2afffe818"
+    },
+    {
+      "path": "production/video/narration-assets/raw/intro_immersion-00.wav",
+      "bytes": 144044,
+      "sha256": "4f5ebcd234a42c5d66d1b891e2cc98ed0da1eae5190832c274087ae66fe92665"
+    },
+    {
+      "path": "production/video/narration-assets/raw/intro_night-00.wav",
+      "bytes": 209324,
+      "sha256": "62fc7cb0fbada2eb925406fa3561d925833fc684f77452c6985159d6e15d57b7"
+    },
+    {
+      "path": "production/video/narration-assets/raw/occlusion-00.wav",
+      "bytes": 274604,
+      "sha256": "159621869fcb94b8dd6c289b420f60bfa596abb8e4dbc541142a590d85643b26"
+    },
+    {
+      "path": "production/video/narration-assets/raw/parameters-00.wav",
+      "bytes": 192044,
+      "sha256": "cb186c763561e086a529991f57cbdefb272afa6df012ffba173d82015601388a"
+    },
+    {
+      "path": "production/video/narration-assets/raw/parameters-01.wav",
+      "bytes": 282284,
+      "sha256": "9690065e75e9c1c02ca4fbc94695e52533a5e1e848f5eacfad4ac09211f57da0"
+    },
+    {
+      "path": "production/video/narration-assets/raw/pitfall_mask-00.wav",
+      "bytes": 169004,
+      "sha256": "a072a1d2233ade4e031924d53a1ad4b88c9f5188f6f3e45b12575f3fe860cb50"
+    },
+    {
+      "path": "production/video/narration-assets/raw/pitfall_mask-01.wav",
+      "bytes": 128684,
+      "sha256": "70a1291f3f1a5c58d1d69698718372b9d50b1c08ea7ba9414424e9a8f3685f6e"
+    },
+    {
+      "path": "production/video/narration-assets/raw/pitfall_stack-00.wav",
+      "bytes": 234284,
+      "sha256": "7eecd3028fe270fdaa294ce2dbfab0238eda2121e28020f2ee6adb8fe7cc66db"
+    },
+    {
+      "path": "production/video/narration-assets/raw/pitfall_stack-01.wav",
+      "bytes": 165164,
+      "sha256": "0d3c087c0c53c5a5b4aeebfbd7a4a72316ac537ad18df95a8f19805da744303e"
+    },
+    {
+      "path": "production/video/narration-assets/raw/pitfall_waterline-00.wav",
+      "bytes": 161324,
+      "sha256": "358da626f922adf0ef708f52cf533d5801b80d8f2c4c74c2eed467e35f82052b"
+    },
+    {
+      "path": "production/video/narration-assets/raw/pitfall_waterline-01.wav",
+      "bytes": 193964,
+      "sha256": "ca26c845b05ca1cfd728196d987c039d528b0730130e3c534c4c006ba27237f0"
+    },
+    {
+      "path": "production/video/narration-assets/raw/preset-00.wav",
+      "bytes": 193964,
+      "sha256": "1c392fd0f491ad389c21af2883ff6e021515f1d3e6f1a6934208cc65cd5088d4"
+    },
+    {
+      "path": "production/video/narration-assets/raw/refraction-00.wav",
+      "bytes": 128684,
+      "sha256": "bc87862fc22931c50d999af46d9f83a1c809f3ade81d3ab086a4624fa4de10f1"
+    },
+    {
+      "path": "production/video/narration-assets/raw/refraction-01.wav",
+      "bytes": 126764,
+      "sha256": "2681f0cc014de063c026bf0af968fe3a95e6122e2748974ae5e4dc220ad00f2d"
+    },
+    {
+      "path": "production/video/narration-assets/raw/refraction-02.wav",
+      "bytes": 117164,
+      "sha256": "7d0e32209636dfcf5f0acbf35599256a68db14368c7e1a70bc021759b41f9afa"
+    },
+    {
+      "path": "production/video/narration-assets/raw/refs_art-00.wav",
+      "bytes": 199724,
+      "sha256": "0dc54fc2bf2f153828d6cf489ee8e0e07b4c866c3079cac225a6dfae10afa254"
+    },
+    {
+      "path": "production/video/narration-assets/raw/refs_tech-00-part0.wav",
+      "bytes": 103724,
+      "sha256": "b2949400744e6a52263a1ab844fa8179310c36aeb8391a5c75cf0afa01b44e42"
+    },
+    {
+      "path": "production/video/narration-assets/raw/refs_tech-00-part1.wav",
+      "bytes": 178604,
+      "sha256": "95149f82c20d3c8f8a13a40b5894fa6000ce7889010a94d1046e69858d9b1f3e"
+    },
+    {
+      "path": "production/video/narration-assets/raw/refs_tech-00.wav",
+      "bytes": 282284,
+      "sha256": "498165583160173249a47e4c0b9d9b970b4553b84e60442d6971f5d195e19176"
+    },
+    {
+      "path": "production/video/narration-assets/raw/ripples-00.wav",
+      "bytes": 207404,
+      "sha256": "78d664d34f6459ca8ac21d2e0cbfd46ea2e73b618ecdc9d2d9aaf6373b874824"
+    },
+    {
+      "path": "production/video/narration-assets/raw/semantic-00.wav",
+      "bytes": 170924,
+      "sha256": "09d6b5d0f22b7bc1f540de1fcf25490dce6130edf9daf13be21091e7cf5745f9"
+    },
+    {
+      "path": "production/video/narration-assets/raw/semantic-01.wav",
+      "bytes": 192044,
+      "sha256": "6f99add399d826daf5aa22e79e1a447a48e13f826814f99c34a8f0f45a398caf"
+    },
+    {
+      "path": "production/video/narration-assets/raw/stack-00.wav",
+      "bytes": 240044,
+      "sha256": "f9904b14c3c997d84fe286ea55c69c9b3abc98d9f7ee4445c8beb7f284cb0a3f"
+    },
+    {
+      "path": "production/video/narration-assets/raw/stack-01.wav",
+      "bytes": 134444,
+      "sha256": "fe703e1dfca4e2d398ff69ebd060d4f6c03d898f6e4eae08046c45aa3c6ae588"
+    },
+    {
+      "path": "production/video/narration-assets/refraction-00.txt",
+      "bytes": 30,
+      "sha256": "e3a85491d5fe033f7278b583a982bbd5e06ec1d6a5d437c1f5d7d5a42999d031"
+    },
+    {
+      "path": "production/video/narration-assets/refraction-00.wav",
+      "bytes": 112364,
+      "sha256": "60aa42094eeab2e8ce9b13c100059f680c2ed7fa98fa7e666ae63f1b0cbb20d5"
+    },
+    {
+      "path": "production/video/narration-assets/refraction-01.txt",
+      "bytes": 30,
+      "sha256": "32c18f58765b7b260474bafb8f8ba3cb6013a4a0c904079b1c83bf4ce9a9ed69"
+    },
+    {
+      "path": "production/video/narration-assets/refraction-01.wav",
+      "bytes": 108524,
+      "sha256": "25c0169434af47263f974c656b516c9fe03720d11b8d7f224e304cba3481b405"
+    },
+    {
+      "path": "production/video/narration-assets/refraction-02.txt",
+      "bytes": 30,
+      "sha256": "3e4da5a09bfcd960eb1ea69549124a85cf925c4b3834be271bba21710af2b1d7"
+    },
+    {
+      "path": "production/video/narration-assets/refraction-02.wav",
+      "bytes": 101804,
+      "sha256": "2f863aec4fdced23f1528317e56dcf98891e22f0b2888d73bc73cab403c50317"
+    },
+    {
+      "path": "production/video/narration-assets/refraction.wav",
+      "bytes": 337004,
+      "sha256": "daa3a11a9fdbc98fd29a5ec631f927989dadeee06fda9583f1fbc7d2b19676f3"
+    },
+    {
+      "path": "production/video/narration-assets/refs_art-00.txt",
+      "bytes": 54,
+      "sha256": "b819329f1c82b781a6ebdf9c5f78d41750db136f0ce3905a60b642e90b6c769b"
+    },
+    {
+      "path": "production/video/narration-assets/refs_art-00.wav",
+      "bytes": 183404,
+      "sha256": "55090fa7a28cadd103797b626571c754ba2c5d5368f8d21312bcd2c0bc64b931"
+    },
+    {
+      "path": "production/video/narration-assets/refs_art.wav",
+      "bytes": 188204,
+      "sha256": "0163dc345c08a8b94fc3144ca6c25f2234199dc54119ebe012488995a98b19bc"
+    },
+    {
+      "path": "production/video/narration-assets/refs_tech-00.txt",
+      "bytes": 72,
+      "sha256": "4de260fd8ca84c1a2f4df98e5698b7630f24721f7cb6f37ae2e5f9b23e479225"
+    },
+    {
+      "path": "production/video/narration-assets/refs_tech-00.wav",
+      "bytes": 265004,
+      "sha256": "b246685f02f90fe63b8296e5d5a9b858eb367430a808a92ae77bb57c954d03ff"
+    },
+    {
+      "path": "production/video/narration-assets/refs_tech.wav",
+      "bytes": 269804,
+      "sha256": "62b175a2972d03ba5724fedb3d8dfbbe12e0065bc4bd9a7e0c7a98903c44d99a"
+    },
+    {
+      "path": "production/video/narration-assets/ripples-00.txt",
+      "bytes": 54,
+      "sha256": "b0f1d21403987b09990c28fa537926d241b40ae8cf23e99e2ad27c9392783b17"
+    },
+    {
+      "path": "production/video/narration-assets/ripples-00.wav",
+      "bytes": 185324,
+      "sha256": "ba7b66dccfedfdb55aaec16dcefda0c5b4427b0260755472479110901f795922"
+    },
+    {
+      "path": "production/video/narration-assets/ripples.wav",
+      "bytes": 190124,
+      "sha256": "a3a73d1289862ee160be5199faa9fc99eddc4274cef95a5f8fc79c3a6ce7cc5d"
+    },
+    {
+      "path": "production/video/narration-assets/semantic-00.txt",
+      "bytes": 42,
+      "sha256": "0dfdab852c4e7b07e5e548c53ec429183ba85facfb45dcc49f5a7ca0ed7f068e"
+    },
+    {
+      "path": "production/video/narration-assets/semantic-00.wav",
+      "bytes": 150764,
+      "sha256": "8d1749315785fb460b500999129c249c99719a6eee480cb1881c360d043fb682"
+    },
+    {
+      "path": "production/video/narration-assets/semantic-01.txt",
+      "bytes": 51,
+      "sha256": "384c0f69322668f403bc72da34de73adfe6301e622ee5d18575385275dc788ba"
+    },
+    {
+      "path": "production/video/narration-assets/semantic-01.wav",
+      "bytes": 169964,
+      "sha256": "47edefd23906620b84b2fdddb77f974a0f0897c37a674cb5cee9c3660b184f26"
+    },
+    {
+      "path": "production/video/narration-assets/semantic.wav",
+      "bytes": 330284,
+      "sha256": "d3b420e6087ec6625485b820e953dd03703516cf6d91d1da0d9f100f0f05ea7f"
+    },
+    {
+      "path": "production/video/narration-assets/speech-report.json",
+      "bytes": 11520,
+      "sha256": "5b1975f35baf035bc83bf2a36d8addbb44c90ba9e350ad02b13f0caa3913d913"
+    },
+    {
+      "path": "production/video/narration-assets/stack-00.txt",
+      "bytes": 57,
+      "sha256": "8898cc4ad9d2454cf58982c1093993ac2a8c8e5c4665aff87dcc03604797e63c"
+    },
+    {
+      "path": "production/video/narration-assets/stack-00.wav",
+      "bytes": 217004,
+      "sha256": "269592331e21f173886ae9c337a11209ca06f5523fd820e7c2cc8e9687779db1"
+    },
+    {
+      "path": "production/video/narration-assets/stack-01.txt",
+      "bytes": 39,
+      "sha256": "94ae4d8e0b40e5220e5c157cce762a30fde8c24fa1ac9a90d74b948462fe4354"
+    },
+    {
+      "path": "production/video/narration-assets/stack-01.wav",
+      "bytes": 124844,
+      "sha256": "6ff1fa3094e262b5fde86bdcf2654ead78382bc08bde06d8bbc0636ddea8612f"
+    },
+    {
+      "path": "production/video/narration-assets/stack.wav",
+      "bytes": 351404,
+      "sha256": "6c60f8d0f97ad3cc16cc5a8f6bbe8123aac6d3e433163e708582be7e5d45e1c8"
+    },
+    {
+      "path": "production/video/plan.json",
+      "bytes": 9188,
+      "sha256": "9beff7afee59351d80ce61946fcae0558c4b882f9251053232079bdf8838f28e"
+    },
+    {
+      "path": "production/video/prepare_captures.py",
+      "bytes": 1188,
+      "sha256": "afe50b5852afbdb70ec0fd8684e21c9410daf9cc297813d2419de5bef96a9e4d"
+    },
+    {
+      "path": "production/video/record_opening_flow.gd",
+      "bytes": 2621,
+      "sha256": "53c66aca302dc24d4c6bb5154fc9021aecdc40ccaf13f0269d5e38e93b462843"
+    },
+    {
+      "path": "production/video/record_showcase.gd",
+      "bytes": 3480,
+      "sha256": "97a3dbc08c5dc840ce0f5f088e715e24410705dd31ac95da00b0b07d54ed7237"
+    },
+    {
+      "path": "production/video/reference/female-zf001.txt",
+      "bytes": 184,
+      "sha256": "4da8c4a5984947aa5ce753a517fa871d0a0c452ba6b24e2b88107990c9081a1d"
+    },
+    {
+      "path": "production/video/reference/female-zf001.wav",
+      "bytes": 722444,
+      "sha256": "556b1ec85a1be292ac30b25552767f3505f3895c23dd3292f5dfc100b29ae976"
+    },
+    {
+      "path": "production/video/reference/kokoro-model-provenance.json",
+      "bytes": 620,
+      "sha256": "ed90867f8d942cef298065c98bfbe47665f6a02ac4b5415badccd7642ecc4dab"
+    },
+    {
+      "path": "production/video/reference/provenance.json",
+      "bytes": 1153,
+      "sha256": "b18676b48aad71a21efc9f09c94835d2b5c45cfedd6ddc176de6a7e6f218c5fb"
+    },
+    {
+      "path": "production/video/render_video.py",
+      "bytes": 22046,
+      "sha256": "654855b7356ed0432d289751729f61d202418356d6bd5221a9a8134fdab48250"
+    },
+    {
+      "path": "production/video/requirements.txt",
+      "bytes": 72,
+      "sha256": "08af304a1839da9cb1cb81d497b2679cf514ba1b184522bd206f749e8df8f7fd"
+    },
+    {
+      "path": "production/video/script.md",
+      "bytes": 5046,
+      "sha256": "b769e9b1d929302918af4ad5b5e9e0af7499ac7310f9cba68fd1bcc6f2864f3e"
+    },
+    {
+      "path": "production/video/subtitle-cues.json",
+      "bytes": 4777,
+      "sha256": "071821e7ef93c46677b216163c27b22a7496a48402301a22e1c70d49c0d94a2f"
+    },
+    {
+      "path": "production/video/synthesize.py",
+      "bytes": 209,
+      "sha256": "8b5cac01fb56d2403be3f4b62275d7a53278f1b7acef033e221e8253d9dc0c2b"
+    },
+    {
+      "path": "production/video/synthesize_higgs.py",
+      "bytes": 7786,
+      "sha256": "0cf2ca3598537dd082369fd32e525c337900c67b304107d652eebd8229f8ab49"
+    },
+    {
+      "path": "production/video/synthesize_kokoro_legacy.py",
+      "bytes": 2228,
+      "sha256": "dd5ee109accc95a8e729fc49929ebca5140c56b1793fb77edce66686a1f7027b"
+    },
+    {
+      "path": "production/video/typography.py",
+      "bytes": 1550,
+      "sha256": "07dd9e5a0df58f55064cd82c81f0a21ce160ccacdf8cd2272729750002911c50"
+    },
+    {
+      "path": "production/video/verify_opening.py",
+      "bytes": 2751,
+      "sha256": "b0f33ca7d54908d7ce851aafa7745970a68024d223738fbdb63ed6d1367607f4"
+    },
+    {
+      "path": "production/video/verify_video.py",
+      "bytes": 4483,
+      "sha256": "1c568870b83bf2d0758e4f18811ab6a59e3ed6c4bfda121686330875dfaa3888"
+    },
+    {
+      "path": "tools/package_video.py",
+      "bytes": 1754,
+      "sha256": "f88b0b209bba2b5116e917abb4138267d0ced919f35a41a2361831d89e0f8a99"
+    }
+  ],
+  "music": "User supplied pixel-art-water; -14 dB with voice-driven ducking",
+  "path_base": "repository_root"
+}

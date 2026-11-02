@@ -12,5 +12,5 @@
   "note": "Values reported by Godot Movie Maker console, rounded by the engine. These are render timings during recording, separate from normal-window TIME_PROCESS measurements. Encoding is recording overhead.",
   "script": "scripts/record_stone_basin.gd",
   "sequence": "15 seconds day, reset, 15 seconds night",
-  "video": "../../stone-basin-day-night-demo.mp4"
+  "video": "../../media/demos/day-night.mp4"
 }

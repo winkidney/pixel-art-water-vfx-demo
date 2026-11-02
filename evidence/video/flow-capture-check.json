@@ -1,0 +1,16 @@
+{
+  "changed_water_pixels": 12244,
+  "changed_dry_pixels": 0,
+  "waterfall_curtain_changed_pixels": 0,
+  "crop": [
+    240,
+    124,
+    480,
+    259
+  ],
+  "curtain_excluded": true,
+  "parameters_labelled": {
+    "flow_amplitude": 1.4
+  },
+  "rgb_roundtrip": "passed"
+}

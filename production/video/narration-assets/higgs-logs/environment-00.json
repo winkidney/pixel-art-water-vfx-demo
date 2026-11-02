@@ -1,0 +1,20 @@
+{
+  "cache_key": "95373610c915f617872329d37ea807fd45fcf7135538599d83602b212dd6d41e",
+  "request": {
+    "model": "higgs",
+    "input": "桥身二维投影，叠加冷暖光带，形成夜间反光。",
+    "voice_ref": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/higgs-v3/edit-source/reference/female-zf001.wav",
+    "reference_text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+    "seed": 20261102,
+    "options": {
+      "text_chunk_size": 40
+    }
+  },
+  "inference_seconds": 1.61,
+  "raw_sha256": "c274c068e1d5626da6128b45f5383dca3d4d425e2c1307b808d66021a6ef8499",
+  "raw_seconds": 5.04,
+  "trim_start_seconds": 0.06,
+  "trim_end_seconds": 0.28,
+  "final_sha256": "a6b0ed7e5ba1272ffca62c98e97d35120959fe7f9c259fb40edce8bcc7b26ec0",
+  "final_seconds": 4.7
+}

@@ -1,0 +1,402 @@
+[
+  {
+    "file": "cover-16x9.png",
+    "size": [
+      1920,
+      1080
+    ],
+    "publication_title": "Godot 复刻《星之海》通透像素水体效果｜2D 水面 Shader 原理拆解 | Sea of Stars",
+    "source": "Unmodified Godot real viewport screenshots, cropped and enlarged at integer scales",
+    "font_sha256": "c4bf6069b8e5e31dc42c81f310afbc322c2cbc843ceba6c871358f9f1aaae033",
+    "text_bounds_verified": true,
+    "text_boxes": [
+      {
+        "text": "Godot 复刻",
+        "xy": [
+          60,
+          72
+        ],
+        "size": 72,
+        "bounds": [
+          60,
+          72,
+          420,
+          144
+        ]
+      },
+      {
+        "text": "《星之海》",
+        "xy": [
+          48,
+          196
+        ],
+        "size": 108,
+        "bounds": [
+          48,
+          196,
+          588,
+          304
+        ]
+      },
+      {
+        "text": "通透像素",
+        "xy": [
+          60,
+          356
+        ],
+        "size": 120,
+        "bounds": [
+          60,
+          356,
+          540,
+          476
+        ]
+      },
+      {
+        "text": "水体效果",
+        "xy": [
+          60,
+          500
+        ],
+        "size": 120,
+        "bounds": [
+          60,
+          500,
+          540,
+          620
+        ]
+      },
+      {
+        "text": "Sea of Stars",
+        "xy": [
+          64,
+          654
+        ],
+        "size": 36,
+        "bounds": [
+          64,
+          654,
+          280,
+          678
+        ]
+      },
+      {
+        "text": "2D 水面 Shader",
+        "xy": [
+          80,
+          758
+        ],
+        "size": 48,
+        "bounds": [
+          80,
+          758,
+          416,
+          806
+        ]
+      },
+      {
+        "text": "原理拆解",
+        "xy": [
+          60,
+          849
+        ],
+        "size": 60,
+        "bounds": [
+          60,
+          849,
+          300,
+          909
+        ]
+      },
+      {
+        "text": "折射 · 涟漪 · 角色入水",
+        "xy": [
+          60,
+          997
+        ],
+        "size": 24,
+        "bounds": [
+          60,
+          997,
+          348,
+          1021
+        ]
+      },
+      {
+        "text": "实机画面 / 2D 水体",
+        "xy": [
+          804,
+          54
+        ],
+        "size": 24,
+        "bounds": [
+          804,
+          54,
+          1020,
+          78
+        ]
+      },
+      {
+        "text": "夜晚 / 冷暖反光",
+        "xy": [
+          1422,
+          755
+        ],
+        "size": 24,
+        "bounds": [
+          1422,
+          755,
+          1602,
+          779
+        ]
+      },
+      {
+        "text": "白天 / 通透水底",
+        "xy": [
+          796,
+          136
+        ],
+        "size": 24,
+        "bounds": [
+          796,
+          136,
+          976,
+          160
+        ]
+      }
+    ],
+    "screenshots": [
+      {
+        "source": "day.png",
+        "sha256": "41834db02b627cbd4dff160bc8d045253341c3619087bb40e073b41049c7b431",
+        "crop": [
+          90,
+          80,
+          378,
+          296
+        ],
+        "integer_scale": 4,
+        "xy": [
+          768,
+          112
+        ]
+      },
+      {
+        "source": "night.png",
+        "sha256": "1841d01b753df12c9e41711fb0e8209009fbe78de07863e28e22e5190e599d17",
+        "crop": [
+          118,
+          100,
+          358,
+          220
+        ],
+        "integer_scale": 2,
+        "xy": [
+          1412,
+          786
+        ]
+      }
+    ],
+    "sha256": "c35d5dd80a39206e5ef8cccb87e887812571dae8c460cac8687680b701a60be6"
+  },
+  {
+    "file": "cover-4x3.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "publication_title": "Godot 复刻《星之海》通透像素水体效果｜2D 水面 Shader 原理拆解 | Sea of Stars",
+    "source": "Unmodified Godot real viewport screenshots, cropped and enlarged at integer scales",
+    "font_sha256": "c4bf6069b8e5e31dc42c81f310afbc322c2cbc843ceba6c871358f9f1aaae033",
+    "text_bounds_verified": true,
+    "text_boxes": [
+      {
+        "text": "Godot 复刻",
+        "xy": [
+          60,
+          72
+        ],
+        "size": 72,
+        "bounds": [
+          60,
+          72,
+          420,
+          144
+        ]
+      },
+      {
+        "text": "《星之海》",
+        "xy": [
+          48,
+          216
+        ],
+        "size": 108,
+        "bounds": [
+          48,
+          216,
+          588,
+          324
+        ]
+      },
+      {
+        "text": "通透像素",
+        "xy": [
+          60,
+          382
+        ],
+        "size": 120,
+        "bounds": [
+          60,
+          382,
+          540,
+          502
+        ]
+      },
+      {
+        "text": "水体效果",
+        "xy": [
+          60,
+          530
+        ],
+        "size": 120,
+        "bounds": [
+          60,
+          530,
+          540,
+          650
+        ]
+      },
+      {
+        "text": "Sea of Stars",
+        "xy": [
+          64,
+          688
+        ],
+        "size": 36,
+        "bounds": [
+          64,
+          688,
+          280,
+          712
+        ]
+      },
+      {
+        "text": "2D 水面 Shader",
+        "xy": [
+          80,
+          809
+        ],
+        "size": 48,
+        "bounds": [
+          80,
+          809,
+          416,
+          857
+        ]
+      },
+      {
+        "text": "原理拆解",
+        "xy": [
+          60,
+          900
+        ],
+        "size": 60,
+        "bounds": [
+          60,
+          900,
+          300,
+          960
+        ]
+      },
+      {
+        "text": "折射 · 涟漪 · 角色入水",
+        "xy": [
+          60,
+          1117
+        ],
+        "size": 24,
+        "bounds": [
+          60,
+          1117,
+          348,
+          1141
+        ]
+      },
+      {
+        "text": "实机画面 / 2D 水体",
+        "xy": [
+          736,
+          74
+        ],
+        "size": 24,
+        "bounds": [
+          736,
+          74,
+          952,
+          98
+        ]
+      },
+      {
+        "text": "夜晚 / 冷暖反光",
+        "xy": [
+          1102,
+          875
+        ],
+        "size": 24,
+        "bounds": [
+          1102,
+          875,
+          1282,
+          899
+        ]
+      },
+      {
+        "text": "白天 / 通透水底",
+        "xy": [
+          728,
+          166
+        ],
+        "size": 24,
+        "bounds": [
+          728,
+          166,
+          908,
+          190
+        ]
+      }
+    ],
+    "screenshots": [
+      {
+        "source": "day.png",
+        "sha256": "41834db02b627cbd4dff160bc8d045253341c3619087bb40e073b41049c7b431",
+        "crop": [
+          80,
+          30,
+          380,
+          320
+        ],
+        "integer_scale": 3,
+        "xy": [
+          700,
+          142
+        ]
+      },
+      {
+        "source": "night.png",
+        "sha256": "1841d01b753df12c9e41711fb0e8209009fbe78de07863e28e22e5190e599d17",
+        "crop": [
+          118,
+          100,
+          358,
+          220
+        ],
+        "integer_scale": 2,
+        "xy": [
+          1092,
+          906
+        ]
+      }
+    ],
+    "sha256": "df6cd53cd7d0654edcde9071b87716723b486b388494da1258007619c029fe54"
+  }
+]

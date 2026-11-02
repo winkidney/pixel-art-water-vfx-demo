@@ -1,0 +1,20 @@
+{
+  "cache_key": "0ba3d2c7c32570ccadd8e1e4fe8e4349b53842fbc25286a05186b0b7352f6bf5",
+  "request": {
+    "model": "higgs",
+    "input": "地图深度决定浸没量，精灵局部高度决定哪些像素入水。",
+    "voice_ref": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/higgs-v3/edit-source/reference/female-zf001.wav",
+    "reference_text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+    "seed": 20261102,
+    "options": {
+      "text_chunk_size": 40
+    }
+  },
+  "inference_seconds": 2.031,
+  "raw_sha256": "01af07007ef435dba439f2693ea149dc33dbcb31f28c9b5298ae8d8f61ddda88",
+  "raw_seconds": 6.48,
+  "trim_start_seconds": 0.04,
+  "trim_end_seconds": 0.36,
+  "final_sha256": "432aa284c5a95dc75dba90d4218ad5d0d41a0e3272deec9152edcff1800af092",
+  "final_seconds": 6.08
+}

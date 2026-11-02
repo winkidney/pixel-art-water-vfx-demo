@@ -1,0 +1,20 @@
+{
+  "cache_key": "77e330d27e1adff5ce5097eb43a78459ef7377654fc8bb448e92a171548bcddf",
+  "request": {
+    "model": "higgs",
+    "input": "浅深色与海床混合。提高清澈度，水下石块保留更多。",
+    "voice_ref": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/higgs-v3/edit-source/reference/female-zf001.wav",
+    "reference_text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+    "seed": 20261102,
+    "options": {
+      "text_chunk_size": 40
+    }
+  },
+  "inference_seconds": 1.807,
+  "raw_sha256": "7e0d0bd8ee5b008d4b822e097f9ecd482b745d656f839a9df988df66ddaceb0e",
+  "raw_seconds": 5.72,
+  "trim_start_seconds": 0.16,
+  "trim_end_seconds": 0.18,
+  "final_sha256": "3b78e70636b8c8a24c96833d40d9a87b8fe994c83929308e75186c7b9929cacd",
+  "final_seconds": 5.38
+}

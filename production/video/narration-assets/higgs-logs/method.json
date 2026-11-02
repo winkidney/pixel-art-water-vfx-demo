@@ -1,0 +1,17 @@
+{
+  "model": "bosonai/higgs-tts-3-4b",
+  "quantization": "Q8_0",
+  "quantized_revision": "874fcb41ececda20bcbc0782d6b4ea7f7d069ea8",
+  "model_sha256": "cfa5cc01adcd199dfcf1baf0f610aa474cda83418fd1802aa6defa82d956a0e4",
+  "runtime": "audio.cpp v0.9.3 CUDA",
+  "binary_sha256": "a1688cdbe574a8e65b2cf6fa54af3f28696ba347171a57895c38a21896c6a511",
+  "reference_sha256": "556b1ec85a1be292ac30b25552767f3505f3895c23dd3292f5dfc100b29ae976",
+  "reference_text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+  "seed": 20261102,
+  "options": {
+    "text_chunk_size": 40
+  },
+  "sampling": "audio.cpp defaults: temperature 0.8, top_p 0.8, top_k 30",
+  "reference_origin": "Synthetic Kokoro zf_001 recording, 15.05 seconds; no human impersonation",
+  "postprocessing": "Trim only leading/trailing near-silence, retaining 80ms/140ms margins. No pitch or emotion changes. Raw files preserved."
+}

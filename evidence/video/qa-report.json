@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "duration": 178,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "frames": 10680,
+  "chapters": 7,
+  "subtitle_cues": 33,
+  "sampled_shots": [
+    {
+      "id": "intro_day",
+      "time": 3,
+      "luma_mean": 83.55619164737654
+    },
+    {
+      "id": "intro_night",
+      "time": 11,
+      "luma_mean": 47.37304880401235
+    },
+    {
+      "id": "intro_immersion",
+      "time": 16.0,
+      "luma_mean": 78.04715277777778
+    },
+    {
+      "id": "semantic",
+      "time": 21,
+      "luma_mean": 41.33953896604938
+    },
+    {
+      "id": "stack",
+      "time": 30,
+      "luma_mean": 57.79950569058642
+    },
+    {
+      "id": "refraction",
+      "time": 39,
+      "luma_mean": 74.48937114197531
+    },
+    {
+      "id": "depth",
+      "time": 49,
+      "luma_mean": 72.7367042824074
+    },
+    {
+      "id": "caustics",
+      "time": 55,
+      "luma_mean": 79.31866994598765
+    },
+    {
+      "id": "foam",
+      "time": 61,
+      "luma_mean": 83.29726610725308
+    },
+    {
+      "id": "ripples",
+      "time": 67,
+      "luma_mean": 55.93044463734568
+    },
+    {
+      "id": "falls",
+      "time": 73,
+      "luma_mean": 56.26138985339506
+    },
+    {
+      "id": "environment",
+      "time": 81,
+      "luma_mean": 42.55550540123457
+    },
+    {
+      "id": "height",
+      "time": 87,
+      "luma_mean": 51.90646412037037
+    },
+    {
+      "id": "immersion",
+      "time": 99,
+      "luma_mean": 68.35384066358024
+    },
+    {
+      "id": "occlusion",
+      "time": 109,
+      "luma_mean": 53.7749643132716
+    },
+    {
+      "id": "parameters",
+      "time": 117,
+      "luma_mean": 58.12842447916667
+    },
+    {
+      "id": "color",
+      "time": 127,
+      "luma_mean": 62.21401379243827
+    },
+    {
+      "id": "preset",
+      "time": 132.5,
+      "luma_mean": 58.27611111111111
+    },
+    {
+      "id": "pitfall_stack",
+      "time": 138,
+      "luma_mean": 87.16503134645062
+    },
+    {
+      "id": "pitfall_mask",
+      "time": 147,
+      "luma_mean": 75.67264033564815
+    },
+    {
+      "id": "pitfall_waterline",
+      "time": 156,
+      "luma_mean": 50.67267264660494
+    },
+    {
+      "id": "refs_tech",
+      "time": 165,
+      "luma_mean": 45.85630401234568
+    },
+    {
+      "id": "refs_art",
+      "time": 174,
+      "luma_mean": 46.82861400462963
+    }
+  ],
+  "qr_decoded_from_final_h264": {
+    "refs_tech": [
+      "https://www.reddit.com/r/gamedev/comments/1d3cdqq/how_did_sea_of_stars_render_varying_submersion_on/",
+      "https://www.youtube.com/watch?v=DkfKwfjaVx0",
+      "https://www.youtube.com/watch?v=RU3EReALbEU"
+    ],
+    "refs_art": [
+      "https://github.com/winkidney/pixel-art-water-vfx-demo",
+      "https://huggingface.co/bosonai/higgs-tts-3-4b"
+    ]
+  },
+  "black_segments": [],
+  "audio": {
+    "input_i": "-16.40",
+    "input_tp": "-3.89",
+    "input_lra": "5.40",
+    "input_thresh": "-27.56",
+    "output_i": "-16.20",
+    "output_tp": "-3.27",
+    "output_lra": "5.20",
+    "output_thresh": "-27.10",
+    "normalization_type": "dynamic",
+    "target_offset": "0.20"
+  },
+  "asr_note": "Independent spot-check only. Traditional/Simplified and homophones differ; not a claim of exact human listening verification.",
+  "film_sha256": "13a38e95e9bb44ea3e4931ee686fcddfcba314bd92fd221e098241b5476143ce"
+}

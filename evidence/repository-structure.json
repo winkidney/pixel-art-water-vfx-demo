@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "phase": "installed_and_gpu_verified",
+  "original_file_count": 847,
+  "binary_media_and_shader_hashes_preserved": 415,
+  "runtime_asset_shader_schema_code_hashes_preserved": 33,
+  "godot_import": "passed; normal local permissions with isolated XDG directories",
+  "current_scene": {
+    "godot": "4.7.2-stable (official)",
+    "legacy": false,
+    "parameters": 158,
+    "passed": true,
+    "renderer": "NVIDIA GeForce RTX 4070 SUPER",
+    "variants": [
+      {
+        "character_visible": true,
+        "size": "(480, 320)",
+        "time": "day",
+        "water_visible": true
+      },
+      {
+        "character_visible": true,
+        "size": "(480, 320)",
+        "time": "night",
+        "water_visible": true
+      }
+    ]
+  },
+  "legacy_scene": {
+    "godot": "4.7.2-stable (official)",
+    "legacy": true,
+    "parameters": 158,
+    "passed": true,
+    "renderer": "NVIDIA GeForce RTX 4070 SUPER",
+    "variants": [
+      {
+        "character_visible": true,
+        "size": "(480, 320)",
+        "time": "day",
+        "water_visible": true
+      }
+    ]
+  },
+  "day_night_pixel_comparison": {
+    "day": {
+      "changed_pixels": 0
+    },
+    "night": {
+      "changed_pixels": 0
+    }
+  },
+  "parameter_reference": "regenerated from 158 definitions",
+  "existing_render_check_tools": "both passed on archived GPU captures",
+  "video_authoring_preview": "23 shots rendered with relocated paths",
+  "cover_regeneration": "both PNG hashes identical",
+  "packaging": "project and video dry-run passed",
+  "scope_note": "This is a layout regression check, not a repeat of all historical parameter or performance tests.",
+  "installed_entry": "demo/project.godot",
+  "installed_gpu_check": {
+    "godot": "4.7.2-stable (official)",
+    "legacy": false,
+    "parameters": 158,
+    "passed": true,
+    "renderer": "NVIDIA GeForce RTX 4070 SUPER",
+    "variants": [
+      {
+        "character_visible": true,
+        "size": "(480, 320)",
+        "time": "day",
+        "water_visible": true
+      },
+      {
+        "character_visible": true,
+        "size": "(480, 320)",
+        "time": "night",
+        "water_visible": true
+      }
+    ]
+  },
+  "installed_day_night_comparison": {
+    "day": {
+      "changed_pixels": 0
+    },
+    "night": {
+      "changed_pixels": 0
+    }
+  }
+}

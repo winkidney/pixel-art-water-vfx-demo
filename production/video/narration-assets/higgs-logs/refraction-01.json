@@ -1,0 +1,20 @@
+{
+  "cache_key": "602e1052937bc2865eddb11414a75a59c031a4745f2ed00eaae0c175c234ec46",
+  "request": {
+    "model": "higgs",
+    "input": "位移取整，岸外退回。",
+    "voice_ref": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/higgs-v3/edit-source/reference/female-zf001.wav",
+    "reference_text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+    "seed": 20261102,
+    "options": {
+      "text_chunk_size": 40
+    }
+  },
+  "inference_seconds": 0.888,
+  "raw_sha256": "2681f0cc014de063c026bf0af968fe3a95e6122e2748974ae5e4dc220ad00f2d",
+  "raw_seconds": 2.64,
+  "trim_start_seconds": 0.06,
+  "trim_end_seconds": 0.32,
+  "final_sha256": "25c0169434af47263f974c656b516c9fe03720d11b8d7f224e304cba3481b405",
+  "final_seconds": 2.26
+}

@@ -1,0 +1,265 @@
+{
+  "streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+      "profile": "High",
+      "codec_type": "video",
+      "codec_tag_string": "avc1",
+      "codec_tag": "0x31637661",
+      "width": 1920,
+      "height": 1080,
+      "coded_width": 1920,
+      "coded_height": 1088,
+      "closed_captions": 0,
+      "film_grain": 0,
+      "has_b_frames": 2,
+      "pix_fmt": "yuv420p",
+      "level": 42,
+      "chroma_location": "left",
+      "field_order": "progressive",
+      "refs": 4,
+      "is_avc": "true",
+      "nal_length_size": "4",
+      "id": "0x1",
+      "r_frame_rate": "60/1",
+      "avg_frame_rate": "60/1",
+      "time_base": "1/15360",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 2734080,
+      "duration": "178.000000",
+      "bit_rate": "1954963",
+      "bits_per_raw_sample": "8",
+      "nb_frames": "10680",
+      "nb_read_frames": "10680",
+      "extradata_size": 46,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "VideoHandler",
+        "vendor_id": "[0][0][0][0]",
+        "encoder": "Lavc61.19.101 libx264"
+      }
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_long_name": "AAC (Advanced Audio Coding)",
+      "profile": "LC",
+      "codec_type": "audio",
+      "codec_tag_string": "mp4a",
+      "codec_tag": "0x6134706d",
+      "sample_fmt": "fltp",
+      "sample_rate": "48000",
+      "channels": 2,
+      "channel_layout": "stereo",
+      "bits_per_sample": 0,
+      "initial_padding": 0,
+      "id": "0x2",
+      "r_frame_rate": "0/0",
+      "avg_frame_rate": "0/0",
+      "time_base": "1/48000",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 8544000,
+      "duration": "178.000000",
+      "bit_rate": "247391",
+      "nb_frames": "8345",
+      "nb_read_frames": "8344",
+      "extradata_size": 5,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "zho",
+        "handler_name": "SoundHandler",
+        "vendor_id": "[0][0][0][0]"
+      }
+    },
+    {
+      "index": 2,
+      "codec_name": "bin_data",
+      "codec_long_name": "binary data",
+      "codec_type": "data",
+      "codec_tag_string": "text",
+      "codec_tag": "0x74786574",
+      "id": "0x3",
+      "r_frame_rate": "0/0",
+      "avg_frame_rate": "0/0",
+      "time_base": "1/1000",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 178000,
+      "duration": "178.000000",
+      "bit_rate": "11",
+      "nb_frames": "7",
+      "extradata_size": 63,
+      "disposition": {
+        "default": 0,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "eng",
+        "handler_name": "SubtitleHandler"
+      }
+    }
+  ],
+  "chapters": [
+    {
+      "id": 0,
+      "time_base": "1/1000",
+      "start": 0,
+      "start_time": "0.000000",
+      "end": 18000,
+      "end_time": "18.000000",
+      "tags": {
+        "title": "核心效果演示"
+      }
+    },
+    {
+      "id": 1,
+      "time_base": "1/1000",
+      "start": 18000,
+      "start_time": "18.000000",
+      "end": 36000,
+      "end_time": "36.000000",
+      "tags": {
+        "title": "设计与语义分层"
+      }
+    },
+    {
+      "id": 2,
+      "time_base": "1/1000",
+      "start": 36000,
+      "start_time": "36.000000",
+      "end": 84000,
+      "end_time": "84.000000",
+      "tags": {
+        "title": "水面技术与参数"
+      }
+    },
+    {
+      "id": 3,
+      "time_base": "1/1000",
+      "start": 84000,
+      "start_time": "84.000000",
+      "end": 114000,
+      "end_time": "114.000000",
+      "tags": {
+        "title": "角色浸没与空间关系"
+      }
+    },
+    {
+      "id": 4,
+      "time_base": "1/1000",
+      "start": 114000,
+      "start_time": "114.000000",
+      "end": 135000,
+      "end_time": "135.000000",
+      "tags": {
+        "title": "默认值与命名预设"
+      }
+    },
+    {
+      "id": 5,
+      "time_base": "1/1000",
+      "start": 135000,
+      "start_time": "135.000000",
+      "end": 162000,
+      "end_time": "162.000000",
+      "tags": {
+        "title": "三个问题与修正"
+      }
+    },
+    {
+      "id": 6,
+      "time_base": "1/1000",
+      "start": 162000,
+      "start_time": "162.000000",
+      "end": 178000,
+      "end_time": "178.000000",
+      "tags": {
+        "title": "技术与美术参考"
+      }
+    }
+  ],
+  "format": {
+    "filename": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/title-cover-v5/render/godot-sea-of-stars-water-vfx.mp4",
+    "nb_streams": 3,
+    "nb_programs": 0,
+    "nb_stream_groups": 0,
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "format_long_name": "QuickTime / MOV",
+    "start_time": "0.000000",
+    "duration": "178.000000",
+    "size": "49267437",
+    "bit_rate": "2214266",
+    "probe_score": 100,
+    "tags": {
+      "major_brand": "isom",
+      "minor_version": "512",
+      "compatible_brands": "isomiso2avc1mp41",
+      "title": "Godot 复刻《星之海》通透像素水体效果｜2D 水面 Shader 原理拆解 | Sea of Stars",
+      "artist": "Pixel-art water VFX experiment",
+      "encoder": "Lavf61.7.103",
+      "comment": "Godot real GPU captures; Higgs TTS 3 Q8_0; fixed synthetic female reference; 2026-11-02"
+    }
+  }
+}

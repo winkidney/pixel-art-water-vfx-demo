@@ -1,0 +1,20 @@
+{
+  "samples": 8544000,
+  "music_residual_rms_during_speech": 0.011729408821752855,
+  "voice_rms_during_speech": 0.21044617891311646,
+  "voice_above_music_db_during_speech": 25.07729842014504,
+  "music_present": true,
+  "mixed_pcm_peak": 0.6392912864685059,
+  "voice_alignment_peak_lag_samples": 0,
+  "alignment_test_lags_samples": [
+    -480,
+    -48,
+    -8,
+    -1,
+    0,
+    1,
+    8,
+    48,
+    480
+  ]
+}

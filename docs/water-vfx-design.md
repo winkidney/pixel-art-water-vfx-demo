@@ -1,16 +1,16 @@
 # 像素水体设计与技术说明
 
-本文面向美术与开发，解释当前石桥清潭的白天、夜晚效果如何组成。实现依据为源码提交 `0fe0c87`，文档整理于 2026-11-02。设计过程另见[完整实验复盘](water-vfx-retrospective.md)，操作与完整默认值见[手工调参](../tidal-grotto/docs/parameters.md)和[参数参考](../tidal-grotto/docs/parameter-reference.md)。
+本文面向美术与开发，解释当前石桥清潭的白天、夜晚效果如何组成。实现依据为源码提交 `0fe0c87`，文档整理于 2026-11-02。设计过程另见[完整实验复盘](water-vfx-retrospective.md)，操作与完整默认值见[手工调参](guides/parameters.md)和[参数参考](guides/parameter-reference.md)。
 
 ## 先看最终效果
 
-![白天与夜晚的 Godot 实机对照](../stone-basin-runtime-comparison.png)
+![白天与夜晚的 Godot 实机对照](../media/images/day-night-comparison.png)
 
 画面要表达的是一片可进入、可观察水底、有持续水流的石潭。浅滩能看清石阶与海床，往深处水色变暗；岸边有断续往复的泡沫，人物入水后身体逐渐染色、变淡，接触水面的位置出现水线与涟漪。右上宽瀑布持续落下，落点扰动向主水域传播。夜晚保留地形辨识度，用冷月光、暖灯反光和珊瑚原画的局部发光建立光色关系。
 
-- [30 秒白天、夜晚实机演示](../stone-basin-day-night-demo.mp4)
-- [运行中调参演示](../parameter-workbench-demo.mp4)
-- [最初洞窟实验演示](../tidal-grotto-demo.mp4)
+- [30 秒白天、夜晚实机演示](../media/demos/day-night.mp4)
+- [运行中调参演示](../media/demos/parameter-workbench.mp4)
+- [最初洞窟实验演示](../media/demos/legacy-grotto.mp4)
 
 以上为项目自己的录像。静态截图只能说明颜色、边界与层次，速度、扩散、冻结和参数切换请结合视频或运行项目观察。
 
@@ -44,7 +44,7 @@ flowchart TD
     K --> L[场景画面加独立调参 UI]
 ```
 
-技术图由 [build_stone_basin_maps.py](../tidal-grotto/tools/build_stone_basin_maps.py) 生成。Python 在这里制作数据，不重画美术。
+技术图由 [build_stone_basin_maps.py](../tools/build_stone_basin_maps.py) 生成。Python 在这里制作数据，不重画美术。
 
 | 数据 | 编码 | 参与的效果 | 为什么单独保存 |
 | --- | --- | --- | --- |
@@ -61,7 +61,7 @@ flowchart TD
 
 ## 3. 实际绘制顺序
 
-从后往前，节点顺序由 [main.gd 的 `_build_world`](../tidal-grotto/scripts/main.gd) 建立：
+从后往前，节点顺序由 [main.gd 的 `_build_world`](../demo/scripts/main.gd) 建立：
 
 ```mermaid
 flowchart LR
@@ -84,7 +84,7 @@ flowchart LR
 
 水面从原图采样海床，再按拟合水深混入浅水色与深水色。日景和夜景各自有基准色，共享用户的 HSV 相对调整。
 
-简化关系如下，对应 [water.gdshader](../tidal-grotto/shaders/water.gdshader)：
+简化关系如下，对应 [water.gdshader](../demo/shaders/water.gdshader)：
 
 ```text
 depth = clamp(B + water_level × tide_influence, 0, 1)
@@ -131,7 +131,7 @@ water_color = mix(sampled_seabed, tint, mix_amount)
 | 落水白沫 | 在落点遮罩内做椭圆径向扰动与轻微亮度变化 | 表现持续翻动的落水接触区 |
 | 主水域 | 从落点向外传播的径向波，按距离指数衰减，加入折射与弱高光 | 让瀑布的动势延伸进石潭 |
 
-水幕和落点见 [waterfall.gdshader](../tidal-grotto/shaders/waterfall.gdshader)，汇流见 [water.gdshader](../tidal-grotto/shaders/water.gdshader)。水幕、落点和汇流分别调速，以符合各自的运动尺度，未做流量守恒或粒子流体模拟。源图已有静态水幕，关闭瀑布效果会回到静态水幕。
+水幕和落点见 [waterfall.gdshader](../demo/shaders/waterfall.gdshader)，汇流见 [water.gdshader](../demo/shaders/water.gdshader)。水幕、落点和汇流分别调速，以符合各自的运动尺度，未做流量守恒或粒子流体模拟。源图已有静态水幕，关闭瀑布效果会回到静态水幕。
 
 ### 4.7 角色渐进浸没
 
@@ -145,15 +145,15 @@ surface = immersion × waterline_height + 小幅时间波动
 
 横向二次项使水线带弯曲感。它是可行的二维近似，不是角色真实体积，也不是逐帧手绘高度图。水下区域偏青、变暗、降低透明度并横向扰动，接触线增加窄亮带与邻域边缘。针对大头角色，默认水线高度倍率设为 0.55，再配合下沉偏移，深水仍保留头部可读性。
 
-代码在 [character.gdshader](../tidal-grotto/shaders/character.gdshader) 和 `main.gd` 的 `_refresh_character`、`_surface_point`。局部高度与地图深度分开后，更换水深不会要求给每个浸没等级再画一张角色。
+代码在 [character.gdshader](../demo/shaders/character.gdshader) 和 `main.gd` 的 `_refresh_character`、`_surface_point`。局部高度与地图深度分开后，更换水深不会要求给每个浸没等级再画一张角色。
 
 ### 4.8 倒影、夜间反光与前后遮挡
 
-角色倒影使用翻转精灵副本，纵向压缩、染色、波动，并由水域遮罩限制。随着人物浸入水中，倒影会减弱。它与水下身体分开绘制，分别表现水面上的镜像与水下的可见身体。见 [reflection.gdshader](../tidal-grotto/shaders/reflection.gdshader)。
+角色倒影使用翻转精灵副本，纵向压缩、染色、波动，并由水域遮罩限制。随着人物浸入水中，倒影会减弱。它与水下身体分开绘制，分别表现水面上的镜像与水下的可见身体。见 [reflection.gdshader](../demo/shaders/reflection.gdshader)。
 
 桥身倒影从底图中采样桥的颜色，投影到手工限定的水域区域，再做压缩与扭曲。月光和暖灯用手工锚点生成横向衰减、纵向限长的破碎光带，仅在夜间加入。它们没有镜像相机，也不会自动反射新增的所有场景物件。
 
-前景遮挡在角色之后绘制。遮挡图记录礁石或棕榈的接地 y，角色脚点位于物件后方时，重画该物件的原图像素。人物走到前方时停止覆盖。叶间水面从遮挡数据中排除，避免叶片间隙变成静态色块。见 [occlusion.gdshader](../tidal-grotto/shaders/occlusion.gdshader)。
+前景遮挡在角色之后绘制。遮挡图记录礁石或棕榈的接地 y，角色脚点位于物件后方时，重画该物件的原图像素。人物走到前方时停止覆盖。叶间水面从遮挡数据中排除，避免叶片间隙变成静态色块。见 [occlusion.gdshader](../demo/shaders/occlusion.gdshader)。
 
 ## 5. 组合后的视觉关系
 
@@ -191,7 +191,7 @@ surface = immersion × waterline_height + 小幅时间波动
 
 ## 7. 如何手工调整而不打散效果
 
-当前有 158 项控制，包含 9 个效果开关与 16 个调色对象的 HSV 控制。原始默认值、有效范围、面板和预设校验共用 [water-parameters.json](../tidal-grotto/assets/water-parameters.json)。下表是调参起点，完整清单见[参数参考](../tidal-grotto/docs/parameter-reference.md)。
+当前有 158 项控制，包含 9 个效果开关与 16 个调色对象的 HSV 控制。原始默认值、有效范围、面板和预设校验共用 [water-parameters.json](../demo/assets/water-parameters.json)。下表是调参起点，完整清单见[参数参考](guides/parameter-reference.md)。
 
 | 控制项 | 默认值 | 有效范围 | 增大后的主要变化 |
 | --- | ---: | --- | --- |
@@ -228,7 +228,7 @@ surface = immersion × waterline_height + 小幅时间波动
 5. 检查贴图导入、低分辨率网格、岸外采样、角色前后关系与日夜对应。
 6. 在真实窗口重跑输入和渲染检查，保存新的场景基线，再比较参数效果。
 
-当前 [main.gd](../tidal-grotto/scripts/main.gd) 与两个环境着色器中仍有本场景坐标，尚未抽成通用场景配置。换一张背景就能运行，不代表语义边界、反光或碰撞已经正确。
+当前 [main.gd](../demo/scripts/main.gd) 与两个环境着色器中仍有本场景坐标，尚未抽成通用场景配置。换一张背景就能运行，不代表语义边界、反光或碰撞已经正确。
 
 ## 9. 已证明的效果与边界
 
@@ -240,12 +240,12 @@ surface = immersion × waterline_height + 小幅时间波动
 
 | 阅读目的 | 入口 |
 | --- | --- |
-| 节点顺序、角色、寻路与时段切换 | [main.gd](../tidal-grotto/scripts/main.gd) |
-| 水面各层合成 | [water.gdshader](../tidal-grotto/shaders/water.gdshader) |
-| 水幕与落点 | [waterfall.gdshader](../tidal-grotto/shaders/waterfall.gdshader) |
-| 浸没、倒影与前景 | [character](../tidal-grotto/shaders/character.gdshader)、[reflection](../tidal-grotto/shaders/reflection.gdshader)、[occlusion](../tidal-grotto/shaders/occlusion.gdshader) |
-| 场景数据生成 | [build_stone_basin_maps.py](../tidal-grotto/tools/build_stone_basin_maps.py) |
-| 默认值、校验、预设与面板 | [参数定义](../tidal-grotto/assets/water-parameters.json)、[parameter_store.gd](../tidal-grotto/scripts/parameter_store.gd)、[parameter_panel.gd](../tidal-grotto/scripts/parameter_panel.gd) |
+| 节点顺序、角色、寻路与时段切换 | [main.gd](../demo/scripts/main.gd) |
+| 水面各层合成 | [water.gdshader](../demo/shaders/water.gdshader) |
+| 水幕与落点 | [waterfall.gdshader](../demo/shaders/waterfall.gdshader) |
+| 浸没、倒影与前景 | [character](../demo/shaders/character.gdshader)、[reflection](../demo/shaders/reflection.gdshader)、[occlusion](../demo/shaders/occlusion.gdshader) |
+| 场景数据生成 | [build_stone_basin_maps.py](../tools/build_stone_basin_maps.py) |
+| 默认值、校验、预设与面板 | [参数定义](../demo/assets/water-parameters.json)、[parameter_store.gd](../demo/scripts/parameter_store.gd)、[parameter_panel.gd](../demo/scripts/parameter_panel.gd) |
 
 最初的三个参考分别提供不同启发：
 
@@ -253,4 +253,4 @@ surface = immersion × waterline_height + 小幅时间波动
 - Reddit 的 [How did Sea of Stars render varying submersion on water?](https://www.reddit.com/r/gamedev/comments/1d3cdqq/how_did_sea_of_stars_render_varying_submersion_on/)讨论弯曲水线及高度映射。它支持把精灵局部形状与浸没深度分开考虑，属于社区方案讨论，不能证明《星之海》的官方内部实现。
 - Red Giraffe 的 [How I Created Pixel Art Oceans | Pixel Perfect](https://www.youtube.com/watch?v=RU3EReALbEU)展示深度、折射、泡沫、反射与统一像素尺度的组合。本项目沿用二维近似，没有采用该视频的三维顶点波、深度缓冲或镜像相机。
 
-YouTube 内容摘要依据实验期间保存的作者元数据和英文自动字幕，未完成视频逐帧核对。作者、章节定位、官方文档与核验范围统一记录在[参考与实现边界](../tidal-grotto/docs/references.md)。
+YouTube 内容摘要依据实验期间保存的作者元数据和英文自动字幕，未完成视频逐帧核对。作者、章节定位、官方文档与核验范围统一记录在[参考与实现边界](references.md)。

@@ -86,8 +86,8 @@
 
 ## 代码依据
 
-- tidal-grotto/scripts/main.gd：界面、时段切换、参数赋值与重置。
-- tidal-grotto/shaders/water.gdshader：水色、折射、焦散、泡沫、涟漪及环境反光。
-- tidal-grotto/shaders/waterfall.gdshader：水帘与落点动画。
-- tidal-grotto/shaders/character.gdshader：浸没、水线及夜间角色色调。
-- tidal-grotto/shaders/reflection.gdshader：角色倒影。
+- demo/scripts/main.gd：界面、时段切换、参数赋值与重置。
+- demo/shaders/water.gdshader：水色、折射、焦散、泡沫、涟漪及环境反光。
+- demo/shaders/waterfall.gdshader：水帘与落点动画。
+- demo/shaders/character.gdshader：浸没、水线及夜间角色色调。
+- demo/shaders/reflection.gdshader：角色倒影。

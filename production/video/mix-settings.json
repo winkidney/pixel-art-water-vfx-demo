@@ -1,0 +1,13 @@
+{
+  "music_gain_db": -14,
+  "fade_in_seconds": 1.5,
+  "fade_out_start": 175,
+  "fade_out_seconds": 3,
+  "sidechain": {
+    "threshold": 0.1,
+    "ratio": 3,
+    "attack_ms": 35,
+    "release_ms": 550
+  },
+  "output_duration": 178
+}

@@ -1,0 +1,20 @@
+{
+  "cache_key": "5642b3fbac5122bca09b3aa02cae75290e7d745bbcf0ab3c7363b830e748ffb5",
+  "request": {
+    "model": "higgs",
+    "input": "普通人形水线会淹到大头角色的脸。",
+    "voice_ref": "/home/winkidney/Documents/Codex/2026-11-01/mini-imagegen-https-www-youtube-com-2/video-work/higgs-v3/edit-source/reference/female-zf001.wav",
+    "reference_text": "先看效果。通透海床、像素折射和交互涟漪，都在戈多里实时运行。底图负责材质，数据负责空间。四个通道是水域、距岸、水深和可走。",
+    "seed": 20261102,
+    "options": {
+      "text_chunk_size": 40
+    }
+  },
+  "inference_seconds": 1.103,
+  "raw_sha256": "358da626f922adf0ef708f52cf533d5801b80d8f2c4c74c2eed467e35f82052b",
+  "raw_seconds": 3.36,
+  "trim_start_seconds": 0.1,
+  "trim_end_seconds": 0.14,
+  "final_sha256": "c4cad8552dcdcc974b706e93c4064a54e72147ff50730377f45e5203c9ae7fe2",
+  "final_seconds": 3.12
+}
